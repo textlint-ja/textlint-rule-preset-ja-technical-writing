@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "pretest": "npm rm textlint-rule-preset-ja-technical-writing && npm i",
+    "textlint": "textlint ../README.md",
+    "test": "npm run textlint"
+  },
+  "devDependencies": {
+    "textlint": "^7.0.1",
+    "textlint-rule-preset-ja-technical-writing": "file:../"
+  }
+}
