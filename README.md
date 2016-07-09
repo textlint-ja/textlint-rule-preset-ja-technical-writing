@@ -59,10 +59,10 @@ https://github.com/azu/textlint-rule-max-kanji-continuous-len
         
 ### 漢数字と算用数字を使い分けます
 - 数量を表現し、数を数えられるものは算用数字を使用します。
-- 任意の数に置き換えても通用する語句がこれに該当します。序数詞（「第～回」「～番目」「～回目」）も算用数字を使います。
+- 任意の数に置き換えても通用する語句がこれに該当します。
 - 慣用的表現、熟語、概数、固有名詞、副詞など、漢数字を使用することが一般的な語句では漢数字を使います。
-- https://github.com/azu/textlint-rule-preset-JTF-style
-- https://www.jtf.jp/jp/style_guide/styleguide_top.html
+
+https://github.com/azu/textlint-rule-preset-JTF-style
 
 
         "arabic-kanji-numbers": true,
@@ -71,7 +71,8 @@ https://github.com/azu/textlint-rule-max-kanji-continuous-len
 - 見出しは自動
 - 本文はですます調
 - 箇条書きはである調
-- https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
+
+https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 
 
         "no-mix-dearu-desumasu": {
@@ -128,7 +129,8 @@ https://github.com/azu/textlint-rule-no-hankaku-kana
         
 ### 弱い日本語表現の利用を使用しない
 - 〜かもしれない 等の弱い表現を使用しない
-- https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
+
+https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
 
         "ja-no-weak-phrase": true,
