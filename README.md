@@ -28,48 +28,49 @@ textlint --preset ja-technical-writing README.md
 
 ## ルール一覧
 
--  1文の長さは90文字以下とする
--  https://github.com/azu/textlint-rule-sentence-length
+# 1文の長さは90文字以下とする
+https://github.com/azu/textlint-rule-sentence-length
 
         "sentence-length": {
             max: 90
         },
         
--  コンマは1文中に3つまで
--  https://github.com/azu/textlint-rule-max-comma
+# コンマは1文中に3つまで
+https://github.com/azu/textlint-rule-max-comma
 
         "max-comma": {
             max: 3
         },
         
--  読点は1文中に3つまで
--  https://github.com/azu/textlint-rule-max-ten
+# 読点は1文中に3つまで
+https://github.com/azu/textlint-rule-max-ten
 
         "max-ten": {
             max: 3
         },
-
--  連続できる最大の漢字長は5文字まで
--  6文字以上の漢字は使用しない
--  https://github.com/azu/textlint-rule-max-kanji-continuous-len
+        
+# 連続できる最大の漢字長は5文字まで
+6文字以上の漢字は使用しない
+https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
         "max-kanji-continuous-len": {
             max: 5
         },
         
--  数量を表現し、数を数えられるものは算用数字を使用します。
--  任意の数に置き換えても通用する語句がこれに該当します。序数詞（「第～回」「～番目」「～回目」）も算用数字を使います。
--  慣用的表現、熟語、概数、固有名詞、副詞など、漢数字を使用することが一般的な語句では漢数字を使います。
--  https://github.com/azu/textlint-rule-preset-JTF-style
--  https://www.jtf.jp/jp/style_guide/styleguide_top.html
+# 漢数字と算用数字を使い分けます
+数量を表現し、数を数えられるものは算用数字を使用します。
+任意の数に置き換えても通用する語句がこれに該当します。序数詞（「第～回」「～番目」「～回目」）も算用数字を使います。
+慣用的表現、熟語、概数、固有名詞、副詞など、漢数字を使用することが一般的な語句では漢数字を使います。
+https://github.com/azu/textlint-rule-preset-JTF-style
+https://www.jtf.jp/jp/style_guide/styleguide_top.html
 
         "arabic-kanji-numbers": true,
-
-- 「ですます調」、「である調」を統一します
--  見出しは自動
--  本文はですます調
--  箇条書きはである調
--  https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
+        
+# 「ですます調」、「である調」を統一します
+見出しは自動
+本文はですます調
+箇条書きはである調
+https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 
         "no-mix-dearu-desumasu": {
             "preferInHeader": "",
@@ -77,67 +78,68 @@ textlint --preset ja-technical-writing README.md
             "preferInList": "である",
             "strict": true
         },
-
--  文末には句点記号として。を使います
--  https://github.com/textlint-ja/textlint-rule-ja-no-mixed-period
+        
+# 文末の句点記号として「。」を使います
+https://github.com/textlint-ja/textlint-rule-ja-no-mixed-period
 
         "ja-no-mixed-period": {
             "periodMark": "。"
         },
         
--  二重否定は使用しない
--  https://github.com/azu/textlint-rule-no-double-negative-ja
+# 二重否定は使用しない
+https://github.com/azu/textlint-rule-no-double-negative-ja
 
         "no-double-negative-ja": true,
         
--  ら抜き言葉を使用しない
--  https://github.com/azu/textlint-rule-no-dropping-the-ra
+# ら抜き言葉を使用しない
+https://github.com/azu/textlint-rule-no-dropping-the-ra
 
         "no-dropping-the-ra": true,
         
--  同じ表現から文を開始しすぎない
--  https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
+# 同じ表現から文を開始しすぎない
+https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
 
         "no-start-duplicated-conjunction": {
             "interval": 2
         },
         
--  同じ接続詞を連続して使用しない
--  https://github.com/takahashim/textlint-rule-no-doubled-conjunction
+# 同じ接続詞を連続して使用しない
+https://github.com/takahashim/textlint-rule-no-doubled-conjunction
 
         "no-doubled-conjunction": true,
         
--  同じ助詞を連続して使用しない
+# 同じ助詞を連続して使用しない
 
         "no-doubled-joshi": {
             "min_interval": 1
         },
         
--  感嘆符!！、疑問符?？を使用しない
--  https://github.com/azu/textlint-rule-no-exclamation-question-mark
+# 感嘆符!！、疑問符?？を使用しない
+https://github.com/azu/textlint-rule-no-exclamation-question-mark
 
         "no-exclamation-question-mark": true,
         
--  半角カナを使用しない
--  https://github.com/azu/textlint-rule-no-hankaku-kana
+# 半角カナを使用しない
+https://github.com/azu/textlint-rule-no-hankaku-kana
 
         "no-hankaku-kana": true,
         
--  〜かもしれない 等の弱い日本語表現の利用を使用しない
--  https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
+# 弱い日本語表現の利用を使用しない
+〜かもしれない 等の弱い表現を使用しない
+https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
         "ja-no-weak-phrase": true,
         
--  同一の単語を間違えて連続しているのをチェックする
--  https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
+# 同一の単語を間違えて連続しているのをチェックする
+https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
 
         "ja-no-successive-word": true,
         
--  よくある日本語の誤用をチェックする
--  https://github.com/textlint-ja/textlint-rule-ja-no-abusage
+# よくある日本語の誤用をチェックする
+https://github.com/textlint-ja/textlint-rule-ja-no-abusage
 
         "ja-no-abusage": true
-
+        
 ## Changelog
 
 See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases).
