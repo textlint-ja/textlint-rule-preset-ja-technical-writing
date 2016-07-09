@@ -64,6 +64,7 @@ https://github.com/azu/textlint-rule-max-kanji-continuous-len
 - https://github.com/azu/textlint-rule-preset-JTF-style
 - https://www.jtf.jp/jp/style_guide/styleguide_top.html
 
+
         "arabic-kanji-numbers": true,
         
 ### 「ですます調」、「である調」を統一します
@@ -71,6 +72,7 @@ https://github.com/azu/textlint-rule-max-kanji-continuous-len
 - 本文はですます調
 - 箇条書きはである調
 - https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
+
 
         "no-mix-dearu-desumasu": {
             "preferInHeader": "",
@@ -127,6 +129,7 @@ https://github.com/azu/textlint-rule-no-hankaku-kana
 ### 弱い日本語表現の利用を使用しない
 - 〜かもしれない 等の弱い表現を使用しない
 - https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
+
 
         "ja-no-weak-phrase": true,
         
