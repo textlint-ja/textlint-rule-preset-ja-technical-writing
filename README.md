@@ -67,10 +67,10 @@ https://www.jtf.jp/jp/style_guide/styleguide_top.html
         "arabic-kanji-numbers": true,
         
 ### 「ですます調」、「である調」を統一します
-https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 - 見出しは自動
 - 本文はですます調
 - 箇条書きはである調
+https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 
         "no-mix-dearu-desumasu": {
             "preferInHeader": "",
