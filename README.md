@@ -1,4 +1,4 @@
-# textlint-rule-preset-ja-technical-writing
+# textlint-rule-preset-ja-technical-writing [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
 
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
 
