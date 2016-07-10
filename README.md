@@ -2,6 +2,9 @@
 
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
 
+<!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu,
+preset-ja-technical-writing/no-exclamation-question-mark -->
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
@@ -66,7 +69,7 @@ https://github.com/azu/textlint-rule-preset-JTF-style
 
 
         "arabic-kanji-numbers": true,
-        
+
 ### 「ですます調」、「である調」を統一します
 - 見出しは自動
 - 本文はですます調
@@ -81,7 +84,8 @@ https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
             "preferInList": "である",
             "strict": true
         },
-        
+
+
 ### 文末の句点記号として「。」を使います
 https://github.com/textlint-ja/textlint-rule-ja-no-mixed-period
 
@@ -128,7 +132,7 @@ https://github.com/azu/textlint-rule-no-hankaku-kana
         "no-hankaku-kana": true,
         
 ### 弱い日本語表現の利用を使用しない
-- 〜かもしれない 等の弱い表現を使用しない
+- `〜かもしれない` 等の弱い表現を使用しない
 
 https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
