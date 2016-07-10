@@ -182,7 +182,7 @@ textlint --preset ja-technical-writing README.md
 
 同一の単語(形態素解析したtoken)が連続している場合は誤字の可能性があります。
 
-誤字ではない場合は、[Issue報告](https://github.com/textlint-ja/textlint-rule-ja-no-successive-word/issues/new)してください。
+誤字でない場合は、[Issue報告](https://github.com/textlint-ja/textlint-rule-ja-no-successive-word/issues/new)してください。
 
         "ja-no-successive-word": true,
         
