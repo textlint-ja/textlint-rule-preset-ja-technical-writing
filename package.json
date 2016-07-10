@@ -29,7 +29,6 @@
     "preset"
   ],
   "devDependencies": {
-    "babel-register": "^6.9.0",
     "mocha": "^2.5.3"
   },
   "dependencies": {
