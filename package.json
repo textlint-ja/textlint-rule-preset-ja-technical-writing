@@ -22,7 +22,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/ && npm run textlint"
+    "test": "mocha test/ && (cd example && npm install && npm test)"
   },
   "keywords": [
     "textlint",
