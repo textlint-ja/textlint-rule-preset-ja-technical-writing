@@ -22,6 +22,7 @@
     "test": "test"
   },
   "scripts": {
+    "docs:toc" : "markdown-toc -i README.md",
     "test": "mocha test/ && (cd example && npm install && npm test)"
   },
   "keywords": [
@@ -29,6 +30,7 @@
     "preset"
   ],
   "devDependencies": {
+    "markdown-toc": "^0.12.14",
     "mocha": "^2.5.3"
   },
   "dependencies": {
