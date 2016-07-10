@@ -32,13 +32,15 @@ textlint --preset ja-technical-writing README.md
 ## ルール一覧
 
 ### 1文の長さは90文字以下とする
+長過ぎる文は読みにくさに繋がるため適切な単位で文を区切ってください。
 https://github.com/azu/textlint-rule-sentence-length
 
         "sentence-length": {
             max: 90
         },
         
-### コンマは1文中に3つまで
+### カンマは1文中に3つまで
+カンマ（,）の多用は、文が長くなっている可能性があります。
 https://github.com/azu/textlint-rule-max-comma
 
         "max-comma": {
@@ -46,6 +48,7 @@ https://github.com/azu/textlint-rule-max-comma
         },
         
 ### 読点は1文中に3つまで
+読点（、）の多用は、文が長くなっている可能性があります。
 https://github.com/azu/textlint-rule-max-ten
 
         "max-ten": {
@@ -71,6 +74,8 @@ https://github.com/azu/textlint-rule-preset-JTF-style
         "arabic-kanji-numbers": true,
 
 ### 「ですます調」、「である調」を統一します
+文体は見出し、本文、箇条書きの中では統一した表記にします。
+
 - 見出しは自動
 - 本文はですます調
 - 箇条書きはである調
@@ -87,6 +92,7 @@ https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 
 
 ### 文末の句点記号として「。」を使います
+文末には「。」を使い文を区切ります。
 https://github.com/textlint-ja/textlint-rule-ja-no-mixed-period
 
         "ja-no-mixed-period": {
@@ -104,6 +110,8 @@ https://github.com/azu/textlint-rule-no-dropping-the-ra
         "no-dropping-the-ra": true,
         
 ### 同じ表現から文を開始しすぎない
+同じ表現から文を開始している場合、文の間で矛盾が発生している場合があります。
+箇条書きなど、同じ表現から開始したいは[textlint-filter-rule-comments](https://github.com/textlint/textlint-filter-rule-comments "textlint-filter-rule-comments")を使い回避してください。
 https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
 
         "no-start-duplicated-conjunction": {
@@ -135,12 +143,14 @@ https://github.com/azu/textlint-rule-no-nfd
 
         "no-nfd": true,
         
-### 感嘆符!！、疑問符?？を使用しない
+### 感嘆符!！、感嘆符?？を使用しない
+特定の感嘆符または感嘆符を使用する場合は、オプションで許可して利用してください。
 https://github.com/azu/textlint-rule-no-exclamation-question-mark
 
         "no-exclamation-question-mark": true,
         
 ### 半角カナを使用しない
+全角カタカナを使用してください。
 https://github.com/azu/textlint-rule-no-hankaku-kana
 
         "no-hankaku-kana": true,
@@ -153,11 +163,14 @@ https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
         "ja-no-weak-phrase": true,
         
 ### 同一の単語を間違えて連続しているのをチェックする
+同一の単語(形態素解析したtoken)が連続している場合は誤字の可能性があります。
+誤字ではない場合は、[Issue報告](https://github.com/textlint-ja/textlint-rule-ja-no-successive-word/issues/new)してください。
 https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
 
         "ja-no-successive-word": true,
         
 ### よくある日本語の誤用をチェックする
+日本語や技術表現における漢字の誤用などをチェックするルールです。
 https://github.com/textlint-ja/textlint-rule-ja-no-abusage
 
         "ja-no-abusage": true
