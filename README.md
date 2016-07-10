@@ -53,7 +53,7 @@ https://github.com/azu/textlint-rule-max-ten
         },
         
 ### 連続できる最大の漢字長は5文字まで
-6文字以上の漢字は使用しない
+漢字同士が連続していると読みにくさにつながります。
 https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
         "max-kanji-continuous-len": {
@@ -109,7 +109,15 @@ https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
         "no-start-duplicated-conjunction": {
             "interval": 2
         },
+ 
         
+### 逆接の接続助詞「が」を連続して使用しない
+逆接の接続助詞「が」は、特に否定の意味ではなくても安易に使われてしまいがちです。
+同一文中に複数回出現していないかどうかをチェックします。
+https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
+
+        "no-doubled-conjunctive-particle-ga": true,
+       
 ### 同じ接続詞を連続して使用しない
 https://github.com/takahashim/textlint-rule-no-doubled-conjunction
 
@@ -120,6 +128,12 @@ https://github.com/takahashim/textlint-rule-no-doubled-conjunction
         "no-doubled-joshi": {
             "min_interval": 1
         },
+
+### UTF8-MAC 濁点を使用しない
+文章中にUTF8-MAC 濁点は不要です。
+https://github.com/azu/textlint-rule-no-nfd
+
+        "no-nfd": true,
         
 ### 感嘆符!！、疑問符?？を使用しない
 https://github.com/azu/textlint-rule-no-exclamation-question-mark
@@ -132,8 +146,7 @@ https://github.com/azu/textlint-rule-no-hankaku-kana
         "no-hankaku-kana": true,
         
 ### 弱い日本語表現の利用を使用しない
-- `〜かもしれない` 等の弱い表現を使用しない
-
+`〜かもしれない` 等の弱い表現を使用しない。
 https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
 
