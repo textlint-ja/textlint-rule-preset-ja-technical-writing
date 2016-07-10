@@ -113,7 +113,7 @@ https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
         
 ### 逆接の接続助詞「が」を連続して使用しない
 逆接の接続助詞「が」は、特に否定の意味ではなくても安易に使われてしまいがちです。
-同一文中に複数回出現していないかどうかをチェックします。
+同一文中に複数回出現していないかをチェックします。
 https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
 
         "no-doubled-conjunctive-particle-ga": true,
