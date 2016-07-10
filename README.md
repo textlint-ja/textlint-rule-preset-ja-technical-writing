@@ -63,6 +63,7 @@ textlint --preset ja-technical-writing README.md
 > https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
 漢字同士が連続していると読みにくさにつながります。
+固有名詞は `allow` オプションに記述して回避します。
 
         "max-kanji-continuous-len": {
             max: 5
