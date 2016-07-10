@@ -170,8 +170,13 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
     - プリセットへのルールの追加
     - プリセットからルールの削除
 
-
 更新内容は[Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases)を参照してください。
+
+## Community
+
+質問は以下のGitterでお願いします。
+
+[![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
 
 ## Running tests
 
