@@ -34,7 +34,7 @@ textlint --preset ja-technical-writing README.md
 ### 1文の長さは90文字以下とする
 > https://github.com/azu/textlint-rule-sentence-length
 
-長過ぎる文は読みにくさに繋がるため適切な単位で文を区切ってください。
+長過ぎる文は読みにくさに繋がるため、適切な単位で文を区切ってください。
 
 
         "sentence-length": {
