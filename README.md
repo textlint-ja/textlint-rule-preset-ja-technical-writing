@@ -140,18 +140,7 @@ textlint --preset ja-technical-writing README.md
 
         "no-dropping-the-ra": true,
         
-### 同じ表現から文を開始しすぎない
-> https://github.com/azu/textlint-rule-no-start-duplicated-conjunction
 
-同じ表現から文を開始している場合、同じことを繰り返し説明している場合があります。
-
-箇条書きなどで同じ表現から開始したいは[textlint-filter-rule-comments](https://github.com/textlint/textlint-filter-rule-comments "textlint-filter-rule-comments")を使い回避してください。
-
-        "no-start-duplicated-conjunction": {
-            "interval": 2
-        },
- 
-        
 ### 逆接の接続助詞「が」を連続して使用しない
 > https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
 
