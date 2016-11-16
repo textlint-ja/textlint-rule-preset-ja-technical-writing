@@ -15,7 +15,7 @@
     "src/",
     "lib/"
   ],
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "技術文書向けのtextlintルールプリセット",
   "main": "lib/textlint-rule-preset-ja-technical-writing.js",
   "directories": {
