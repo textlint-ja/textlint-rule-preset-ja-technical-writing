@@ -30,7 +30,7 @@
     "preset"
   ],
   "devDependencies": {
-    "markdown-toc": "^0.13.0",
+    "markdown-toc": "^1.0.1",
     "mocha": "^3.0.0"
   },
   "dependencies": {
