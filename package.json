@@ -26,8 +26,9 @@
     "test": "mocha test/ && (cd example && npm install && npm test)"
   },
   "keywords": [
+    "preset",
     "textlint",
-    "preset"
+    "textlintrule"
   ],
   "devDependencies": {
     "markdown-toc": "^0.12.14",
