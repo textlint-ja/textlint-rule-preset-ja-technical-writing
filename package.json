@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "textlint-rule-ja-no-abusage": "^1.1.1",
-    "textlint-rule-ja-no-mixed-period": "^1.0.2",
+    "textlint-rule-ja-no-mixed-period": "^1.0.3",
     "textlint-rule-ja-no-successive-word": "^1.0.1",
     "textlint-rule-ja-no-weak-phrase": "^1.0.2",
     "textlint-rule-max-comma": "^1.0.2",
