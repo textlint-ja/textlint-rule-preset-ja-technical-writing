@@ -8,8 +8,8 @@
 
 合わせて利用することを想定しているfilterルール(例外を明示できる)も参照してください。
 
-- [textlint/textlint-filter-rule-comments: textlint filter rule that disables all rules between comments directive.](https://github.com/textlint/textlint-filter-rule-comments)
-- [textlint/textlint-filter-rule-whitelist: textlint filter rule that filter any word by white list.](https://github.com/textlint/textlint-filter-rule-whitelist)
+- [textlint/textlint-filter-rule-comments](https://github.com/textlint/textlint-filter-rule-comments)
+- [textlint/textlint-filter-rule-whitelist](https://github.com/textlint/textlint-filter-rule-whitelist)
 
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu,
 preset-ja-technical-writing/no-exclamation-question-mark -->
@@ -72,7 +72,7 @@ textlint --preset ja-technical-writing README.md
         "sentence-length": {
             max: 90
         },
-        
+
 ### カンマは1文中に3つまで
 > https://github.com/azu/textlint-rule-max-comma
 
@@ -81,7 +81,7 @@ textlint --preset ja-technical-writing README.md
         "max-comma": {
             max: 3
         },
-        
+
 ### 読点は1文中に3つまで
 > https://github.com/azu/textlint-rule-max-ten
 
@@ -90,7 +90,7 @@ textlint --preset ja-technical-writing README.md
         "max-ten": {
             max: 3
         },
-        
+
 ### 連続できる最大の漢字長は5文字まで
 > https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
@@ -100,7 +100,7 @@ textlint --preset ja-technical-writing README.md
         "max-kanji-continuous-len": {
             max: 5
         },
-        
+
 ### 漢数字と算用数字を使い分けます
 > https://github.com/azu/textlint-rule-preset-JTF-style
 
@@ -137,17 +137,17 @@ textlint --preset ja-technical-writing README.md
         "ja-no-mixed-period": {
             "periodMark": "。"
         },
-        
+
 ### 二重否定は使用しない
 > https://github.com/azu/textlint-rule-no-double-negative-ja
 
         "no-double-negative-ja": true,
-        
+
 ### ら抜き言葉を使用しない
 > https://github.com/azu/textlint-rule-no-dropping-the-ra
 
         "no-dropping-the-ra": true,
-        
+
 
 ### 逆接の接続助詞「が」を連続して使用しない
 > https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
@@ -157,12 +157,12 @@ textlint --preset ja-technical-writing README.md
 同一文中に複数回出現していないかをチェックします。
 
         "no-doubled-conjunctive-particle-ga": true,
-       
+
 ### 同じ接続詞を連続して使用しない
 > https://github.com/takahashim/textlint-rule-no-doubled-conjunction
 
         "no-doubled-conjunction": true,
-        
+
 ### 同じ助詞を連続して使用しない
 > https://github.com/azu/textlint-rule-no-doubled-joshi
 
@@ -177,21 +177,21 @@ textlint --preset ja-technical-writing README.md
 ファイルからコピー＆ペーストした文字である場合があります。
 
         "no-nfd": true,
-        
+
 ### 感嘆符!！、感嘆符?？を使用しない
 > https://github.com/azu/textlint-rule-no-exclamation-question-mark
 
 特定の感嘆符または感嘆符を使用する場合は、オプションで許可して利用してください。
 
         "no-exclamation-question-mark": true,
-        
+
 ### 半角カナを使用しない
 > https://github.com/azu/textlint-rule-no-hankaku-kana
 
 全角カタカナを使用してください。
 
         "no-hankaku-kana": true,
-        
+
 ### 弱い日本語表現の利用を使用しない
 > https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
@@ -199,7 +199,7 @@ textlint --preset ja-technical-writing README.md
 
 
         "ja-no-weak-phrase": true,
-        
+
 ### 同一の単語を間違えて連続しているのをチェックする
 > https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
 
@@ -208,14 +208,14 @@ textlint --preset ja-technical-writing README.md
 誤字でない場合は、[Issue報告](https://github.com/textlint-ja/textlint-rule-ja-no-successive-word/issues/new)してください。
 
         "ja-no-successive-word": true,
-        
+
 ### よくある日本語の誤用をチェックする
 > https://github.com/textlint-ja/textlint-rule-ja-no-abusage
 
 日本語や技術表現における漢字の誤用などをチェックするルールです。
 
         "ja-no-abusage": true
-        
+
 ## Changelog
 
 See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases).
