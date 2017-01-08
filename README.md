@@ -1,6 +1,15 @@
 # textlint-rule-preset-ja-technical-writing [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
 
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
+全体的に少し厳しめの設定がデフォルト値となっているため、文章に合わせて設定値を変更する必要があります。
+
+また、[連続できる最大の漢字長は5文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF5%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)のように文章全体として例外が必ず出てくるルールもデフォルトで入っています。
+`allow`オプションで例外を規定できるようになっているため、例外を明示しつつ利用することを想定しています。
+
+合わせて利用することを想定しているfilterルール(例外を明示できる)も参照してください。
+
+- [textlint/textlint-filter-rule-comments: textlint filter rule that disables all rules between comments directive.](https://github.com/textlint/textlint-filter-rule-comments)
+- [textlint/textlint-filter-rule-whitelist: textlint filter rule that filter any word by white list.](https://github.com/textlint/textlint-filter-rule-whitelist)
 
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu,
 preset-ja-technical-writing/no-exclamation-question-mark -->
@@ -227,6 +236,7 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
 - Major リリース
     - プリセットへのルールの追加
     - プリセットからルールの削除
+    - 既存のオプション値の変更
 
 更新内容は[Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases)を参照してください。
 
