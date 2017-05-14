@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "markdown-toc": "^1.0.2",
-    "mocha": "^3.0.0"
+    "mocha": "^3.4.0"
   },
   "dependencies": {
     "textlint-rule-ja-no-abusage": "^1.1.1",
