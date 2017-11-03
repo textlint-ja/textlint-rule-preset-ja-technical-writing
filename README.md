@@ -60,6 +60,7 @@ textlint --preset ja-technical-writing README.md
   * [弱い日本語表現の利用を使用しない](#%E5%BC%B1%E3%81%84%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%A1%A8%E7%8F%BE%E3%81%AE%E5%88%A9%E7%94%A8%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [同一の単語を間違えて連続しているのをチェックする](#%E5%90%8C%E4%B8%80%E3%81%AE%E5%8D%98%E8%AA%9E%E3%82%92%E9%96%93%E9%81%95%E3%81%88%E3%81%A6%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
   * [よくある日本語の誤用をチェックする](#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%AA%A4%E7%94%A8%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
+  * [冗長な表現をチェックする](#%E5%86%97%E9%95%B7%E3%81%AA%E8%A1%A8%E7%8F%BE%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
 - [Changelog](#changelog)
 - [Semantic Versioning Policy](#semantic-versioning-policy)
 - [Community](#community)
