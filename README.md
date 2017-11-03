@@ -227,7 +227,7 @@ textlint --preset ja-technical-writing README.md
 > https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression
 
 冗長な表現とは、その文から省いても意味が通じるような表現を示しています。
-"することができる"という冗長な表現を"できる"にするといったルールです。
+`"することができる"`という冗長な表現を`"できる"`にするといったルールです。
 
         "ja-no-redundant-expression": true
 
