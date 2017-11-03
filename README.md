@@ -45,7 +45,7 @@ textlint --preset ja-technical-writing README.md
   * [1文の長さは90文字以下とする](#1%E6%96%87%E3%81%AE%E9%95%B7%E3%81%95%E3%81%AF90%E6%96%87%E5%AD%97%E4%BB%A5%E4%B8%8B%E3%81%A8%E3%81%99%E3%82%8B)
   * [カンマは1文中に3つまで](#%E3%82%AB%E3%83%B3%E3%83%9E%E3%81%AF1%E6%96%87%E4%B8%AD%E3%81%AB3%E3%81%A4%E3%81%BE%E3%81%A7)
   * [読点は1文中に3つまで](#%E8%AA%AD%E7%82%B9%E3%81%AF1%E6%96%87%E4%B8%AD%E3%81%AB3%E3%81%A4%E3%81%BE%E3%81%A7)
-  * [連続できる最大の漢字長は5文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF5%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)
+  * [連続できる最大の漢字長は6文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF6%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)
   * [漢数字と算用数字を使い分けます](#%E6%BC%A2%E6%95%B0%E5%AD%97%E3%81%A8%E7%AE%97%E7%94%A8%E6%95%B0%E5%AD%97%E3%82%92%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%81%BE%E3%81%99)
   * [「ですます調」、「である調」を統一します](#%E3%81%A7%E3%81%99%E3%81%BE%E3%81%99%E8%AA%BF%E3%81%A7%E3%81%82%E3%82%8B%E8%AA%BF%E3%82%92%E7%B5%B1%E4%B8%80%E3%81%97%E3%81%BE%E3%81%99)
   * [文末の句点記号として「。」を使います](#%E6%96%87%E6%9C%AB%E3%81%AE%E5%8F%A5%E7%82%B9%E8%A8%98%E5%8F%B7%E3%81%A8%E3%81%97%E3%81%A6%E3%82%92%E4%BD%BF%E3%81%84%E3%81%BE%E3%81%99)
@@ -60,6 +60,13 @@ textlint --preset ja-technical-writing README.md
   * [弱い日本語表現の利用を使用しない](#%E5%BC%B1%E3%81%84%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%A1%A8%E7%8F%BE%E3%81%AE%E5%88%A9%E7%94%A8%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [同一の単語を間違えて連続しているのをチェックする](#%E5%90%8C%E4%B8%80%E3%81%AE%E5%8D%98%E8%AA%9E%E3%82%92%E9%96%93%E9%81%95%E3%81%88%E3%81%A6%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
   * [よくある日本語の誤用をチェックする](#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%AA%A4%E7%94%A8%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
+- [Changelog](#changelog)
+- [Semantic Versioning Policy](#semantic-versioning-policy)
+- [Community](#community)
+- [Running tests](#running-tests)
+- [Contributing](#contributing)
+- [Author](#author)
+- [License](#license)
 
 <!-- tocstop -->
 
@@ -91,14 +98,14 @@ textlint --preset ja-technical-writing README.md
             max: 3
         },
 
-### 連続できる最大の漢字長は5文字まで
+### 連続できる最大の漢字長は6文字まで
 > https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
 漢字同士が連続していると読みにくさにつながります。
 固有名詞は `allow` オプションに記述して回避します。
 
         "max-kanji-continuous-len": {
-            max: 5
+            max: 6
         },
 
 ### 漢数字と算用数字を使い分けます
