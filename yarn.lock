@@ -396,7 +396,7 @@ kuromoji@0.1.1:
     doublearray "0.0.2"
     zlibjs "^0.2.0"
 
-kuromojin@^1.0.2, kuromojin@^1.1.0, kuromojin@^1.2.1, kuromojin@^1.3.1:
+kuromojin@^1.0.2, kuromojin@^1.1.0, kuromojin@^1.2.1, kuromojin@^1.3.1, kuromojin@^1.3.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/kuromojin/-/kuromojin-1.4.0.tgz#2d955746736981e73d02dbfd20eeee8110cddab2"
   dependencies:
@@ -697,6 +697,14 @@ textlint-rule-ja-no-mixed-period@^2.0.0:
   dependencies:
     check-ends-with-period "^1.0.1"
     textlint-rule-helper "^2.0.0"
+
+textlint-rule-ja-no-redundant-expression@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-redundant-expression/-/textlint-rule-ja-no-redundant-expression-1.0.3.tgz#08b4146b99f756d8c0ec56bd3b7111425a3f0d8c"
+  dependencies:
+    kuromojin "^1.3.2"
+    morpheme-match "^1.0.1"
+    morpheme-match-all "^1.1.0"
 
 textlint-rule-ja-no-successive-word@^1.0.1:
   version "1.0.2"
