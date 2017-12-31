@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@textlint/ast-node-types@^3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-3.0.1.tgz#cf35e913aef798f0efac797144e167744a7857e8"
+
 amp-create-callback@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amp-create-callback/-/amp-create-callback-1.0.1.tgz#51bb6f1491545d86e9bf236caff514bbb4578310"
@@ -626,6 +630,14 @@ sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
     concat-stream "^1.5.2"
     structured-source "^3.0.2"
 
+sentence-splitter@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.6.tgz#9e0ade1897f9fadd50feb35e0d9550e580f37aca"
+  dependencies:
+    "@textlint/ast-node-types" "^3.0.0"
+    concat-stream "^1.5.2"
+    structured-source "^3.0.2"
+
 set-getter@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/set-getter/-/set-getter-0.1.0.tgz#d769c182c9d5a51f409145f2fba82e5e86e80376"
@@ -843,11 +855,11 @@ textlint-rule-prh@^5.0.0:
     textlint-rule-helper "^2.0.0"
     untildify "^3.0.2"
 
-textlint-rule-sentence-length@^1.0.7:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-1.1.3.tgz#c8c44e41882d663907f9c1f8b6398d89cabbd6a8"
+textlint-rule-sentence-length@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-2.0.0.tgz#75273298502a8464d7cbd9900121300d9b89e194"
   dependencies:
-    sentence-splitter "^2.0.0"
+    sentence-splitter "^3.0.6"
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^2.1.1"
 
