@@ -1,6 +1,4 @@
-# textlint-rule-preset-ja-technical-writing [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/textlint-ja/textlint-rule-preset-ja-technical-writing.svg)](https://greenkeeper.io/)
+# textlint-rule-preset-ja-technical-writing [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja) [![Greenkeeper badge](https://badges.greenkeeper.io/textlint-ja/textlint-rule-preset-ja-technical-writing.svg)](https://greenkeeper.io/)
 
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
 全体的に少し厳しめの設定がデフォルト値となっているため、文章に合わせて設定値を変更する必要があります。
