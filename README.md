@@ -42,7 +42,7 @@ textlint --preset ja-technical-writing README.md
 
 <!-- toc -->
 
-  * [1文の長さは90文字以下とする](#1%E6%96%87%E3%81%AE%E9%95%B7%E3%81%95%E3%81%AF90%E6%96%87%E5%AD%97%E4%BB%A5%E4%B8%8B%E3%81%A8%E3%81%99%E3%82%8B)
+  * [1文の長さは100文字以下とする](#1%E6%96%87%E3%81%AE%E9%95%B7%E3%81%95%E3%81%AF100%E6%96%87%E5%AD%97%E4%BB%A5%E4%B8%8B%E3%81%A8%E3%81%99%E3%82%8B)
   * [カンマは1文中に3つまで](#%E3%82%AB%E3%83%B3%E3%83%9E%E3%81%AF1%E6%96%87%E4%B8%AD%E3%81%AB3%E3%81%A4%E3%81%BE%E3%81%A7)
   * [読点は1文中に3つまで](#%E8%AA%AD%E7%82%B9%E3%81%AF1%E6%96%87%E4%B8%AD%E3%81%AB3%E3%81%A4%E3%81%BE%E3%81%A7)
   * [連続できる最大の漢字長は6文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF6%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)
@@ -55,6 +55,7 @@ textlint --preset ja-technical-writing README.md
   * [同じ接続詞を連続して使用しない](#%E5%90%8C%E3%81%98%E6%8E%A5%E7%B6%9A%E8%A9%9E%E3%82%92%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [同じ助詞を連続して使用しない](#%E5%90%8C%E3%81%98%E5%8A%A9%E8%A9%9E%E3%82%92%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [UTF8-MAC 濁点を使用しない](#utf8-mac-%E6%BF%81%E7%82%B9%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
+  * [不必要な制御文字を使用しない](#%E4%B8%8D%E5%BF%85%E8%A6%81%E3%81%AA%E5%88%B6%E5%BE%A1%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [感嘆符!！、感嘆符?？を使用しない](#%E6%84%9F%E5%98%86%E7%AC%A6%E6%84%9F%E5%98%86%E7%AC%A6%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [半角カナを使用しない](#%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [弱い日本語表現の利用を使用しない](#%E5%BC%B1%E3%81%84%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%A1%A8%E7%8F%BE%E3%81%AE%E5%88%A9%E7%94%A8%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
@@ -71,15 +72,20 @@ textlint --preset ja-technical-writing README.md
 
 <!-- tocstop -->
 
-### 1文の長さは90文字以下とする
+### 1文の長さは100文字以下とする
 > https://github.com/azu/textlint-rule-sentence-length
 
 長過ぎる文は読みにくさに繋がるため、適切な単位で文を区切ってください。
-
+厳しめの設定にしたい場合は`90`文字を推奨しています。
 
         "sentence-length": {
-            max: 90
+            max: 100
         },
+
+過去の設定の履歴は以下のようになっています。
+
+- バージョン3.0.0+: 100文字以下
+- バージョン2.0.0以下: 90文字以下
 
 ### カンマは1文中に3つまで
 > https://github.com/azu/textlint-rule-max-comma
@@ -211,7 +217,6 @@ textlint --preset ja-technical-writing README.md
 > https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
 `〜かもしれない` 等の弱い表現を使用しない。
-
 
         "ja-no-weak-phrase": true,
 
