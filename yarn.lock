@@ -8,9 +8,9 @@
   dependencies:
     execall "^1.0.0"
 
-"@textlint/ast-node-types@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-3.0.1.tgz#cf35e913aef798f0efac797144e167744a7857e8"
+"@textlint/ast-node-types@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.0.2.tgz#5386a15187798efb48eb71fa1cbf6ca2770b206a"
 
 amp-create-callback@^1.0.0:
   version "1.0.1"
@@ -120,9 +120,9 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-browser-stdout@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/browser-stdout/-/browser-stdout-1.3.0.tgz#f351d32969d32fa5d7a5567154263d928ae3bd1f"
+browser-stdout@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/browser-stdout/-/browser-stdout-1.3.1.tgz#baa559ee14ced73452229bad7326467c61fabd60"
 
 check-ends-with-period@^1.0.1:
   version "1.0.1"
@@ -147,9 +147,9 @@ coffee-script@^1.12.4:
   version "1.12.7"
   resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.7.tgz#c05dae0cb79591d05b3070a8433a98c9a89ccc53"
 
-commander@2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
+commander@2.15.1:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
 commandpost@^1.0.1, commandpost@^1.2.1:
   version "1.2.1"
@@ -188,9 +188,9 @@ diacritics-map@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/diacritics-map/-/diacritics-map-0.1.0.tgz#6dfc0ff9d01000a2edf2865371cac316e94977af"
 
-diff@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.3.1.tgz#aa8567a6eed03c531fc89d3f711cd0e5259dec75"
+diff@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
 diff@^3.3.0:
   version "3.4.0"
@@ -207,6 +207,16 @@ emoji-regex@^6.4.1:
 end-with@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/end-with/-/end-with-1.0.2.tgz#a432755ab4f51e7fc74f3a719c6b81df5d668bdc"
+
+es-abstract@^1.6.1:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.12.0.tgz#9dbbdd27c6856f0001421ca18782d786bf8a6165"
+  dependencies:
+    es-to-primitive "^1.1.1"
+    function-bind "^1.1.1"
+    has "^1.0.1"
+    is-callable "^1.1.3"
+    is-regex "^1.0.4"
 
 es-abstract@^1.7.0:
   version "1.9.0"
@@ -303,13 +313,13 @@ gray-matter@^2.1.0:
     js-yaml "^3.8.1"
     toml "^2.3.2"
 
-growl@1.10.3:
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/growl/-/growl-1.10.3.tgz#1926ba90cf3edfe2adb4927f5880bc22c66c790f"
+growl@1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/growl/-/growl-1.10.5.tgz#f2735dc2283674fa67478b10181059355c369e5e"
 
-has-flag@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
+has-flag@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
 
 has@^1.0.1:
   version "1.0.1"
@@ -479,7 +489,7 @@ match-index@^1.0.1:
   dependencies:
     regexp.prototype.flags "^1.1.1"
 
-minimatch@^3.0.4:
+minimatch@3.0.4, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   dependencies:
@@ -506,20 +516,21 @@ mkdirp@0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.0.0.tgz#cccac988b0bc5477119cba0e43de7af6d6ad8f4e"
+mocha@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.2.0.tgz#6d8ae508f59167f940f2b5b3c4a612ae50c90ae6"
   dependencies:
-    browser-stdout "1.3.0"
-    commander "2.11.0"
+    browser-stdout "1.3.1"
+    commander "2.15.1"
     debug "3.1.0"
-    diff "3.3.1"
+    diff "3.5.0"
     escape-string-regexp "1.0.5"
     glob "7.1.2"
-    growl "1.10.3"
+    growl "1.10.5"
     he "1.1.1"
+    minimatch "3.0.4"
     mkdirp "0.5.1"
-    supports-color "4.4.0"
+    supports-color "5.4.0"
 
 moji@^0.5.1:
   version "0.5.1"
@@ -566,6 +577,15 @@ object.pick@^1.2.0:
   resolved "https://registry.yarnpkg.com/object.pick/-/object.pick-1.3.0.tgz#87a10ac4c1694bd2e1cbf53591a66141fb5dd747"
   dependencies:
     isobject "^3.0.1"
+
+object.values@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/object.values/-/object.values-1.0.4.tgz#e524da09b4f66ff05df457546ec72ac99f13069a"
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.6.1"
+    function-bind "^1.1.0"
+    has "^1.0.1"
 
 once@^1.3.0:
   version "1.4.0"
@@ -657,12 +677,13 @@ sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
     concat-stream "^1.5.2"
     structured-source "^3.0.2"
 
-sentence-splitter@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.6.tgz#9e0ade1897f9fadd50feb35e0d9550e580f37aca"
+sentence-splitter@^3.0.10:
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.10.tgz#9883d46be71cd6c6d826490133651fe2f151219d"
   dependencies:
-    "@textlint/ast-node-types" "^3.0.0"
+    "@textlint/ast-node-types" "^4.0.2"
     concat-stream "^1.5.2"
+    object.values "^1.0.4"
     structured-source "^3.0.2"
 
 set-getter@^0.1.0:
@@ -704,11 +725,11 @@ structured-source@^3.0.2:
   dependencies:
     boundary "^1.0.1"
 
-supports-color@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.4.0.tgz#883f7ddabc165142b2a61427f3352ded195d1a3e"
+supports-color@5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
-    has-flag "^2.0.0"
+    has-flag "^3.0.0"
 
 textlint-rule-helper@^1.1.4, textlint-rule-helper@^1.1.5:
   version "1.2.0"
@@ -852,9 +873,9 @@ textlint-rule-no-nfd@^1.0.1:
     textlint-rule-helper "^1.1.5"
     unorm "^1.4.1"
 
-textlint-rule-preset-jtf-style@^2.2.1:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.0.tgz#b21041afa47c277a406b72a01d4d45fd5ce26fc7"
+textlint-rule-preset-jtf-style@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.1.tgz#5f2aece16b1d1296032d0d57cc2f8d8f3362318c"
   dependencies:
     analyze-desumasu-dearu "^2.1.2"
     japanese-numerals-to-number "^1.0.2"
@@ -882,11 +903,11 @@ textlint-rule-prh@^5.0.0:
     textlint-rule-helper "^2.0.0"
     untildify "^3.0.2"
 
-textlint-rule-sentence-length@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-2.0.0.tgz#75273298502a8464d7cbd9900121300d9b89e194"
+textlint-rule-sentence-length@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-2.1.1.tgz#a348d784b9a4b7be6929204a15cb4508755b99a3"
   dependencies:
-    sentence-splitter "^3.0.6"
+    sentence-splitter "^3.0.10"
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^2.1.1"
 
