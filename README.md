@@ -64,6 +64,7 @@ textlint --preset ja-technical-writing README.md
   * [冗長な表現をチェックする](#%E5%86%97%E9%95%B7%E3%81%AA%E8%A1%A8%E7%8F%BE%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
 - [Changelog](#changelog)
 - [Semantic Versioning Policy](#semantic-versioning-policy)
+- [ルールの利用者](#%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%A9%E7%94%A8%E8%80%85)
 - [Community](#community)
 - [Running tests](#running-tests)
 - [Contributing](#contributing)
@@ -267,6 +268,14 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
     - 既存のオプション値の変更
 
 更新内容は[Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases)を参照してください。
+
+## ルールの利用者
+
+このプリセットを利用しているユーザーです。
+
+- [asciidwango/js-primer](https://github.com/asciidwango/js-primer)
+
+ユーザーリストへのPRも募集しています。
 
 ## Community
 
