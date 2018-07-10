@@ -34,6 +34,7 @@
     "mocha": "^5.0.0"
   },
   "dependencies": {
+    "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.0.1",
     "textlint-rule-ja-no-abusage": "^1.1.1",
     "textlint-rule-ja-no-mixed-period": "^2.0.0",
     "textlint-rule-ja-no-redundant-expression": "^2.0.0",

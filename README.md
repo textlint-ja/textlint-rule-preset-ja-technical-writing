@@ -186,6 +186,13 @@ textlint --preset ja-technical-writing README.md
 
         "no-nfd": true,
 
+###  不必要な制御文字を使用しない
+> https://github.com/textlint-rule/textlint-rule-no-invalid-control-character
+
+改行(`\n`)やタブ(`\t`)以外の一般的な文章にはでてこない不自然な制御文字が入るのを防止します。
+
+        "no-invalid-control-character": true,
+
 ### 感嘆符!！、感嘆符?？を使用しない
 > https://github.com/azu/textlint-rule-no-exclamation-question-mark
 
