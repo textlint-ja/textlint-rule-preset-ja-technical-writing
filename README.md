@@ -274,6 +274,7 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
 このプリセットを利用しているユーザーです。
 
 - [asciidwango/js-primer](https://github.com/asciidwango/js-primer)
+- [Maven3のはじめかた](https://github.com/KengoTODA/what-is-maven)
 
 ユーザーリストへのPRも募集しています。
 
