@@ -2,9 +2,10 @@
 # yarn lockfile v1
 
 
-"@textlint-rule/textlint-rule-no-invalid-control-character@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.1.0.tgz#18ff44d61a9978b399c7906bfea4f8cc72541faf"
+"@textlint-rule/textlint-rule-no-invalid-control-character@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.2.0.tgz#3e8f03258d06b7deb2592bdb13626659c46abbf5"
+  integrity sha512-FgkOQr14H8D/LQVAEOR2cGWhzItb9MXCAvaBwKkysIfP9Ngwam+8NRmbphQ/GrAm3PXV63QmK1xwAKM1DntwmQ==
   dependencies:
     execall "^1.0.0"
 
@@ -1083,9 +1084,10 @@ mkdirp@0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-6.0.0.tgz#b558da6245a09581aa4a1c6aee9e0fa6ad0e1767"
+mocha@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/mocha/-/mocha-6.0.1.tgz#c287da87913fa0edc4c44850ba8bc4fdbf20d3ea"
+  integrity sha512-tQzCxWqxSD6Oyg5r7Ptbev0yAMD8p+Vfh4snPFuiUsWqYj0eVYTDT2DkEY307FTj0WRlIWN9rWMMAUzRmijgVQ==
   dependencies:
     ansi-colors "3.2.3"
     browser-stdout "1.3.1"
@@ -1634,17 +1636,19 @@ textlint-rule-helper@^2.0.0:
   dependencies:
     unist-util-visit "^1.1.0"
 
-textlint-rule-ja-no-abusage@^1.1.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-1.2.1.tgz#4faad660b0abe1fc05e87528f804cf22b7c73a78"
+textlint-rule-ja-no-abusage@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-1.2.2.tgz#6478a150d4dcea4e95bb88a2af92a2fcace1c5f0"
+  integrity sha512-lDRvfOCh41h0DnenGgfjstBNBh7EZP37r/q/24DP1PKWvVytOtiIxN048KEfm4sXjJZ/eSZOrZrfHqFm1uaiCw==
   dependencies:
     kuromojin "^1.3.1"
     morpheme-match "^1.0.1"
     textlint-rule-prh "^3.1.1"
 
-textlint-rule-ja-no-mixed-period@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-mixed-period/-/textlint-rule-ja-no-mixed-period-2.0.0.tgz#240dd04536327eff5e12b3e9d0be69f5ad10a851"
+textlint-rule-ja-no-mixed-period@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/textlint-rule-ja-no-mixed-period/-/textlint-rule-ja-no-mixed-period-2.1.1.tgz#6c63446de0bab9870041f38b1a339d54328f4c60"
+  integrity sha512-yCfRva4pl2Sa6Xsxhzkec9rGuqP4MBlGrQ7ZQIM9On9dMaeIVabcwniMbLfO1CzUBBe9xUaCF/8eE0zOi8g4/A==
   dependencies:
     check-ends-with-period "^1.0.1"
     textlint-rule-helper "^2.0.0"
@@ -1709,9 +1713,10 @@ textlint-rule-no-doubled-conjunction@^1.0.2:
     textlint-rule-helper "^1.1.5"
     textlint-util-to-string "^1.2.0"
 
-textlint-rule-no-doubled-conjunctive-particle-ga@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-1.0.2.tgz#b9cb679555aea2ab0d4ffcfa4dd2ffab71bf0057"
+textlint-rule-no-doubled-conjunctive-particle-ga@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-1.1.0.tgz#f43717a670ca94d5a7de94efb85b862075436f23"
+  integrity sha512-5uTZEw0S1j27DJ2vxdSqmqekZGuzOz2c8axtjJR1XiLc/miB8f7Rz3S16Mq+M2W06wcJTdoM87ix5XWa+4oe8A==
   dependencies:
     kuromojin "^1.1.0"
     sentence-splitter "^1.2.0"
@@ -1764,9 +1769,10 @@ textlint-rule-no-nfd@^1.0.1:
     textlint-rule-helper "^1.1.5"
     unorm "^1.4.1"
 
-textlint-rule-preset-jtf-style@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.1.tgz#5f2aece16b1d1296032d0d57cc2f8d8f3362318c"
+textlint-rule-preset-jtf-style@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.npmjs.org/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.3.tgz#5128d96f4edb566c8940e09ddcf3ce4803d133c4"
+  integrity sha512-wSBz4yqCcbKSAhlW7rhCCCPpCULTq2tT3lhyY3Q43cL+qsNx6U1UjngmQqLWkVBXVw2awQxkdeqORW7r+n4Qdg==
   dependencies:
     analyze-desumasu-dearu "^2.1.2"
     japanese-numerals-to-number "^1.0.2"
