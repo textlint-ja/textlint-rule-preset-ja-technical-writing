@@ -38,7 +38,7 @@
     "interop-require": "^1.0.0",
     "textlint-rule-ja-no-abusage": "^1.2.2",
     "textlint-rule-ja-no-mixed-period": "^2.1.1",
-    "textlint-rule-ja-no-redundant-expression": "^2.0.0",
+    "textlint-rule-ja-no-redundant-expression": "^3.0.0",
     "textlint-rule-ja-no-successive-word": "^1.1.0",
     "textlint-rule-ja-no-weak-phrase": "^1.0.2",
     "textlint-rule-max-comma": "^1.0.2",
