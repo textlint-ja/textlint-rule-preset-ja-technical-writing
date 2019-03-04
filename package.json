@@ -41,6 +41,7 @@
     "textlint-rule-ja-no-redundant-expression": "^3.0.1",
     "textlint-rule-ja-no-successive-word": "^1.1.0",
     "textlint-rule-ja-no-weak-phrase": "^1.0.2",
+    "textlint-rule-ja-unnatural-alphabet": "2.0.1",
     "textlint-rule-max-comma": "^1.0.2",
     "textlint-rule-max-kanji-continuous-len": "^1.1.0",
     "textlint-rule-max-ten": "^2.0.1",
