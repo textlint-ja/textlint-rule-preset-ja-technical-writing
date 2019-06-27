@@ -1426,9 +1426,10 @@ textlint-rule-no-doubled-joshi@^3.5.1:
     textlint-rule-helper "^1.1.4"
     textlint-util-to-string "^1.1.0"
 
-textlint-rule-no-dropping-the-ra@^1.0.3:
+textlint-rule-no-dropping-the-ra@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/textlint-rule-no-dropping-the-ra/-/textlint-rule-no-dropping-the-ra-1.1.2.tgz#17d8c65986d7bd8014a4529303a2ba0b769a89d2"
+  integrity sha1-F9jGWYbXvYAUpFKTA6K6C3aaidI=
   dependencies:
     kuromojin "^1.2.1"
     textlint-rule-helper "^1.1.4"
