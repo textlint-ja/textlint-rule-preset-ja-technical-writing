@@ -1416,9 +1416,10 @@ textlint-rule-no-doubled-conjunctive-particle-ga@^1.1.0:
     textlint-rule-helper "^1.1.5"
     textlint-util-to-string "^1.2.0"
 
-textlint-rule-no-doubled-joshi@^3.3.0:
+textlint-rule-no-doubled-joshi@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-joshi/-/textlint-rule-no-doubled-joshi-3.5.1.tgz#759c6c5def8075f849d9a4df551c2d2a0815ba2f"
+  integrity sha1-dZxsXe+AdfhJ2aTfVRwtKggVui8=
   dependencies:
     kuromojin "^1.2.1"
     sentence-splitter "^2.2.0"
