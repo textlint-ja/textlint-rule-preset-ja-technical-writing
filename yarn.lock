@@ -1241,7 +1241,7 @@ sentence-splitter@^1.2.0:
   dependencies:
     structured-source "^3.0.2"
 
-sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
+sentence-splitter@^2.0.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-2.3.2.tgz#5ad33cd0e6ae171d58c88f6bfef16a9ed04f3a79"
   integrity sha512-QnpHNykm4nI4T6mT+NoVayh9Ixl5DohYCSVqMgPJsO2WejOcqaYTh4HQOkmzaDzXH3NO5pif4z/hpo2NGtgNlg==
@@ -1249,7 +1249,7 @@ sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
     concat-stream "^1.5.2"
     structured-source "^3.0.2"
 
-sentence-splitter@^3.0.10:
+sentence-splitter@^3.0.10, sentence-splitter@^3.0.11:
   version "3.0.11"
   resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.11.tgz#82d98f0fd7a392e0e6c49b0730ae7b880bfde0b2"
   integrity sha512-8k/74ErjpdvgBVLQ7kI7jbbaqNdgMXVqMF8gWlJan25xfm1mg8cYmHQgMb+zx8xyocm1Dq46af4TpmnKWHr/yA==
@@ -1522,15 +1522,15 @@ textlint-rule-no-doubled-conjunctive-particle-ga@^1.1.0:
     textlint-rule-helper "^1.1.5"
     textlint-util-to-string "^1.2.0"
 
-textlint-rule-no-doubled-joshi@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-joshi/-/textlint-rule-no-doubled-joshi-3.5.1.tgz#759c6c5def8075f849d9a4df551c2d2a0815ba2f"
-  integrity sha1-dZxsXe+AdfhJ2aTfVRwtKggVui8=
+textlint-rule-no-doubled-joshi@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-joshi/-/textlint-rule-no-doubled-joshi-3.5.2.tgz#d37deeca04ccc0265100c2163a85de5dd5b28462"
+  integrity sha512-w9Cnr3mQhGgEO1iKH+JS+kOoBw061xkHln+KaJESenivcCOJrvbvvouJdXsQA2oq20ZWQeSk1U6sfZGQnTszKA==
   dependencies:
     kuromojin "^1.2.1"
-    sentence-splitter "^2.2.0"
-    textlint-rule-helper "^1.1.4"
-    textlint-util-to-string "^1.1.0"
+    sentence-splitter "^3.0.11"
+    textlint-rule-helper "^2.1.1"
+    textlint-util-to-string "^2.1.1"
 
 textlint-rule-no-dropping-the-ra@^1.1.2:
   version "1.1.2"
@@ -1616,7 +1616,7 @@ textlint-rule-sentence-length@^2.1.1:
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^2.1.1"
 
-textlint-util-to-string@^1.1.0, textlint-util-to-string@^1.2.0:
+textlint-util-to-string@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/textlint-util-to-string/-/textlint-util-to-string-1.2.1.tgz#1cf89956d27555a55e9588c06b35a50f0d1d46f9"
   integrity sha1-HPiZVtJ1VaVelYjAazWlDw0dRvk=
