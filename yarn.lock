@@ -9,10 +9,10 @@
   dependencies:
     execall "^1.0.0"
 
-"@textlint/ast-node-types@^4.0.2", "@textlint/ast-node-types@^4.2.1", "@textlint/ast-node-types@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.2.tgz#5042d0b3b16f18b9f2d16b96e6ee5356e6f3d37d"
-  integrity sha512-5VHykhxgUat7dvRWGw52Tk55SWjuZDpDO7PKDhfcLTFrD1cjbTtFFnWeJc0BfoqB2AUjfHXRoMdnqbFRGmnPVQ==
+"@textlint/ast-node-types@^4.0.2", "@textlint/ast-node-types@^4.2.1", "@textlint/ast-node-types@^4.2.3":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.3.tgz#2fc57a14600ac4dc5136dc7fb9793ac064bbd864"
+  integrity sha512-5zqbMpeWk1B3AUkAmI5d3Y6CWqQNXeLKbdOGkwkvM0NSvhnlpAVooJ348lyfk8AwEQwzRVtAacQVXmIhdCwLGA==
 
 "@textlint/regexp-string-matcher@^1.0.2":
   version "1.0.2"
@@ -27,12 +27,11 @@
     to-regex "^3.0.2"
 
 "@textlint/types@^1.1.2":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.1.5.tgz#2834cd625f71ca2a6d7b0540dcc67ba5dbe34ac5"
-  integrity sha512-z9PqRrk9EEgSP3F83YV9A/yAYMbfubf3D85QwN/EUm3gtg0XuALqt9aHywuFcgVnvEJCUbhwz4xV51oqq5unYw==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.2.0.tgz#4850e8438f220523603d3891ca80f866a56f0226"
+  integrity sha512-fHnzTVfjPrbr8ycUOGxp0bfosHOvA79PpZGraUBy9s3njNuf8V2zp864YSLikGeOkMe1Gql6vALTKIFjq9ZDDQ==
   dependencies:
-    "@textlint/ast-node-types" "^4.2.2"
-    structured-source "^3.0.2"
+    "@textlint/ast-node-types" "^4.2.3"
 
 amp-create-callback@^1.0.0:
   version "1.0.1"
@@ -810,9 +809,9 @@ lodash.uniqwith@^4.5.0:
   integrity sha1-egy/ZfQ7WShiWp1NDcVLGMrcfvM=
 
 lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
 log-symbols@2.2.0:
   version "2.2.0"
@@ -852,9 +851,9 @@ markdown-toc@^1.2.0:
     strip-color "^0.1.0"
 
 match-index@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/match-index/-/match-index-1.0.1.tgz#b4b673e99ab3ac5a6af303ccf4db709812bc3f58"
-  integrity sha1-tLZz6ZqzrFpq8wPM9NtwmBK8P1g=
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/match-index/-/match-index-1.0.3.tgz#752ec60c6586ea5dd440d5e62cfbff25838c071a"
+  integrity sha512-1XjyBWqCvEFFUDW/MPv0RwbITRD4xQXOvKoPYtLDq8IdZTfdF/cQSo5Yn4qvhfSSZgjgkTFsqJD2wOUG4ovV8Q==
   dependencies:
     regexp.prototype.flags "^1.1.1"
 
