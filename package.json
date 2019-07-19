@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "markdown-toc": "^1.2.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0"
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
