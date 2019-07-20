@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
-    "interop-require": "^1.0.0",
-    "textlint-rule-ja-no-abusage": "^1.2.2",
+    "@textlint/module-interop": "^1.0.1",
+    "textlint-rule-ja-no-abusage": "^2.0.0",
     "textlint-rule-ja-no-mixed-period": "^2.1.1",
     "textlint-rule-ja-no-redundant-expression": "^3.0.1",
     "textlint-rule-ja-no-successive-word": "^1.1.0",
