@@ -69,6 +69,7 @@ textlint --preset ja-technical-writing README.md
   * [よくある日本語の誤用をチェックする](#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E8%AA%A4%E7%94%A8%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
   * [冗長な表現をチェックする](#%E5%86%97%E9%95%B7%E3%81%AA%E8%A1%A8%E7%8F%BE%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
   * [入力ミスで発生する不自然なアルファベットをチェックする](#%E5%85%A5%E5%8A%9B%E3%83%9F%E3%82%B9%E3%81%A7%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B%E4%B8%8D%E8%87%AA%E7%84%B6%E3%81%AA%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%99%E3%83%83%E3%83%88%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
+  * [対になっていない括弧をチェックする](#%E5%AF%BE%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%8B%AC%E5%BC%A7%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
 - [Changelog](#changelog)
 - [Semantic Versioning Policy](#semantic-versioning-policy)
 - [ルールの利用者](#%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%A9%E7%94%A8%E8%80%85)
@@ -255,7 +256,17 @@ textlint --preset ja-technical-writing README.md
 ### 入力ミスで発生する不自然なアルファベットをチェックする
 > https://github.com/textlint-ja/textlint-rule-ja-unnatural-alphabet
 
+`リイr−ス` などIMEの入力ミスが日本語中に混じった不自然なアルファベットをチェックします。
+
         "ja-unnatural-alphabet": true
+
+### 対になっていない括弧をチェックする
+> https://github.com/textlint-rule/textlint-rule-no-unmatched-pair
+
+1文中に`(`に対応する`)`がない場合などの括弧の対応関係をチェックします。
+
+        "no-unmatched-pair": true
+
 
 ## Changelog
 
