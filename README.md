@@ -263,7 +263,7 @@ textlint --preset ja-technical-writing README.md
 ### 対になっていない括弧をチェックする
 > https://github.com/textlint-rule/textlint-rule-no-unmatched-pair
 
-1文中に`(`に対応する`)`がない場合などの括弧の対応関係をチェックします。
+1文中で`(`に対応する`)`がない場合などの括弧の対応関係をチェックします。
 
         "no-unmatched-pair": true
 
