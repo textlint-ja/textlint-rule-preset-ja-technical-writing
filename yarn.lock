@@ -14,6 +14,11 @@
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.3.tgz#2fc57a14600ac4dc5136dc7fb9793ac064bbd864"
   integrity sha512-5zqbMpeWk1B3AUkAmI5d3Y6CWqQNXeLKbdOGkwkvM0NSvhnlpAVooJ348lyfk8AwEQwzRVtAacQVXmIhdCwLGA==
 
+"@textlint/module-interop@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-1.0.1.tgz#765ca9ccb9b66657d65061d3546b3fe51e48c983"
+  integrity sha512-gqx1Te+lMnXX6xyGTUdzGhm8RT7IfiSRMtWoH1FeTMg2InArRT+lTksCFc/x5dtaPN4vwOFZUvU8oTzYQzXbyg==
+
 "@textlint/regexp-string-matcher@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@textlint/regexp-string-matcher/-/regexp-string-matcher-1.0.2.tgz#af2f04023d1481e1e6144f8ef22788811b93e542"
@@ -270,7 +275,7 @@ color-name@1.1.3:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-commandpost@^1.0.1, commandpost@^1.2.1:
+commandpost@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/commandpost/-/commandpost-1.4.0.tgz#89218012089dfc9b67a337ba162f15c88e0f1048"
   integrity sha512-aE2Y4MTFJ870NuB/+2z1cXBhSBBzRydVVjzhFC4gtenEhpnj15yu0qptWGJsO9YGrcPZ3ezX8AWb1VA391MKpQ==
@@ -568,11 +573,6 @@ inherits@2, inherits@^2.0.3, inherits@~2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-interop-require@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/interop-require/-/interop-require-1.0.0.tgz#e53103679944c88d7e6105b62a9f4475c783971e"
-  integrity sha1-5TEDZ5lEyI1+YQW2Kp9EdceDlx4=
-
 invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
@@ -725,7 +725,7 @@ joyo-kanji@^0.2.1:
   resolved "https://registry.yarnpkg.com/joyo-kanji/-/joyo-kanji-0.2.1.tgz#5e2e8ea2b903ba9333f1680c66902fc9682ea592"
   integrity sha1-Xi6OorkDupMz8WgMZpAvyWgupZI=
 
-js-yaml@3.13.1, js-yaml@^3.6.1, js-yaml@^3.8.1, js-yaml@^3.9.1:
+js-yaml@3.13.1, js-yaml@^3.8.1, js-yaml@^3.9.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -951,10 +951,30 @@ morpheme-match-all@^1.1.0, morpheme-match-all@^1.2.0:
   dependencies:
     morpheme-match "^1.2.1"
 
+morpheme-match-all@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/morpheme-match-all/-/morpheme-match-all-2.0.1.tgz#b520262f9026a51ec102687bb36bcf07284e54c4"
+  integrity sha512-KrVokpD3Fj5g8UfU8uqFERNaJJFwEikRRZY1BAUjGtbNe7RYMxc+MzwcWxL9kcJKigU0Qan9m1jAbRUhXVPhqw==
+  dependencies:
+    morpheme-match "^2.0.0"
+
+morpheme-match-textlint@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/morpheme-match-textlint/-/morpheme-match-textlint-2.0.3.tgz#8740848bc6b0b04695dc985a61ece346bd1ac7b4"
+  integrity sha512-OCz4/PsQzOrZO5JDLF/IIynvArhnSfCr4jHiTXhy0Gsz3yGtYHUbaZZFFoqCBD66+EbCUeMYK4E8CkMhgJ3+Dw==
+  dependencies:
+    morpheme-match "^2.0.0"
+    morpheme-match-all "^2.0.1"
+
 morpheme-match@^1.0.1, morpheme-match@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/morpheme-match/-/morpheme-match-1.2.1.tgz#783cdcf9feb0e8e7da7e794a8a38f6d711796aa0"
   integrity sha512-SSIcFPas4Dctx5PbrfKbW5XNADlkcn38LI+fqgB9QtminQ7FXeOR3//rnAmooZ1/5zTGeFoi8H9kFBAH9y1nfQ==
+
+morpheme-match@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/morpheme-match/-/morpheme-match-2.0.0.tgz#d95916683e119d916335ffe54e79dfb0b2ceee6a"
+  integrity sha512-6k8vkOliZVX4p3Ufknnlv+QshCRdkxc72b7MVq3Zo8l5dBVLuvM7L7VPnaQJwsWntI3xLLDzDLy84YMHrl35Qw==
 
 ms@2.1.1:
   version "2.1.1"
@@ -1105,14 +1125,6 @@ path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
-
-prh@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/prh/-/prh-1.1.0.tgz#1c22b2a1998daaa7445865e5c86fb30e5b8ebb33"
-  integrity sha1-HCKyoZmNqqdEWGXlyG+zDluOuzM=
-  dependencies:
-    commandpost "^1.0.1"
-    js-yaml "^3.6.1"
 
 prh@^5.4.3:
   version "5.4.3"
@@ -1414,14 +1426,14 @@ textlint-rule-helper@^2.0.0, textlint-rule-helper@^2.1.1:
     structured-source "^3.0.2"
     unist-util-visit "^1.1.0"
 
-textlint-rule-ja-no-abusage@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-1.2.2.tgz#6478a150d4dcea4e95bb88a2af92a2fcace1c5f0"
-  integrity sha512-lDRvfOCh41h0DnenGgfjstBNBh7EZP37r/q/24DP1PKWvVytOtiIxN048KEfm4sXjJZ/eSZOrZrfHqFm1uaiCw==
+textlint-rule-ja-no-abusage@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-2.0.0.tgz#b3f978258be128abf3d42ed4f694ea7fccc8cfed"
+  integrity sha512-CIqD6+0MZnQtv3VEHwFcSveBVowzIiqNxWFAVLYlwDiOx3NkOornOnYUPwerxF8NK2wiqdgrhdAfjTtjdtRQGQ==
   dependencies:
     kuromojin "^1.3.1"
-    morpheme-match "^1.0.1"
-    textlint-rule-prh "^3.1.1"
+    morpheme-match-textlint "^2.0.0"
+    textlint-rule-prh "^5.2.1"
 
 textlint-rule-ja-no-mixed-period@^2.1.1:
   version "2.1.1"
@@ -1588,16 +1600,7 @@ textlint-rule-preset-jtf-style@^2.3.3:
     textlint-rule-helper "^2.0.0"
     textlint-rule-prh "^5.0.0"
 
-textlint-rule-prh@^3.1.1:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/textlint-rule-prh/-/textlint-rule-prh-3.1.3.tgz#0bd87537dd15c884dcffdeef0afcf9147cb30fc6"
-  integrity sha1-C9h1N90VyITc/97vCvz5FHyzD8Y=
-  dependencies:
-    prh "^1.0.1"
-    textlint-rule-helper "^2.0.0"
-    untildify "^3.0.2"
-
-textlint-rule-prh@^5.0.0:
+textlint-rule-prh@^5.0.0, textlint-rule-prh@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/textlint-rule-prh/-/textlint-rule-prh-5.2.1.tgz#dcbb3ee674a9c63e7ba71f73b31d675571b874fc"
   integrity sha512-RlVQRok7GnmuuCrNRSYbFqcpzJkH1g6OrVVrGE+S9drT1TzgsSSM8NkAQlP6kFnQ7fN4V7g4j6JBg0N3ArBpCg==
@@ -1705,7 +1708,7 @@ unorm@^1.4.1:
   resolved "https://registry.yarnpkg.com/unorm/-/unorm-1.6.0.tgz#029b289661fba714f1a9af439eb51d9b16c205af"
   integrity sha512-b2/KCUlYZUeA7JFUuRJZPUtr4gZvBh7tavtv4fvk4+KV9pfGiR6CQAQAWl49ZpR3ts2dk4FYkP7EIgDJoiOLDA==
 
-untildify@^3.0.2, untildify@^3.0.3:
+untildify@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.3.tgz#1e7b42b140bcfd922b22e70ca1265bfe3634c7c9"
   integrity sha512-iSk/J8efr8uPT/Z4eSUywnqyrQU7DSdMfdqK4iWEaUVVmcP5JcnpRqmVMwcwcnmI1ATFNgC5V90u09tBynNFKA==
