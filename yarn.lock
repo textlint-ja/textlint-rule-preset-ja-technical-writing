@@ -1158,6 +1158,13 @@ kuromojin@^1.0.2, kuromojin@^1.1.0, kuromojin@^1.2.1, kuromojin@^1.3.1, kuromoji
   dependencies:
     kuromoji "0.1.1"
 
+kuromojin@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/kuromojin/-/kuromojin-2.0.0.tgz#23e74a5ed2578432c9703ae75a69ba0a09ccb12d"
+  integrity sha512-60j/yLkFSc4t4roj8tI8ZNNSiAFnrkgXw8SqXz/9nakfs6mkCvPbrd7S8LDr4YNwEt1IyLys5JQTR9EnYyGHhA==
+  dependencies:
+    kuromoji "0.1.1"
+
 lazy-cache@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-2.0.2.tgz#b9190a4f913354694840859f8a8f7084d8822264"
@@ -1418,7 +1425,7 @@ morpheme-match-all@^2.0.1:
   dependencies:
     morpheme-match "^2.0.0"
 
-morpheme-match-textlint@^2.0.0:
+morpheme-match-textlint@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/morpheme-match-textlint/-/morpheme-match-textlint-2.0.3.tgz#8740848bc6b0b04695dc985a61ece346bd1ac7b4"
   integrity sha512-OCz4/PsQzOrZO5JDLF/IIynvArhnSfCr4jHiTXhy0Gsz3yGtYHUbaZZFFoqCBD66+EbCUeMYK4E8CkMhgJ3+Dw==
@@ -2190,13 +2197,13 @@ textlint-rule-helper@^2.0.0, textlint-rule-helper@^2.1.1:
     structured-source "^3.0.2"
     unist-util-visit "^1.1.0"
 
-textlint-rule-ja-no-abusage@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-2.0.0.tgz#b3f978258be128abf3d42ed4f694ea7fccc8cfed"
-  integrity sha512-CIqD6+0MZnQtv3VEHwFcSveBVowzIiqNxWFAVLYlwDiOx3NkOornOnYUPwerxF8NK2wiqdgrhdAfjTtjdtRQGQ==
+textlint-rule-ja-no-abusage@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-2.0.1.tgz#cd07bea78a2dec65b4128f8d49e104d44f9084d9"
+  integrity sha512-HUAi0vpjoE+8Jl0OzuhgqYlPzGbHjNr7sQuEFQWmrKUF7LdKTdP0dDcmcJ5rbKKLXZ4eV+6Tf2VfWfQrlIRkGg==
   dependencies:
-    kuromojin "^1.3.1"
-    morpheme-match-textlint "^2.0.0"
+    kuromojin "^2.0.0"
+    morpheme-match-textlint "^2.0.3"
     textlint-rule-prh "^5.2.1"
 
 textlint-rule-ja-no-mixed-period@^2.1.1:
