@@ -5,7 +5,7 @@
     "test": "npm run textlint"
   },
   "devDependencies": {
-    "textlint": "^11.3.1",
+    "textlint": "^11.4.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "file:../"
   }
