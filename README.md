@@ -292,6 +292,13 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
 
 更新内容は[Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/releases)を参照してください。
 
+### Release Flow
+
+- 次のMajorバージョンのIssueを作り、IssueにCHANGELOGを書いていく
+- Pull Requestはrenovatebotから出るのでマージする
+- 半年ごとに`@shipjs prepare`が実行されて、メジャーアップデートのPRがでる
+- リリースされたらIssueをクローズする
+
 ## ルールの利用者
 
 このプリセットを利用しているユーザーです。
