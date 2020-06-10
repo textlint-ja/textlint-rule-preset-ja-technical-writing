@@ -23,7 +23,9 @@
   },
   "scripts": {
     "docs:toc": "markdown-toc -i README.md",
-    "test": "mocha test/ && (cd example && npm install && npm test)"
+    "test": "mocha test/ && (cd example && npm install && npm test)",
+    "release:prepare": "shipjs prepare",
+    "release:trigger": "shipjs trigger"
   },
   "keywords": [
     "textlint",
@@ -31,7 +33,7 @@
   ],
   "devDependencies": {
     "markdown-toc": "^1.2.0",
-    "mocha": "^6.2.3"
+    "mocha": "^6.2.1"
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
@@ -49,13 +51,13 @@
     "textlint-rule-no-double-negative-ja": "^1.0.5",
     "textlint-rule-no-doubled-conjunction": "^1.0.2",
     "textlint-rule-no-doubled-conjunctive-particle-ga": "^1.1.0",
-    "textlint-rule-no-doubled-joshi": "^3.7.2",
+    "textlint-rule-no-doubled-joshi": "^3.5.2",
     "textlint-rule-no-dropping-the-ra": "^1.1.2",
     "textlint-rule-no-exclamation-question-mark": "^1.0.2",
     "textlint-rule-no-hankaku-kana": "^1.0.2",
-    "textlint-rule-no-mix-dearu-desumasu": "^4.0.1",
-    "textlint-rule-no-nfd": "^1.0.2",
-    "textlint-rule-preset-jtf-style": "^2.3.4",
-    "textlint-rule-sentence-length": "^2.2.0"
+    "textlint-rule-no-mix-dearu-desumasu": "^4.0.0",
+    "textlint-rule-no-nfd": "^1.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.3",
+    "textlint-rule-sentence-length": "^2.1.2"
   }
 }
