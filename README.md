@@ -20,12 +20,6 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install textlint-rule-preset-ja-technical-writing
 
-**beta版** 次期公開予定の4.0.0βは次のようにインストールできます。
-
-    npm install textlint-rule-preset-ja-technical-writing@beta
-
-β版へのフィードバックは[4.0.0βのIssue](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/issues/44)へ書き込んでください。
-
 ## Usage
 
 Via `.textlintrc`(Recommended)
