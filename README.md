@@ -1,4 +1,4 @@
-# textlint-rule-preset-ja-technical-writing [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-preset-ja-technical-writing) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
+# textlint-rule-preset-ja-technical-writing [![Actions Status](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/workflows/test/badge.svg)](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/actions?query=workflow%3A"test") [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
 
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
 全体的に少し厳しめの設定がデフォルト値となっているため、文章に合わせて設定値を変更する必要があります。
