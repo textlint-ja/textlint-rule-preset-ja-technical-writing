@@ -302,6 +302,11 @@
   resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-1.0.2.tgz#8342b1a10048e3e9ce624c0000e477a8870a1d4b"
   integrity sha512-qQ6dqlg4SYywCywimIbkveQZu1MG6ugf6fcJuWDi3D51FbdkSRsMrPusJ1YoW6Y3XBp0ww9fJjXWtlUStGeQsw==
 
+"@textlint/module-interop@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-1.1.4.tgz#d8cb10e5bd1d4d31998c95fb0a52ad8100d6e18a"
+  integrity sha512-9M3kYG5nBoD2lhp05sqi6fieNU6rBcf+A8Trp+4d8o5uJ4RRsWeRtAQMWM7Tv15onqIITRq7fm3la7xovVB9KA==
+
 "@textlint/regexp-string-matcher@^1.0.2", "@textlint/regexp-string-matcher@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@textlint/regexp-string-matcher/-/regexp-string-matcher-1.1.0.tgz#e19975029ce228a214d50c6a7e9dbcbef29ad8cd"
