@@ -9,7 +9,7 @@
 合わせて利用することを想定しているfilterルール(例外を明示できる)も参照してください。
 
 - [textlint/textlint-filter-rule-comments](https://github.com/textlint/textlint-filter-rule-comments)
-- [textlint/textlint-filter-rule-whitelist](https://github.com/textlint/textlint-filter-rule-whitelist)
+- [textlint-filter-rule-allowlist](https://github.com/textlint/textlint-filter-rule-allowlist)
 
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu,
 preset-ja-technical-writing/no-exclamation-question-mark -->
