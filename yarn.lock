@@ -4061,11 +4061,12 @@ textlint-rule-ja-no-redundant-expression@^3.0.2:
     textlint-rule-helper "^2.1.1"
     textlint-util-to-string "^3.1.1"
 
-textlint-rule-ja-no-successive-word@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-1.1.1.tgz#6cd8b102eaf6c133ee8dc461e3adb3fd519072c3"
-  integrity sha512-X3aQ9yCh+/oMQtROSyTue22mkQRnEod0oFCchVR7f/PabaMahfiSHozbBj7/tVg4umXhvar30xwEG3+OkhDfaw==
+textlint-rule-ja-no-successive-word@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-1.2.0.tgz#ba7597b54978388a5f8e53b9003bd9066f2111ad"
+  integrity sha512-5ki006mIOeElHtPk0WECR8xvW66I+o3lpzbRpvDSlEwjZwNeR4QHwByfBsl7KdScy945Vab1t5I0lCXXS7u3ow==
   dependencies:
+    "@textlint/regexp-string-matcher" "^1.1.0"
     kuromojin "^2.0.0"
 
 textlint-rule-ja-no-weak-phrase@^1.0.5:
