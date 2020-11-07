@@ -59,7 +59,7 @@
     "markdown-toc": "^1.2.0",
     "mocha": "^8.2.1",
     "semver": "^7.3.2",
-    "shipjs": "0.22.0"
+    "shipjs": "0.23.0"
   },
   "email": "azuciao@gmail.com"
 }
