@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "markdown-toc": "^1.2.0",
-    "mocha": "^8.3.0",
+    "mocha": "^8.3.1",
     "semver": "^7.3.4",
     "shipjs": "0.23.0"
   },
