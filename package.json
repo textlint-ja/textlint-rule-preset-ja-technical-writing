@@ -33,7 +33,7 @@
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
-    "@textlint/module-interop": "^1.2.3",
+    "@textlint/module-interop": "^1.2.4",
     "textlint-rule-ja-no-abusage": "^2.0.1",
     "textlint-rule-ja-no-mixed-period": "^2.1.1",
     "textlint-rule-ja-no-redundant-expression": "^3.0.2",
