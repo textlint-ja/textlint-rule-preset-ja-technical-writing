@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>textlint editor playground</title>
+    <title>textlint-rule-preset-ja-technical-writing</title>
     <style>
         * {
             box-sizing: border-box
@@ -199,6 +199,10 @@
         }
     </style>
     <style>
+        .main {
+            padding: 1em 0;
+        }
+
         .content {
             width: 800px;
             margin: auto;
@@ -231,12 +235,7 @@
 <div class="content">
     <main class="main">
         <label for="input">Input text for linting:</label>
-        <textarea id="input" class="textarea" spellcheck="false">お刺身が食べれない！お寿司は食べられる。
-東京特許許可局は難しい漢字だ。
-今すぐ行動することができる。
-This spellinng is maybe a typo.
-</textarea>
-
+        <textarea id="input" class="textarea" spellcheck="false"></textarea>
     </main>
     <button id="install">Install</button>
     <label for="install">* require <a href="https://github.com/textlint/editor/tree/master/packages/webextension">textlint-editor
