@@ -20,8 +20,7 @@ jobs:
           echo "REPO_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')" >> $GITHUB_ENV
           echo "CURRENT_VERSION=$(node -p 'require("./package.json").version')" >> $GITHUB_ENV
       - name: Install
-        run: npm install
-        working-directory: example/
+        run: yarn install && cd example/ && npm install
       - name: Build
         run: npm run website -- --metadataversion="${CURRENT_VERSION}"
         env:
