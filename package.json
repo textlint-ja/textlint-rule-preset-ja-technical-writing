@@ -28,7 +28,7 @@
     "docs:toc": "markdown-toc -i README.md",
     "release:prepare": "shipjs prepare",
     "release:trigger": "shipjs trigger",
-    "test": "mocha test/ && (cd example && npm install && npm test)"
+    "test": "mocha test/ && (cd example && yarn install && npm test)"
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^1.2.0",

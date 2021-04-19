@@ -23,7 +23,7 @@ jobs:
         run: yarn install
       - name: Build
         run: |
-          npm install
+          yarn install
           npm run website -- --metadataversion="${CURRENT_VERSION}"
         env:
           OWNER_NAME: ${{ env.OWNER_NAME }}
