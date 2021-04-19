@@ -6,7 +6,7 @@
   "scripts": {
     "textlint": "textlint ../README.md",
     "test": "npm run textlint",
-    "website": "textlint-website-generator --cwd `pwd` --textlintrc ./example/.textlintrc --output-dir ./dist"
+    "website": "textlint-website-generator --output-dir ./dist"
   },
   "devDependencies": {
     "@textlint/website-generator": "^0.10.2",
