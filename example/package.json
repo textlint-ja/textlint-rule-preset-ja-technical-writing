@@ -1,10 +1,15 @@
 {
   "private": true,
+  "name": "textlint-rule-preset-ja-technical-writing",
+  "version": "5.0.0",
+  "homepage": "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing",
   "scripts": {
     "textlint": "textlint ../README.md",
-    "test": "npm run textlint"
+    "test": "npm run textlint",
+    "website": "textlint-website-generator --cwd `pwd` --textlintrc ./example/.textlintrc --output-dir ./dist"
   },
   "devDependencies": {
+    "@textlint/website-generator": "^0.10.2",
     "textlint": "^11.9.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "file:../"
