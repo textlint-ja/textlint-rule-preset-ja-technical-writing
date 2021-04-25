@@ -3921,7 +3921,7 @@ textlint-rule-max-kanji-continuous-len@^1.1.1:
   resolved "https://registry.yarnpkg.com/textlint-rule-max-kanji-continuous-len/-/textlint-rule-max-kanji-continuous-len-1.1.1.tgz#cbcc44488c06d36c65099e12f7977e3a15c3b77f"
   integrity sha1-y8xESIwG02xlCZ4S95d+OhXDt38=
 
-textlint-rule-max-ten@^4.0.0:
+textlint-rule-max-ten@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/textlint-rule-max-ten/-/textlint-rule-max-ten-4.0.1.tgz#49b47793d94559e9b7d165f1689d41a81159f5af"
   integrity sha512-ORfaFgrk8eX8ZG1qLjzSaZPGvnjLO+ZwcFhaOdgVqhEwaVZdXJgruvELpO4QFX0z/2+y2VKcKMAJ9xfgGWB5Fw==
