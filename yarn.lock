@@ -1478,11 +1478,6 @@ flat@^5.0.2:
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
-flatmap@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/flatmap/-/flatmap-0.0.3.tgz#1f18a4d938152d495965f9c958d923ab2dd669b4"
-  integrity sha1-Hxik2TgVLUlZZfnJWNkjqy3WabQ=
-
 flatted@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
@@ -3434,14 +3429,6 @@ sentence-case@^3.0.3:
     tslib "^2.0.3"
     upper-case-first "^2.0.2"
 
-sentence-splitter@^2.0.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-2.3.2.tgz#5ad33cd0e6ae171d58c88f6bfef16a9ed04f3a79"
-  integrity sha512-QnpHNykm4nI4T6mT+NoVayh9Ixl5DohYCSVqMgPJsO2WejOcqaYTh4HQOkmzaDzXH3NO5pif4z/hpo2NGtgNlg==
-  dependencies:
-    concat-stream "^1.5.2"
-    structured-source "^3.0.2"
-
 sentence-splitter@^3.0.11, sentence-splitter@^3.2.0, sentence-splitter@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.2.1.tgz#d6f5b66f4ab130f511d50e41e6f42070e2936ffb"
@@ -3920,13 +3907,14 @@ textlint-rule-ja-unnatural-alphabet@2.0.1:
     match-index "^1.0.1"
     regx "^1.0.4"
 
-textlint-rule-max-comma@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-1.0.4.tgz#f555c97e0d3039ca7da06cfd1afad0e5f5899a37"
-  integrity sha1-9VXJfg0wOcp9oGz9GvrQ5fWJmjc=
+textlint-rule-max-comma@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-2.0.0.tgz#21a31042a65d4d84b0eaf9482e6269a4ba992e24"
+  integrity sha512-KwKGX1Tc5ABhVVLTl8LiqNuxR5ogwHkqxNxYIlexOgwskgdq6nysKDhvnbEOfhxJ50cbi73dCS6/xYojINQTjw==
   dependencies:
-    sentence-splitter "^2.0.0"
-    unist-util-filter "^0.2.1"
+    sentence-splitter "^3.2.1"
+    textlint-util-to-string "^3.1.1"
+    unist-util-filter "^2.0.3"
 
 textlint-rule-max-kanji-continuous-len@^1.1.1:
   version "1.1.1"
@@ -4303,23 +4291,22 @@ unique-concat@^0.2.2:
   resolved "https://registry.yarnpkg.com/unique-concat/-/unique-concat-0.2.2.tgz#9210f9bdcaacc5e1e3929490d7c019df96f18712"
   integrity sha1-khD5vcqsxeHjkpSQ18AZ35bxhxI=
 
-unist-util-filter@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/unist-util-filter/-/unist-util-filter-0.2.1.tgz#e2f7876828903a6a9308e362051f86b14f35b545"
-  integrity sha1-4veHaCiQOmqTCONiBR+GsU81tUU=
+unist-util-filter@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-filter/-/unist-util-filter-2.0.3.tgz#558cf866016f0e7ade1e30ef190abf253111dd39"
+  integrity sha512-8k6Jl/KLFqIRTHydJlHh6+uFgqYHq66pV75pZgr1JwfyFSjbWb12yfb0yitW/0TbHXjr9U4G9BQpOvMANB+ExA==
   dependencies:
-    flatmap "0.0.3"
-    unist-util-is "^1.0.0"
-
-unist-util-is@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-1.0.0.tgz#4c7b3c5c0f6aa963640056fe4af7b5fcfdbb8ef0"
-  integrity sha1-THs8XA9qqWNkAFb+Sve1/P27jvA=
+    unist-util-is "^4.0.0"
 
 unist-util-is@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-3.0.0.tgz#d9e84381c2468e82629e4a5be9d7d05a2dd324cd"
   integrity sha512-sVZZX3+kspVNmLWBPAB6r+7D9ZgAFPNWm66f7YNb420RlQSbn+n8rG8dGZSkrER7ZIXGQYNm5pqC3v3HopH24A==
+
+unist-util-is@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.1.0.tgz#976e5f462a7a5de73d94b706bac1b90671b57797"
+  integrity sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==
 
 unist-util-is@^5.0.0:
   version "5.0.0"
