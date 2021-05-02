@@ -9,7 +9,7 @@
     "website": "textlint-website-generator --output-dir ./dist"
   },
   "devDependencies": {
-    "@textlint/website-generator": "^0.10.5",
+    "@textlint/website-generator": "^0.11.2",
     "textlint": "^11.9.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "file:../"
