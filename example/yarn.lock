@@ -297,6 +297,14 @@
   dependencies:
     "@textlint/ast-node-types" "^4.4.3"
 
+"@textlint/config-inliner@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@textlint/config-inliner/-/config-inliner-0.11.3.tgz#28c92df66d6fc57f3bb078779458e3719f086885"
+  integrity sha512-XzvWzyTmRWM9bKslXPD+j3J1z3lpHDHWJcolJKP9Zilpapdl5uXKzAcZpVqOb3Hj3ZmpH4jg2k1t57KxqJXoCQ==
+  dependencies:
+    "@textlint/config-loader" "^0.11.0"
+    untildify "^4.0.0"
+
 "@textlint/config-loader@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@textlint/config-loader/-/config-loader-0.11.0.tgz#9667febee3b13e2a9e83ddb2c333a276c896c83c"
@@ -310,10 +318,10 @@
     rc-config-loader "^4.0.0"
     try-resolve "^1.0.1"
 
-"@textlint/config-partial-parser@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@textlint/config-partial-parser/-/config-partial-parser-0.11.0.tgz#f319edea97d5b954f317c622830302108a79fd1c"
-  integrity sha512-wL7oqI/e7pkgl0u3gXrH+J4e4qhGGrB2upiKMvDURpvIFPusNVyTdBb0NyMyxjN+HmLkKjmepLpswlMEaXwLmg==
+"@textlint/config-partial-parser@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@textlint/config-partial-parser/-/config-partial-parser-0.11.3.tgz#b7861f966fffdc1b93176e87b10d2fe11a968301"
+  integrity sha512-Eep6BUPNew6gyzBaL1yDyr6mIW8XiP/IK+SExvTR5oQJNCM/t5UY8WOj5kSu3hpiKbGNZZrnjaVsFknXuDtmug==
   dependencies:
     "@textlint/config-loader" "^0.11.0"
     "@textlint/kernel" "^3.4.1"
@@ -506,14 +514,15 @@
     "@textlint/types" "^1.5.1"
     "@textlint/utils" "^1.2.1"
 
-"@textlint/script-compiler@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.11.0.tgz#1fd3656a344239be9519ca6d74c7475db40c105c"
-  integrity sha512-wYRrsHBRZV413zKxAqp6RP8+2wMuAmWGXm8CbQfQaT4U0Aj55JpF3tQMGCuSh4iBBiVB+bYUQ4Zb547Y7x3t2Q==
+"@textlint/script-compiler@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.11.3.tgz#36895fb56ce62ae23beb0172db9f9e972b7f88af"
+  integrity sha512-k2p+DCi5GvDYPPZWXGsZMDDBdNOus5I9/vQ0hwnFYEJT9MSWIezU1HrGD3SZ4jaXyP51VMImP5eQFJCz9jMKCw==
   dependencies:
     "@babel/core" "^7.12.10"
+    "@textlint/config-inliner" "^0.11.3"
     "@textlint/config-loader" "^0.11.0"
-    "@textlint/config-partial-parser" "^0.11.0"
+    "@textlint/config-partial-parser" "^0.11.3"
     "@textlint/kernel" "^3.4.1"
     "@textlint/runtime-helper" "^0.11.0"
     "@textlint/script-parser" "^0.11.0"
@@ -614,15 +623,15 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-1.2.5.tgz#1406e179d44d130d8e60322f3f873a721c93ba75"
   integrity sha512-2vgz4x3tKK+R9N0OlOovJClRCHubxZi86ki218cvRVpoU9pPrHwkwZud+rjItDl2xFBj7Gujww7c0W1wyytWVQ==
 
-"@textlint/website-generator@^0.11.2":
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.11.2.tgz#dab87beac30bb8d5e8d4314921ca53a033985ffe"
-  integrity sha512-hVynb3WnHThQthU5s+W5DV+MeXvnUqZBSq9tGyXQOlVEYYPRXtfHQcNlToscInkQ3D0CNXr/XjSDPmvnkoJ4Kw==
+"@textlint/website-generator@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.11.3.tgz#f4640d23f46338953a5a9d717f5db4b7d39d528c"
+  integrity sha512-EuZMUp4adKJ4bYf5exZ86/ipHrN7pULnahvn4surPjz98UnXBIs7yz/AjsFT+0q0Kqg9XU+DniUxQdnrooJUAQ==
   dependencies:
-    "@textlint/script-compiler" "^0.11.0"
+    "@textlint/script-compiler" "^0.11.3"
     meow "^9.0.0"
     read-pkg "^5.2.0"
-    textchecker-element "^0.11.2"
+    textchecker-element "^0.11.3"
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.0"
@@ -3584,10 +3593,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-textchecker-element@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.11.2.tgz#a7e9bd99fc8044c6bdfb4d80e1cc62489264c730"
-  integrity sha512-yr3YBks5SgjjesymJr8eRWMj94bQte4Ebm+SfZVVaQmPV3fm3rKNcUE1fgmp6cbNET0uiQF2Xnp5iba9N9L9tg==
+textchecker-element@^0.11.3:
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.11.3.tgz#92b99c3740cdb028d3d3a9941ff171f28d8b9a39"
+  integrity sha512-comOpj7K9tPfNINnxMWlQylC1D4o1XCoHQaAsA5DRb6hydI41lzrYDQ85ekGU0Uovvfw0mOX9o1dwAGyj3pLgQ==
   dependencies:
     "@textlint/source-code-fixer" "^3.4.1"
     delay "^4.4.0"
@@ -3813,13 +3822,13 @@ textlint-rule-no-nfd@^1.0.2:
     textlint-rule-no-hankaku-kana "^1.0.2"
     textlint-rule-no-mix-dearu-desumasu "^5.0.0"
     textlint-rule-no-nfd "^1.0.2"
-    textlint-rule-preset-jtf-style "^2.3.9"
+    textlint-rule-preset-jtf-style "^2.3.11"
     textlint-rule-sentence-length "^2.2.0"
 
-textlint-rule-preset-jtf-style@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.9.tgz#740b256dfe6cb737b2ae71ba34f89efd0decf333"
-  integrity sha512-GIUHwOK3ndhD+2MMkqcaDS4Xh0ZMuLY/UZgzKz8+KodRpQ3MM/+AbPACdJ219z2wF6hhIIdeUKBxuBr2uumeQQ==
+textlint-rule-preset-jtf-style@^2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-jtf-style/-/textlint-rule-preset-jtf-style-2.3.11.tgz#f6a5f20fafa3ada6671820347c1335b58eb0cf8f"
+  integrity sha512-kkzdAZbsUp5iNcjmirX2Fe3O7JZC38PBKmQ9ygU0ZWuStb7IzcpCowsTSTtwR9YEvuXqoufziLnGlsAFXeY3Ow==
   dependencies:
     analyze-desumasu-dearu "^2.1.2"
     japanese-numerals-to-number "^1.0.2"
@@ -4159,6 +4168,11 @@ untildify@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.3.tgz#1e7b42b140bcfd922b22e70ca1265bfe3634c7c9"
   integrity sha512-iSk/J8efr8uPT/Z4eSUywnqyrQU7DSdMfdqK4iWEaUVVmcP5JcnpRqmVMwcwcnmI1ATFNgC5V90u09tBynNFKA==
+
+untildify@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/untildify/-/untildify-4.0.0.tgz#2bc947b953652487e4600949fb091e3ae8cd919b"
+  integrity sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==
 
 uri-js@^4.2.2:
   version "4.4.1"
