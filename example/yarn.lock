@@ -424,10 +424,10 @@
     "@textlint/types" "^12.0.0"
     "@textlint/utils" "^12.0.0"
 
-"@textlint/script-compiler@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.12.0.tgz#eed7a8b0109430c5f636bbc328e90ca1b3c78800"
-  integrity sha512-abOh8FBVDvvrZ8sKY0qSpVBTk1U0s+jmcat+D5xHTcVZ99fvUH8tqHP3EH0yyXB8bpHTgVZfKwxVo0uY95iTQw==
+"@textlint/script-compiler@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.12.1.tgz#f740c96417a5946dcd299765015f8e3a6dc8b623"
+  integrity sha512-Qf/iJQaU4Rci+5q0K4CjD2n3oEVWsR2iHly0bwokq1n4oWkw9Jic0dMk3dZeOxGXy3xvyq22AYdj+gg69Kkr1Q==
   dependencies:
     "@babel/core" "^7.12.10"
     "@textlint/config-inliner" "^0.12.0"
@@ -436,6 +436,8 @@
     "@textlint/kernel" "^12.0.0"
     "@textlint/runtime-helper" "^0.12.0"
     "@textlint/script-parser" "^0.12.0"
+    "@textlint/textlint-plugin-markdown" "^12.0.0"
+    "@textlint/textlint-plugin-text" "^12.0.0"
     "@textlint/types" "^12.0.0"
     babel-loader "^8.2.2"
     babel-plugin-static-fs "^3.0.0"
@@ -506,15 +508,15 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-12.0.0.tgz#e457b4ebbf3925b3bf0d32c597e1a20beaa1b121"
   integrity sha512-bnIr17iouc4MtVR+r7v8mBasNn3ZsQpfTLTi4RelrZJdICHMBUMOWRX70cVRV/xJck/nfY9igt325qI0y2ELoQ==
 
-"@textlint/website-generator@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.12.0.tgz#da4fc6fa67b502939319e5013e843d1b79889365"
-  integrity sha512-Eay2UKEoQN6fYs150ISZ4ZW9gX+KwYvEy4crNOyoUjwEWRI4h3AFP1Z4YoktkD08Q/F5PibcduZGe16Bq3qJ1A==
+"@textlint/website-generator@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.12.1.tgz#e18b24698380225a2d64b7f7997bbce9582689b5"
+  integrity sha512-+m5fD5DD1ckkLJRDwvbHb7WnJq38N9QDxW8PEO4JTqE8dsSi78P0Q65QzSLKltBAP6Ro1S5gFBcGjVlKwvRH/Q==
   dependencies:
-    "@textlint/script-compiler" "^0.12.0"
+    "@textlint/script-compiler" "^0.12.1"
     meow "^9.0.0"
     read-pkg "^5.2.0"
-    textchecker-element "^0.12.0"
+    textchecker-element "^0.12.1"
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.0"
@@ -3588,10 +3590,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-textchecker-element@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.12.0.tgz#500f72d74ae5fef11fce1a9b695d3fd2d12510d7"
-  integrity sha512-rMqNMa+6F86t+5EgCddf1IJhhaOzXQxpZohkg7x2B+5qxNJO1PqX0r71Z1caSefMGuLzAUsnsVMlUCXSFJUDxQ==
+textchecker-element@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.12.1.tgz#38a29245fdbee7dc7cf7e88aa28ca99e9bf06395"
+  integrity sha512-quLN189SwYVUYS9Hb2TyqxFgBKrw/l8+QQSEst7bp4qIgspEGYbxAXGWuuEmHTN1vUrQj2DgwgRWn5yzjB06Hg==
   dependencies:
     "@textlint/source-code-fixer" "^12.0.0"
     delay "^4.4.0"
