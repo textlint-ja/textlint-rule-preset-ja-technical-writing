@@ -1,0 +1,29 @@
+name: Create ReleaseIssue
+on:
+  schedule:
+    # 1月/7月にリリース
+    - cron:  "0 0 1 */6 *"
+
+jobs:
+  create_issue:
+    name: Create team sync issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        uses: imjohnbo/issue-bot@v3.0
+        with:
+          assignees: "azu"
+          title: "Next Release"
+          body: |
+            ### 次のリリースの準備ができました
+
+            - [ ] マージ忘れのPRがないかを確認
+            - [ ] Version PackagesのPRをマージ
+            - [ ] 新しいバージョンがリリースされたことを確認
+
+          pinned: false
+          close-previous: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
