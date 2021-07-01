@@ -12,7 +12,7 @@ jobs:
       issues: write
     steps:
       - name: Create team sync issue
-        uses: imjohnbo/issue-bot@v3.0
+        uses: imjohnbo/issue-bot@v3.3
         with:
           assignees: "azu"
           title: "Next Release"
