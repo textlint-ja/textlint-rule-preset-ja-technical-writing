@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
@@ -19,10 +23,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-
       - name: Install Dependencies
-        run: yarn
-
+        run: yarn install
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@master
