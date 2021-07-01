@@ -1,3 +1,17 @@
+# [7.0.0](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/compare/v6.0.0...v7.0.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @textlint/module-interop to v12 ([#78](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/issues/78)) ([4fd0633](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/4fd063355f8e621f296d190ff14eff9b7ddbb3e1))
+* **deps:** update dependency textlint-rule-preset-jtf-style to ^2.3.10 ([fecf936](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/fecf936cd8e871589037baed4d99917f73bb6871))
+* **deps:** update dependency textlint-rule-preset-jtf-style to ^2.3.11 ([5481b07](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/5481b075e0cfa821f07b8a6f8b45d9ce27071683))
+* **deps:** update dependency textlint-rule-preset-jtf-style to ^2.3.9 ([f5bd3f7](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/f5bd3f764db796a3f45112969d15488caa5ca60f))
+* **deps:** update patch updates ([a54982b](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/a54982bdbaf025b56acfed1d7e7530b458c6d9ff))
+* **deps:** update patch updates ([dfa679b](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/commit/dfa679b39057345245673846cf74e3b8e93ccbc7))
+
+
+
 # [6.0.0](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/compare/v5.0.0...v6.0.0) (2021-04-25)
 
 
