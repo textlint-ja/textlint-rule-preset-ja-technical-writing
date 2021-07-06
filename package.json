@@ -26,8 +26,7 @@
   },
   "scripts": {
     "docs:toc": "markdown-toc -i README.md",
-    "release:prepare": "shipjs prepare",
-    "release:trigger": "shipjs trigger",
+    "release": "changeset publish",
     "test": "mocha test/ && (cd example && yarn install && npm test)"
   },
   "dependencies": {
