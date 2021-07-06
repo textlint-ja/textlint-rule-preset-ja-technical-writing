@@ -3,8 +3,8 @@
 技術文書向けの[textlint](https://textlint.github.io/)ルールプリセットです。
 全体的に少し厳しめの設定がデフォルト値となっているため、文章に合わせて設定値を変更する必要があります。
 
-また、[連続できる最大の漢字長は6文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF6%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)のように文章全体として例外が必ず出てくるルールもデフォルトで入っています。
-ルールによっては`allow`オプションで例外を規定できるようになっているため、例外を明示しつつ利用することを想定しています。
+また、[連続できる最大の漢字長は6文字まで](#%E9%80%A3%E7%B6%9A%E3%81%A7%E3%81%8D%E3%82%8B%E6%9C%80%E5%A4%A7%E3%81%AE%E6%BC%A2%E5%AD%97%E9%95%B7%E3%81%AF6%E6%96%87%E5%AD%97%E3%81%BE%E3%81%A7)
+のように文章全体として例外が必ず出てくるルールもデフォルトで入っています。 ルールによっては`allow`オプションで例外を規定できるようになっているため、例外を明示しつつ利用することを想定しています。
 
 合わせて利用することを想定しているfilterルール(例外を明示できる)も参照してください。
 
@@ -26,9 +26,9 @@ Via `.textlintrc`(Recommended)
 
 ```json
 {
-    "rules": {
-        "preset-ja-technical-writing": true
-    }
+  "rules": {
+    "preset-ja-technical-writing": true
+  }
 }
 ```
 
@@ -37,6 +37,24 @@ Via CLI
 ```
 textlint --preset ja-technical-writing README.md
 ```
+
+## ルールの設定方法
+
+次のように `"preset-ja-technical-writing"` 以下にそれぞれのオプション値を指定することで、設定を変更できます。
+各ルールの設定できるオプションは、各ルールのREADMEを参照してください。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "max": 120,
+      "no-mix-dearu-desumasu": false
+    }
+  }
+}
+```
+
+また、ルールの設定方法については[textlintのドキュメント](https://textlint.github.io/docs/configuring.html#rule-preset)も参照してください。
 
 ## ルール一覧
 
@@ -56,6 +74,7 @@ textlint --preset ja-technical-writing README.md
   * [同じ助詞を連続して使用しない](#%E5%90%8C%E3%81%98%E5%8A%A9%E8%A9%9E%E3%82%92%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [UTF8-MAC 濁点を使用しない](#utf8-mac-%E6%BF%81%E7%82%B9%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [不必要な制御文字を使用しない](#%E4%B8%8D%E5%BF%85%E8%A6%81%E3%81%AA%E5%88%B6%E5%BE%A1%E6%96%87%E5%AD%97%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
+  * [不必要なゼロ幅スペースを使用しない](#%E4%B8%8D%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%BC%E3%83%AD%E5%B9%85%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [感嘆符!！、感嘆符?？を使用しない](#%E6%84%9F%E5%98%86%E7%AC%A6%E6%84%9F%E5%98%86%E7%AC%A6%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [半角カナを使用しない](#%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
   * [弱い日本語表現の利用を使用しない](#%E5%BC%B1%E3%81%84%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%A1%A8%E7%8F%BE%E3%81%AE%E5%88%A9%E7%94%A8%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84)
@@ -66,8 +85,10 @@ textlint --preset ja-technical-writing README.md
   * [対になっていない括弧をチェックする](#%E5%AF%BE%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%8B%AC%E5%BC%A7%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B)
 - [Changelog](#changelog)
 - [Semantic Versioning Policy](#semantic-versioning-policy)
+  * [Release Flow](#release-flow)
 - [ルールの利用者](#%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%A9%E7%94%A8%E8%80%85)
 - [Community](#community)
+- [その他のルール](#%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB)
 - [Running tests](#running-tests)
 - [Contributing](#contributing)
 - [Author](#author)
@@ -76,10 +97,10 @@ textlint --preset ja-technical-writing README.md
 <!-- tocstop -->
 
 ### 1文の長さは100文字以下とする
+
 > https://github.com/azu/textlint-rule-sentence-length
 
-長過ぎる文は読みにくさに繋がるため、適切な単位で文を区切ってください。
-厳しめの設定にしたい場合は`90`文字を推奨しています。
+長過ぎる文は読みにくさに繋がるため、適切な単位で文を区切ってください。 厳しめの設定にしたい場合は`90`文字を推奨しています。
 
         "sentence-length": {
             max: 100
@@ -91,6 +112,7 @@ textlint --preset ja-technical-writing README.md
 - バージョン2.0.0以下: 90文字以下
 
 ### カンマは1文中に3つまで
+
 > https://github.com/azu/textlint-rule-max-comma
 
 カンマ（,）の多用は、文が長くなっている可能性があります。
@@ -100,6 +122,7 @@ textlint --preset ja-technical-writing README.md
         },
 
 ### 読点は1文中に3つまで
+
 > https://github.com/azu/textlint-rule-max-ten
 
 読点（、）の多用は、文が長くなっている可能性があります。
@@ -109,16 +132,17 @@ textlint --preset ja-technical-writing README.md
         },
 
 ### 連続できる最大の漢字長は6文字まで
+
 > https://github.com/azu/textlint-rule-max-kanji-continuous-len
 
-漢字同士が連続していると読みにくさにつながります。
-固有名詞は `allow` オプションに記述して回避します。
+漢字同士が連続していると読みにくさにつながります。 固有名詞は `allow` オプションに記述して回避します。
 
         "max-kanji-continuous-len": {
             max: 6
         },
 
 ### 漢数字と算用数字を使い分けます
+
 > https://github.com/azu/textlint-rule-preset-JTF-style
 
 数量を表現し、数を数えられるものは算用数字を使用します。任意の数に置き換えても通用する語句がこれに該当します。
@@ -128,6 +152,7 @@ textlint --preset ja-technical-writing README.md
         "arabic-kanji-numbers": true,
 
 ### 「ですます調」、「である調」を統一します
+
 > https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
 
 - 見出しは自動
@@ -143,8 +168,8 @@ textlint --preset ja-technical-writing README.md
             "strict": true
         },
 
-
 ### 文末の句点記号として「。」を使います
+
 > https://github.com/textlint-ja/textlint-rule-ja-no-mixed-period
 
 文末には「。」を使い文を区切ります。
@@ -156,17 +181,19 @@ textlint --preset ja-technical-writing README.md
         },
 
 ### 二重否定は使用しない
+
 > https://github.com/azu/textlint-rule-no-double-negative-ja
 
         "no-double-negative-ja": true,
 
 ### ら抜き言葉を使用しない
+
 > https://github.com/azu/textlint-rule-no-dropping-the-ra
 
         "no-dropping-the-ra": true,
 
-
 ### 逆接の接続助詞「が」を連続して使用しない
+
 > https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
 
 逆接の接続助詞「が」は、特に否定の意味ではなくても安易に使われてしまいがちです。
@@ -176,11 +203,13 @@ textlint --preset ja-technical-writing README.md
         "no-doubled-conjunctive-particle-ga": true,
 
 ### 同じ接続詞を連続して使用しない
+
 > https://github.com/takahashim/textlint-rule-no-doubled-conjunction
 
         "no-doubled-conjunction": true,
 
 ### 同じ助詞を連続して使用しない
+
 > https://github.com/azu/textlint-rule-no-doubled-joshi
 
         "no-doubled-joshi": {
@@ -188,21 +217,31 @@ textlint --preset ja-technical-writing README.md
         },
 
 ### UTF8-MAC 濁点を使用しない
+
 > https://github.com/azu/textlint-rule-no-nfd
 
-文章中にUTF8-MAC 濁点は不要です。
-ファイルからコピー＆ペーストした文字である場合があります。
+文章中にUTF8-MAC 濁点は不要です。 ファイルからコピー＆ペーストした文字である場合があります。
 
         "no-nfd": true,
 
-###  不必要な制御文字を使用しない
+### 不必要な制御文字を使用しない
+
 > https://github.com/textlint-rule/textlint-rule-no-invalid-control-character
 
-改行(`\n`)やタブ(`\t`)以外の一般的な文章にはでてこない不自然な制御文字が入るのを防止します。
+改行(`\n`)やタブ(`\t`)以外の制御文字が文章に入るのを防止します。
 
         "no-invalid-control-character": true,
 
+### 不必要なゼロ幅スペースを使用しない
+
+> https://github.com/textlint-rule/textlint-rule-no-zero-width-spaces
+
+ゼロ幅スペース（`\u200b`）が文章に入るのを防止します。
+
+        "no-zero-width-spaces": true,
+
 ### 感嘆符!！、感嘆符?？を使用しない
+
 > https://github.com/azu/textlint-rule-no-exclamation-question-mark
 
 特定の感嘆符または感嘆符を使用する場合は、オプションで許可して利用してください。
@@ -210,6 +249,7 @@ textlint --preset ja-technical-writing README.md
         "no-exclamation-question-mark": true,
 
 ### 半角カナを使用しない
+
 > https://github.com/azu/textlint-rule-no-hankaku-kana
 
 全角カタカナを使用してください。
@@ -217,6 +257,7 @@ textlint --preset ja-technical-writing README.md
         "no-hankaku-kana": true,
 
 ### 弱い日本語表現の利用を使用しない
+
 > https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
 `〜かもしれない` 等の弱い表現を使用しない。
@@ -224,6 +265,7 @@ textlint --preset ja-technical-writing README.md
         "ja-no-weak-phrase": true,
 
 ### 同一の単語を間違えて連続しているのをチェックする
+
 > https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
 
 同一の単語(形態素解析したtoken)が連続している場合は誤字の可能性があります。
@@ -233,6 +275,7 @@ textlint --preset ja-technical-writing README.md
         "ja-no-successive-word": true,
 
 ### よくある日本語の誤用をチェックする
+
 > https://github.com/textlint-ja/textlint-rule-ja-no-abusage
 
 日本語や技術表現における漢字の誤用などをチェックするルールです。
@@ -240,6 +283,7 @@ textlint --preset ja-technical-writing README.md
         "ja-no-abusage": true
 
 ### 冗長な表現をチェックする
+
 > https://github.com/textlint-ja/textlint-rule-ja-no-redundant-expression
 
 冗長な表現とは、その文から省いても意味が通じるような表現を示しています。
@@ -248,6 +292,7 @@ textlint --preset ja-technical-writing README.md
         "ja-no-redundant-expression": true
 
 ### 入力ミスで発生する不自然なアルファベットをチェックする
+
 > https://github.com/textlint-ja/textlint-rule-ja-unnatural-alphabet
 
 `リイr−ス` などIMEの入力ミスが日本語中に混じった不自然なアルファベットをチェックします。
@@ -255,12 +300,12 @@ textlint --preset ja-technical-writing README.md
         "ja-unnatural-alphabet": true
 
 ### 対になっていない括弧をチェックする
+
 > https://github.com/textlint-rule/textlint-rule-no-unmatched-pair
 
 1文中で`(`に対応する`)`がない場合などの括弧の対応関係をチェックします。
 
         "no-unmatched-pair": true
-
 
 ## Changelog
 
@@ -322,7 +367,8 @@ Install devDependencies and Run `npm test`:
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/issues).
+For bugs and feature
+requests, [please create an issue](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/issues).
 
 1. Fork it
 2. Create your feature branch: `git checkout -b my-new-feature`
