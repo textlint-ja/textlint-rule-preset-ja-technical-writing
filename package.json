@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-preset-ja-technical-writing",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "技術文書向けのtextlintルールプリセット",
   "keywords": [
     "textlint",
