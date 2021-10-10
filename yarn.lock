@@ -2765,10 +2765,10 @@ textlint-rule-no-doubled-conjunction@^2.0.2:
     textlint-rule-helper "^2.2.0"
     textlint-util-to-string "^3.1.1"
 
-textlint-rule-no-doubled-conjunctive-particle-ga@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-2.0.3.tgz#c28f491e6b455c460a132d1a6a16d1020613f732"
-  integrity sha512-pIPfz6Yux6ROfK7YrUqMuGLEHiPwRqDCBQjqGQGgHxMFsbP1peCUYrAEdDDv8ijnUK/Rn1wCbtH/uLbAdYJmwA==
+textlint-rule-no-doubled-conjunctive-particle-ga@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-2.0.4.tgz#46923a42ba01eb7d8455f6faee032c72f94d7e33"
+  integrity sha512-lHC1M5Y9zApDswvliYNri59hqkic4pY+X2/ZVOD7SAJinBycnb2W2jPcldoeG+QqRsu3BqbVmURR9Z/wJujwsw==
   dependencies:
     kuromojin "^3.0.0"
     sentence-splitter "^3.2.1"
