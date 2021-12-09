@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@textlint/website-generator": "^0.12.1",
-    "textlint": "^12.0.2",
+    "textlint": "^12.1.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "file:../"
   }
