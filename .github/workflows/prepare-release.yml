@@ -6,7 +6,7 @@ on:
 
 jobs:
   create_issue:
-    name: Create team sync issue
+    name: Create ReleaseIssue
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -15,6 +15,7 @@ jobs:
         uses: imjohnbo/issue-bot@v3.3
         with:
           assignees: "azu"
+          labels: "Type: Release"
           title: "Next Release"
           body: |
             ### 次のリリースの準備ができました
