@@ -52,11 +52,11 @@
     "textlint-rule-no-mix-dearu-desumasu": "^5.0.0",
     "textlint-rule-no-nfd": "^1.0.2",
     "textlint-rule-no-zero-width-spaces": "^1.0.1",
-    "textlint-rule-preset-jtf-style": "^2.3.12",
+    "textlint-rule-preset-jtf-style": "^2.3.13",
     "textlint-rule-sentence-length": "^3.0.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.23.0",
+    "@changesets/cli": "^2.23.2",
     "markdown-toc": "^1.2.0",
     "mocha": "^10.0.0",
     "semver": "^7.3.7"
