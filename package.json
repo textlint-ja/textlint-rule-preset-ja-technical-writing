@@ -58,7 +58,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
     "markdown-toc": "^1.2.0",
-    "mocha": "^10.1.0",
+    "mocha": "^10.2.0",
     "semver": "^7.3.8"
   },
   "email": "azuciao@gmail.com"
