@@ -4044,7 +4044,7 @@ textlint-util-to-string@^3.0.0, textlint-util-to-string@^3.1.1:
     structured-source "^3.0.2"
     unified "^8.4.0"
 
-textlint@^12.5.0:
+textlint@^12.5.1:
   version "12.5.1"
   resolved "https://registry.yarnpkg.com/textlint/-/textlint-12.5.1.tgz#b21ddd6a4c527e607e77707f15e48be5f2794788"
   integrity sha512-LoFU1yBIm/gxM++jDdvdfS2diW14NBHsimRyChi8Kb5h5pUHcG0rGfW2PflUzfYcHF0XykgW9WBdPd1WWnyS7Q==
