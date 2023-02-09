@@ -519,7 +519,7 @@
   resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-12.0.0.tgz#f6f4a513f7d58c25304fc1e6a544989a82565978"
   integrity sha512-WSuwd3pd2xYDCYqpA6NE8FwMZS4WJ2gZmsSCXBpOh3qJ/pHbmrfEaiwOpGQJA4RfXVp8Fy5KfaAQJIr+wox98A==
 
-"@textlint/module-interop@^13.1.1", "@textlint/module-interop@^13.2.0":
+"@textlint/module-interop@^13.1.3", "@textlint/module-interop@^13.2.0":
   version "13.2.0"
   resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-13.2.0.tgz#57f7a0410ac2bc3b78e5df2f158939615017d217"
   integrity sha512-bUrC4iWsfWfo6kIh+sa0OLXtg+lAwjRtvs86k6BbEbgvlQ7MXr8VmxL8zJXIWnyP/RFnwNAb7Ezljxjj/h6VSg==
@@ -3986,7 +3986,7 @@ textlint-rule-no-zero-width-spaces@^1.0.1:
   dependencies:
     "@textlint-rule/textlint-rule-no-invalid-control-character" "^2.0.0"
     "@textlint-rule/textlint-rule-no-unmatched-pair" "^1.0.9"
-    "@textlint/module-interop" "^13.1.1"
+    "@textlint/module-interop" "^13.1.3"
     textlint-rule-ja-no-abusage "^3.0.0"
     textlint-rule-ja-no-mixed-period "^3.0.1"
     textlint-rule-ja-no-redundant-expression "^4.0.1"
@@ -4055,7 +4055,7 @@ textlint-util-to-string@^3.0.0, textlint-util-to-string@^3.1.1:
     structured-source "^3.0.2"
     unified "^8.4.0"
 
-textlint@^13.1.1:
+textlint@^13.1.3:
   version "13.2.0"
   resolved "https://registry.yarnpkg.com/textlint/-/textlint-13.2.0.tgz#f7b2f2eefa5a27afa4b5555448d7abf5f44ccfe5"
   integrity sha512-do5QcvOhcDlbjmiMi/g3wnpUC79NSSj5WnDdG48Zzl/FLkrVPzU52XGW5eT15GuVR2zeiCKnm1/uZ21tAlOsLg==
