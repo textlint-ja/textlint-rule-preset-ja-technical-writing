@@ -16,9 +16,18 @@ preset-ja-technical-writing/no-exclamation-question-mark -->
 
 ## Install
 
-Install with [npm](https://www.npmjs.com/):
+[npm](https://www.npmjs.com/)コマンドを使ってインストールできます。
 
     npm install textlint-rule-preset-ja-technical-writing
+
+安定版は、半年に一度更新されます。
+
+次のように`@next`をつけることで、次期バージョンをインストールして試せます。
+安定版と次期バージョンの差分は[Version PackagesのPR](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/pulls?q=is%3Apr+is%3Aopen+Version+Packages)で確認できます。
+
+    npm install textlint-rule-preset-ja-technical-writing@next
+
+もし、次期バージョンを利用してみて問題があった場合は、コメントでお知らせください。
 
 ## Usage
 
