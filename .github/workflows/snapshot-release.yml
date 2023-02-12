@@ -27,7 +27,7 @@ jobs:
         run: yarn install
       - name: "Release @next"
         run: |
-          yarn changeset version --snapshot
+          yarn changeset version --snapshot next
           yarn changeset publish --no-git-tag --snapshot --tag next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
