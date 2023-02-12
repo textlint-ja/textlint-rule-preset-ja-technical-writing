@@ -53,7 +53,7 @@
     "textlint-rule-no-nfd": "^2.0.1",
     "textlint-rule-no-zero-width-spaces": "^1.0.1",
     "textlint-rule-preset-jtf-style": "^2.3.13",
-    "textlint-rule-sentence-length": "^3.0.0"
+    "textlint-rule-sentence-length": "^4.0.2"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
