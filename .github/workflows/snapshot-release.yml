@@ -1,4 +1,4 @@
-name: "Canary Release@next"
+name: "Snapshot Release@next"
 
 on:
   push:
