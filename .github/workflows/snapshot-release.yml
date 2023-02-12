@@ -6,7 +6,7 @@ on:
       - master
 
 permissions:
-  contents: read
+  contents: write # changeset push to snapshot branch
 
 jobs:
   release:
@@ -23,6 +23,7 @@ jobs:
         run: yarn install
       - name: "Release @next"
         run: |
+          git checkout -b snapshot
           yarn changeset version --snapshot
           yarn changeset publish --no-git-tag --snapshot --tag next
         env:
