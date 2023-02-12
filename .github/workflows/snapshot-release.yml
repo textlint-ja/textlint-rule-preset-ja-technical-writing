@@ -25,6 +25,10 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: yarn install
+      - name: Set NPMRC
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
       - name: "Release @next"
         run: |
           yarn changeset version --snapshot next
