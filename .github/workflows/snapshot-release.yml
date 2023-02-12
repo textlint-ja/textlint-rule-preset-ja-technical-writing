@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          registry-url: https://registry.npmjs.org # to create .npmrc file with NODE_AUTH
+          registry-url: 'https://registry.npmjs.org' # to create .npmrc file with NODE_AUTH
           node-version: 18
       - name: Install Dependencies
         run: yarn install
@@ -31,4 +31,4 @@ jobs:
           yarn changeset publish --no-git-tag --snapshot --tag next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
