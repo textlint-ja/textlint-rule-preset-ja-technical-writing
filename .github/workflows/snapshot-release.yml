@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   release:
@@ -16,6 +15,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -23,11 +25,9 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: "Release @next"
-        id: changesets
-        uses: changesets/action@master
-        with:
-          version: yarn changeset version --snapshot
-          publish: yarn changeset publish --no-git-tag --snapshot --tag next
+        run: |
+          yarn changeset version --snapshot
+          yarn changeset publish --no-git-tag --snapshot --tag next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
