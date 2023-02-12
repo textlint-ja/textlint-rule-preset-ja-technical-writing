@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          registry-url: https://registry.npmjs.org
+          registry-url: https://registry.npmjs.org # to create .npmrc file with NODE_AUTH
           node-version: 18
       - name: Install Dependencies
         run: yarn install
