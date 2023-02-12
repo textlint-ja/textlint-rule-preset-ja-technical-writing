@@ -122,7 +122,7 @@ textlint --preset ja-technical-writing README.md
 
 ### カンマは1文中に3つまで
 
-> https://github.com/azu/textlint-rule-max-comma
+> https://github.com/textlint-rule/textlint-rule-max-comma
 
 カンマ（,）の多用は、文が長くなっている可能性があります。
 
@@ -132,7 +132,7 @@ textlint --preset ja-technical-writing README.md
 
 ### 読点は1文中に3つまで
 
-> https://github.com/azu/textlint-rule-max-ten
+> https://github.com/textlint-ja/textlint-rule-max-ten
 
 読点（、）の多用は、文が長くなっている可能性があります。
 
@@ -142,7 +142,7 @@ textlint --preset ja-technical-writing README.md
 
 ### 連続できる最大の漢字長は6文字まで
 
-> https://github.com/azu/textlint-rule-max-kanji-continuous-len
+> https://github.com/textlint-ja/textlint-rule-max-kanji-continuous-len
 
 漢字同士が連続していると読みにくさにつながります。 固有名詞は `allow` オプションに記述して回避します。
 
@@ -152,7 +152,7 @@ textlint --preset ja-technical-writing README.md
 
 ### 漢数字と算用数字を使い分けます
 
-> https://github.com/azu/textlint-rule-preset-JTF-style
+> https://github.com/textlint-ja/textlint-rule-preset-JTF-style
 
 数量を表現し、数を数えられるものは算用数字を使用します。任意の数に置き換えても通用する語句がこれに該当します。
 
@@ -162,7 +162,7 @@ textlint --preset ja-technical-writing README.md
 
 ### 「ですます調」、「である調」を統一します
 
-> https://github.com/azu/textlint-rule-no-mix-dearu-desumasu
+> https://github.com/textlint-ja/textlint-rule-no-mix-dearu-desumasu
 
 - 見出しは自動
 - 本文はですます調
@@ -191,19 +191,19 @@ textlint --preset ja-technical-writing README.md
 
 ### 二重否定は使用しない
 
-> https://github.com/azu/textlint-rule-no-double-negative-ja
+> https://github.com/textlint-ja/textlint-rule-no-double-negative-ja
 
         "no-double-negative-ja": true,
 
 ### ら抜き言葉を使用しない
 
-> https://github.com/azu/textlint-rule-no-dropping-the-ra
+> https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra
 
         "no-dropping-the-ra": true,
 
 ### 逆接の接続助詞「が」を連続して使用しない
 
-> https://github.com/takahashim/textlint-rule-no-doubled-conjunctive-particle-ga
+> https://github.com/textlint-ja/textlint-rule-no-doubled-conjunctive-particle-ga
 
 逆接の接続助詞「が」は、特に否定の意味ではなくても安易に使われてしまいがちです。
 
@@ -213,13 +213,13 @@ textlint --preset ja-technical-writing README.md
 
 ### 同じ接続詞を連続して使用しない
 
-> https://github.com/takahashim/textlint-rule-no-doubled-conjunction
+> https://github.com/textlint-ja/textlint-rule-no-doubled-conjunction
 
         "no-doubled-conjunction": true,
 
 ### 同じ助詞を連続して使用しない
 
-> https://github.com/azu/textlint-rule-no-doubled-joshi
+> https://github.com/textlint-ja/textlint-rule-no-doubled-joshi
 
         "no-doubled-joshi": {
             "min_interval": 1
@@ -227,7 +227,7 @@ textlint --preset ja-technical-writing README.md
 
 ### UTF8-MAC 濁点を使用しない
 
-> https://github.com/azu/textlint-rule-no-nfd
+> https://github.com/textlint-ja/textlint-rule-no-nfd
 
 文章中にUTF8-MAC 濁点は不要です。 ファイルからコピー＆ペーストした文字である場合があります。
 
@@ -249,17 +249,18 @@ textlint --preset ja-technical-writing README.md
 
         "no-zero-width-spaces": true,
 
-### 感嘆符!！、感嘆符?？を使用しない
+### 感嘆符!！、疑問符?？を使用しない
 
-> https://github.com/azu/textlint-rule-no-exclamation-question-mark
+> https://github.com/textlint-rule/textlint-rule-no-exclamation-question-mark
 
-特定の感嘆符または感嘆符を使用する場合は、オプションで許可して利用してください。
+技術文書では、感嘆符（!！）、疑問符（?？）は基本的には使用しないでください。
+特定の感嘆符や疑問符を使用する場合は、オプションで許可するか、filterルールで例外として扱ってください。
 
         "no-exclamation-question-mark": true,
 
 ### 半角カナを使用しない
 
-> https://github.com/azu/textlint-rule-no-hankaku-kana
+> https://github.com/textlint-ja/textlint-rule-no-hankaku-kana
 
 全角カタカナを使用してください。
 
@@ -269,7 +270,8 @@ textlint --preset ja-technical-writing README.md
 
 > https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
-`〜かもしれない` 等の弱い表現を使用しない。
+`〜かもしれない` 等の弱い表現を使用しないでください。
+主張を言い切るような表現を使うことを推奨するためのルールです。
 
         "ja-no-weak-phrase": true,
 
