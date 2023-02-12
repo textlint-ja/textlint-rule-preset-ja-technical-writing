@@ -20,7 +20,7 @@ preset-ja-technical-writing/no-exclamation-question-mark -->
 
     npm install textlint-rule-preset-ja-technical-writing
 
-安定版は、半年に一度更新されます。
+安定版は、半年(1月と7月)に一度更新されます。
 
 次のように`@next`をつけることで、次期バージョンをインストールして試せます。
 安定版と次期バージョンの差分は[Version PackagesのPR](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing/pulls?q=is%3Apr+is%3Aopen+Version+Packages)で確認できます。
@@ -346,7 +346,7 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
 
 - 次のMajorバージョンのIssueを作り、IssueにCHANGELOGを書いていく
 - Pull Requestはrenovatebotから出るのでマージする
-- 半年ごとに`@shipjs prepare`が実行されて、メジャーアップデートのPRがでる
+- 半年ごとにリリース用のIssueが作られるので、確認してリリース用のPRをマージする
 - リリースされたらIssueをクローズする
 
 ## ルールの利用者
