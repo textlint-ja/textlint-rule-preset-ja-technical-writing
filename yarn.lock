@@ -2510,6 +2510,14 @@ sentence-splitter@^4.0.2:
     "@textlint/ast-node-types" "^13.2.0"
     structured-source "^4.0.0"
 
+sentence-splitter@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-4.2.0.tgz#40a959de0b5b41ee769d9f211ebd99f54248e2a8"
+  integrity sha512-1Ww0iofAbR56tu6lVJ9Yh8Sj5ukeVjikBQ4sR5sNWM0kc+2AJe3p5F2o2qyuf5dJ4KVs1RbJpNkwEiMBCz7pKg==
+  dependencies:
+    "@textlint/ast-node-types" "^13.2.0"
+    structured-source "^4.0.0"
+
 serialize-javascript@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-6.0.0.tgz#efae5d88f45d7924141da8b5c3a7a7e663fefeb8"
@@ -2874,14 +2882,13 @@ textlint-rule-ja-unnatural-alphabet@2.0.1:
     match-index "^1.0.1"
     regx "^1.0.4"
 
-textlint-rule-max-comma@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-2.0.2.tgz#c204ae840b436d572d5c24e3a3056776992a882b"
-  integrity sha512-t4twAgEZWWMhIYH3xURZr/A1EcAUKiC10/N0EU6RG+ZBa9+FB5HDhMdQMS5wHqEI1FopWHTYYv/sC2PGEtvyLg==
+textlint-rule-max-comma@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-3.0.0.tgz#946892239d0e2a56aace22718caf8af82e3ca40d"
+  integrity sha512-hFq6emf2A4Poq6EuOw8EykAdx2bFhlR9nQ5wn7kGNEbDgdkUuUFJkeIG+QfaoiJGnufi0SJNTsh8p2M/02SI/w==
   dependencies:
-    sentence-splitter "^3.2.1"
-    textlint-util-to-string "^3.1.1"
-    unist-util-filter "^2.0.3"
+    sentence-splitter "^4.2.0"
+    textlint-util-to-string "^3.3.2"
 
 textlint-rule-max-kanji-continuous-len@^1.1.1:
   version "1.1.1"
@@ -3042,6 +3049,16 @@ textlint-util-to-string@^3.2.0, textlint-util-to-string@^3.3.0:
     structured-source "^4.0.0"
     unified "^8.4.0"
 
+textlint-util-to-string@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/textlint-util-to-string/-/textlint-util-to-string-3.3.2.tgz#9c72f534c731f295e6a0500d694f18835595e1e8"
+  integrity sha512-TCnHX5xGDWIGQpcusLrctodid+n5t5G6ft9+KAVad+GmrOOkk9IiPej8FwH9Vq/uk1j44yTB20YYja0YnQ+z/w==
+  dependencies:
+    "@textlint/ast-node-types" "^13.0.5"
+    rehype-parse "^6.0.1"
+    structured-source "^4.0.0"
+    unified "^8.4.0"
+
 through2@^2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
@@ -3149,13 +3166,6 @@ unified@^8.4.0:
     is-plain-obj "^2.0.0"
     trough "^1.0.0"
     vfile "^4.0.0"
-
-unist-util-filter@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/unist-util-filter/-/unist-util-filter-2.0.3.tgz#558cf866016f0e7ade1e30ef190abf253111dd39"
-  integrity sha512-8k6Jl/KLFqIRTHydJlHh6+uFgqYHq66pV75pZgr1JwfyFSjbWb12yfb0yitW/0TbHXjr9U4G9BQpOvMANB+ExA==
-  dependencies:
-    unist-util-is "^4.0.0"
 
 unist-util-is@^3.0.0:
   version "3.0.0"
