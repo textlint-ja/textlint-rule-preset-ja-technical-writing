@@ -1,5 +1,5 @@
 ---
-"textlint-rule-preset-ja-technical-writing": patch
+"textlint-rule-preset-ja-technical-writing": major
 ---
 
 Update dependency textlint-rule-max-comma to v3
