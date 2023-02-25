@@ -637,9 +637,7 @@ See [Releases page](https://github.com/textlint-ja/textlint-rule-preset-ja-techn
 
 ## Running tests
 
-Install devDependencies and Run `npm test`:
-
-    npm i -d && npm test
+    npm test
 
 ## Contributing
 
