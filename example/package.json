@@ -5,6 +5,7 @@
   "homepage": "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing",
   "scripts": {
     "textlint": "textlint ../README.md",
+    "textlint:fix": "textlint --fix ../README.md",
     "test": "npm run textlint",
     "website": "textlint-website-generator --output-dir ./dist"
   },

@@ -99,11 +99,22 @@ textlint --preset ja-technical-writing README.md
 
 > https://github.com/textlint-rule/textlint-rule-sentence-length
 
-長過ぎる文は読みにくさに繋がるため、適切な単位で文を区切ってください。 厳しめの設定にしたい場合は`90`文字を推奨しています。
+長過ぎる文は読みにくさに繋がるため、適切な長さで文を句点（`。`）などで区切ってください。
+厳しめの設定にしたい場合は`90`文字を推奨しています。
 
-        "sentence-length": {
-            max: 100
-        },
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max": 100
+      }
+    }
+  }
+}
+```
 
 過去の設定の履歴は以下のようになっています。
 
@@ -115,30 +126,66 @@ textlint --preset ja-technical-writing README.md
 > https://github.com/textlint-rule/textlint-rule-max-comma
 
 カンマ（,）の多用は、文が長くなっている可能性があります。
+1文が長くなると読みにくなっている可能性があるため適切な長さで文を句点（`。`）などで区切ってください。
 
-        "max-comma": {
-            max: 3
-        },
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "max-comma": {
+        "max": 3
+      }
+    }
+  }
+}
+```
 
 ### 読点は1文中に3つまで
 
 > https://github.com/textlint-ja/textlint-rule-max-ten
 
-読点（、）の多用は、文が長くなっている可能性があります。
+読点（、）の多用は、1文が長くなっている可能性があります。
+1文が長くなると読みにくなっている可能性があるため、適切な長さで文を句点（`。`）などで区切ってください。
 
-        "max-ten": {
-            max: 3
-        },
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "max-ten": {
+        "max": 3
+      }
+    }
+  }
+}
+```
 
 ### 連続できる最大の漢字長は6文字まで
 
 > https://github.com/textlint-ja/textlint-rule-max-kanji-continuous-len
 
-漢字同士が連続していると読みにくさにつながります。 固有名詞は `allow` オプションに記述して回避します。
+漢字同士が連続していると読みにくさにつながります。
+デフォルトでは連続する漢字は、6文字までとしています。
 
-        "max-kanji-continuous-len": {
-            max: 6
-        },
+6文字以上の固有名詞は `allow` オプションに記述して回避できます。
+
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "max-kanji-continuous-len": {
+        "max": 6,
+        "allow": []
+      }
+    }
+  }
+}
+```
 
 ### 漢数字と算用数字を使い分けます
 
@@ -148,24 +195,46 @@ textlint --preset ja-technical-writing README.md
 
 慣用的表現、熟語、概数、固有名詞、副詞など、漢数字を使用することが一般的な語句では漢数字を使います。
 
-        "arabic-kanji-numbers": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "arabic-kanji-numbers": true
+    }
+  }
+}
+```
 
 ### 「ですます調」、「である調」を統一します
 
 > https://github.com/textlint-ja/textlint-rule-no-mix-dearu-desumasu
 
+文章の「ですます調」、「である調」を統一してください。
+文体は見出し、本文、箇条書きの中で、それぞれ統一した表記にします。
+
+デフォルト設定は次の通りです。 
+
 - 見出しは自動
 - 本文はですます調
 - 箇条書きはである調
 
-文体は見出し、本文、箇条書きの中では統一した表記にします。
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "",
+        "preferInBody": "ですます",
+        "preferInList": "である",
+        "strict": true
+      }
+    }
+  }
+}
+```
 
-        "no-mix-dearu-desumasu": {
-            "preferInHeader": "",
-            "preferInBody": "ですます",
-            "preferInList": "である",
-            "strict": true
-        },
 
 ### 文末の句点記号として「。」を使います
 
@@ -173,23 +242,58 @@ textlint --preset ja-technical-writing README.md
 
 文末には「。」を使い文を区切ります。
 
-「。」のつけ忘れのチェックや「:」で文を区切らないようにします。
+「。」のつけ忘れのチェックや「:」で文を終わらせないようにします。
 
-        "ja-no-mixed-period": {
-            "periodMark": "。"
-        },
+デフォルト設定は次の通りです。 
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "periodMark": "。"
+      }
+    }
+  }
+}
+```
+
 
 ### 二重否定は使用しない
 
 > https://github.com/textlint-ja/textlint-rule-no-double-negative-ja
 
-        "no-double-negative-ja": true,
+[二重否定](https://ja.wikipedia.org/wiki/%E4%BA%8C%E9%87%8D%E5%90%A6%E5%AE%9A_(%E8%A8%80%E8%AA%9E%E5%AD%A6))は文章を読みにくくするため、使用しないようにします。
+
+デフォルト設定は次の通りです。 
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-double-negative-ja": true
+    }
+  }
+}
+```
 
 ### ら抜き言葉を使用しない
 
 > https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra
 
-        "no-dropping-the-ra": true,
+ら抜き言葉は話し言葉のため、書き言葉である文章では使用しないようにします。
+
+デフォルト設定は次の通りです。 
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-dropping-the-ra": true
+    }
+  }
+}
+```
 
 ### 逆接の接続助詞「が」を連続して使用しない
 
@@ -197,31 +301,101 @@ textlint --preset ja-technical-writing README.md
 
 逆接の接続助詞「が」は、特に否定の意味ではなくても安易に使われてしまいがちです。
 
-同一文中に複数回出現していないかをチェックします。
+同一文中に「が」が複数回出現していないかをチェックします。
 
-        "no-doubled-conjunctive-particle-ga": true,
+デフォルト設定は次の通りです。 
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-doubled-conjunctive-particle-ga": true
+    }
+  }
+}
+```
 
 ### 同じ接続詞を連続して使用しない
 
 > https://github.com/textlint-ja/textlint-rule-no-doubled-conjunction
 
-        "no-doubled-conjunction": true,
+「しかし、〜。しかし、〜」のように同じ接続詞が連続すると、文章が読みにくくなります。
+同じ接続詞が連続して使用されていないかをチェックします。
+
+デフォルト設定は次の通りです。 
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-doubled-conjunction": true
+    }
+  }
+}
+```
 
 ### 同じ助詞を連続して使用しない
 
 > https://github.com/textlint-ja/textlint-rule-no-doubled-joshi
 
-        "no-doubled-joshi": {
-            "min_interval": 1
-        },
+文中で同じ助詞が連続すると文章が読みにくくなります。
+1つの文中に同じ助詞が連続して出てくるのをチェックします。
+
+修正方法としては、次のようなものがあります。
+
+- 助詞の書き間違いなので、別の助詞に置き換える
+  - 例) `私は彼は好きだ` → `私は彼が好きだ`
+- 複数のことを1つの文で書いている可能性があるため、助詞が連続している文を分割する
+  - 1文でまとめようとして、無理やり助詞で文を繋いでいる可能性があります
+  - 文自体を分けることで、同じ助詞が連続していることがなくなります
+  - 例) https://github.com/asciidwango/js-primer/pull/1598#discussion_r1110939474
+- 助詞で無理やり文を繋げている可能性があるので、文の中で順番を入れ替える
+  - 助詞で文の中身を無理やり繋げようとしていて、使える助詞の選択肢が狭くなっている可能性があります
+  - 文の流れを箇条書きなどにして整理してみてください
+  - 例) https://github.com/asciidwango/js-primer/pull/1594#discussion_r1110973573
+- 助詞が不要なら削除して、文を簡潔にする
+  - "実際に" などのように強調的な言葉を削除することで、助詞が不要になる可能性があります
+  - 技術文書では簡潔な文章を心がけることが多いため、強調的な単語自体を削除することもあります
+
+[例外](https://github.com/textlint-ja/textlint-rule-no-doubled-joshi#%E4%BE%8B%E5%A4%96)も多いため、詳しくは[textlint-rule-no-doubled-joshi](https://github.com/textlint-ja/textlint-rule-no-doubled-joshi)のREADMEを参照してください。
+また、`allow`オプションで、特定の助詞が連続して出てくることを許可できます。
+
+文自体を直す余地がない場合は、コメントなどを使ってエラーを無視してください。
+
+- [Ignoring Text · textlint](https://textlint.github.io/docs/ignore.html)
+
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-doubled-joshi": {
+        "min_interval": 1
+      }
+    }
+  }
+}
+```
 
 ### UTF8-MAC 濁点を使用しない
 
 > https://github.com/textlint-ja/textlint-rule-no-nfd
 
-文章中にUTF8-MAC 濁点は不要です。 ファイルからコピー＆ペーストした文字である場合があります。
+文章中にUTF8-MAC 濁点は使用しないようにします。
+ファイルからコピー＆ペーストした文字である場合があります。
 
-        "no-nfd": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-nfd": true
+    }
+  }
+}
+```
 
 ### 不必要な制御文字を使用しない
 
@@ -229,7 +403,19 @@ textlint --preset ja-technical-writing README.md
 
 改行(`\n`)やタブ(`\t`)以外の制御文字が文章に入るのを防止します。
 
-        "no-invalid-control-character": true,
+不必要な制御文字は文字化けの原因となるため、使用しないようにします。
+
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-invalid-control-character": true
+    }
+  }
+}
+```
 
 ### 不必要なゼロ幅スペースを使用しない
 
@@ -237,16 +423,36 @@ textlint --preset ja-technical-writing README.md
 
 ゼロ幅スペース（`\u200b`）が文章に入るのを防止します。
 
-        "no-zero-width-spaces": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-zero-width-spaces": true
+    }
+  }
+}
+```
 
 ### 感嘆符!！、疑問符?？を使用しない
 
 > https://github.com/textlint-rule/textlint-rule-no-exclamation-question-mark
 
 技術文書では、感嘆符（!！）、疑問符（?？）は基本的には使用しないでください。
-特定の感嘆符や疑問符を使用する場合は、オプションで許可するか、filterルールで例外として扱ってください。
+特定の感嘆符や疑問符を使用する場合は、オプションで許可するか、コメントなどで例外として無視してください。
 
-        "no-exclamation-question-mark": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-exclamation-question-mark": true
+    }
+  }
+}
+```
 
 ### 半角カナを使用しない
 
@@ -254,26 +460,56 @@ textlint --preset ja-technical-writing README.md
 
 全角カタカナを使用してください。
 
-        "no-hankaku-kana": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-hankaku-kana": true
+    }
+  }
+}
+```
 
 ### 弱い日本語表現の利用を使用しない
 
 > https://github.com/textlint-ja/textlint-rule-ja-no-weak-phrase
 
-`〜かもしれない` 等の弱い表現を使用しないでください。
-主張を言い切るような表現を使うことを推奨するためのルールです。
+`〜かもしれない` や `〜と思います` 等の弱い表現を使用しないでください。
+技術文書で曖昧な表現を避けるようにするためのルールです。
 
-        "ja-no-weak-phrase": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-weak-phrase": true
+    }
+  }
+}
+```
 
 ### 同一の単語を間違えて連続しているのをチェックする
 
 > https://github.com/textlint-ja/textlint-rule-ja-no-successive-word
 
-同一の単語(形態素解析したtoken)が連続している場合は誤字の可能性があります。
+同一の単語(形態素解析したtoken)が連続している場合は、入力ミスや誤字の可能性があります。
 
 誤字でない場合は、[Issue報告](https://github.com/textlint-ja/textlint-rule-ja-no-successive-word/issues/new)してください。
 
-        "ja-no-successive-word": true,
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-successive-word": true
+    }
+  }
+}
+```
 
 ### よくある日本語の誤用をチェックする
 
@@ -281,7 +517,17 @@ textlint --preset ja-technical-writing README.md
 
 日本語や技術表現における漢字の誤用などをチェックするルールです。
 
-        "ja-no-abusage": true
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-abusage": true
+    }
+  }
+}
+```
 
 ### 冗長な表現をチェックする
 
@@ -290,7 +536,17 @@ textlint --preset ja-technical-writing README.md
 冗長な表現とは、その文から省いても意味が通じるような表現を示しています。
 `"することができる"`という冗長な表現を`"できる"`にするといったルールです。
 
-        "ja-no-redundant-expression": true
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-redundant-expression": true
+    }
+  }
+}
+```
 
 ### 入力ミスで発生する不自然なアルファベットをチェックする
 
@@ -298,15 +554,36 @@ textlint --preset ja-technical-writing README.md
 
 `リイr−ス` などIMEの入力ミスが日本語中に混じった不自然なアルファベットをチェックします。
 
-        "ja-unnatural-alphabet": true
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-unnatural-alphabet": true
+    }
+  }
+}
+```
 
 ### 対になっていない括弧をチェックする
 
 > https://github.com/textlint-rule/textlint-rule-no-unmatched-pair
 
-1文中で`(`に対応する`)`がない場合などの括弧の対応関係をチェックします。
+1文中で対になっていない括弧チェックします。
+`(`に対応する`)`がない場合や、`[`に対応する`]`がない場合などをチェックします。
 
-        "no-unmatched-pair": true
+デフォルト設定は次の通りです。
+
+```json
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-unmatched-pair": true
+    }
+  }
+}
+```
 
 ## Changelog
 
