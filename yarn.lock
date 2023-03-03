@@ -3255,10 +3255,10 @@ textlint-rule-ja-unnatural-alphabet@2.0.1:
     match-index "^1.0.1"
     regx "^1.0.4"
 
-textlint-rule-max-comma@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-3.0.0.tgz#946892239d0e2a56aace22718caf8af82e3ca40d"
-  integrity sha512-hFq6emf2A4Poq6EuOw8EykAdx2bFhlR9nQ5wn7kGNEbDgdkUuUFJkeIG+QfaoiJGnufi0SJNTsh8p2M/02SI/w==
+textlint-rule-max-comma@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-max-comma/-/textlint-rule-max-comma-3.0.1.tgz#9f81b5087883456c3c4f608c276e2661552ef1fd"
+  integrity sha512-VMht14U0+gxRhEnT3/Rfv7yUDF3YGhsSSODwXGnnicwe54Czs2CYALAZIlWA79R4LLqcYFc9pP1i8DeGWvaHeA==
   dependencies:
     sentence-splitter "^4.2.0"
     textlint-util-to-string "^3.3.2"
