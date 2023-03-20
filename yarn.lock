@@ -3229,10 +3229,10 @@ textlint-rule-ja-no-redundant-expression@^4.0.1:
     textlint-rule-helper "^2.2.1"
     textlint-util-to-string "^3.1.1"
 
-textlint-rule-ja-no-successive-word@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-2.0.0.tgz#32ab674f45483243d62e375b2636a81cf41b2925"
-  integrity sha512-4BCz5G7JbmuSwGTXlgTil70SS8x6firJ67ZQR9w3cmwNn6JC9UoBEjweia/M4Mviyadaw4fDLhFSfEC0v5OX+Q==
+textlint-rule-ja-no-successive-word@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-2.0.1.tgz#7b59bcd441ccd62c064cdd2883e9a26f170e7d57"
+  integrity sha512-XKTXkHwMu86SnGaj73B67U4apDdTquDKF3SfG24tRbzMyJoGe/Iba5VMId8sp8QHeTonp1bYOSxjZsbkpGyCNw==
   dependencies:
     "@textlint/regexp-string-matcher" "^1.1.0"
     kuromojin "^3.0.0"
