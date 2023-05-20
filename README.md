@@ -31,7 +31,7 @@ preset-ja-technical-writing/no-exclamation-question-mark -->
 
 ## Usage
 
-Via `.textlintrc`(Recommended)
+Via `.textlintrc.json`(Recommended)
 
 ```json
 {
