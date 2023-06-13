@@ -3335,10 +3335,10 @@ textlint-rule-no-exclamation-question-mark@^1.1.0:
     match-index "^1.0.3"
     textlint-rule-helper "^2.1.1"
 
-textlint-rule-no-hankaku-kana@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-hankaku-kana/-/textlint-rule-no-hankaku-kana-2.0.0.tgz#f76137d6933b1c87513dc6d36a76f24c5bddf9e0"
-  integrity sha512-zqrP2iSEjCMU8mqSvK+ybIisLel/hwUltE36g0hqDiET4uQmtgLj9OVtX77pLOkMOJAiAfme2Ub8irQifYq2Sg==
+textlint-rule-no-hankaku-kana@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-hankaku-kana/-/textlint-rule-no-hankaku-kana-2.0.1.tgz#aac00049bba008e45b79ce230fd406030fbe8dfd"
+  integrity sha512-39s94HK6V1xnII1haYiYQnWy1YQAKK7Zj0mcpUMFHHC4M5JdsRnhGs6DQPVEff0gQIFV0iuDNlofXt15kjMtEA==
   dependencies:
     textlint-rule-helper "^2.3.0"
     textlint-tester "^13.3.1"
@@ -3352,14 +3352,13 @@ textlint-rule-no-mix-dearu-desumasu@^5.0.0:
     textlint-rule-helper "^2.0.0"
     unist-util-visit "^3.0.0"
 
-textlint-rule-no-nfd@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-nfd/-/textlint-rule-no-nfd-2.0.1.tgz#f13c74796dcfe06b8bd6e8c0e2560d041b384ee7"
-  integrity sha512-d0SSK64qliPzan+xuRo7F2N4cfgDxBSwzZSwOMclwtPN+ag4Ir0M5SVfBEX1uOAgfPFnjssziDm6kp6WSwzJxg==
+textlint-rule-no-nfd@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-nfd/-/textlint-rule-no-nfd-2.0.2.tgz#61bba87031773349c13dffbf77c1184eab1cbac9"
+  integrity sha512-lIUvcQ+wqtConpPQU2YwEJl2dRcRyyrxPYZ3V76UwnkVg++XPLIrE5mLDgyNE/UIQ34e/KitJfMLqKWvnkFbNQ==
   dependencies:
     match-index "^1.0.3"
     textlint-rule-helper "^2.3.0"
-    unorm "^1.4.1"
 
 textlint-rule-no-zero-width-spaces@^1.0.1:
   version "1.0.1"
@@ -3641,11 +3640,6 @@ universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
-
-unorm@^1.4.1:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/unorm/-/unorm-1.6.0.tgz#029b289661fba714f1a9af439eb51d9b16c205af"
-  integrity sha512-b2/KCUlYZUeA7JFUuRJZPUtr4gZvBh7tavtv4fvk4+KV9pfGiR6CQAQAWl49ZpR3ts2dk4FYkP7EIgDJoiOLDA==
 
 untildify@^3.0.3:
   version "3.0.3"
