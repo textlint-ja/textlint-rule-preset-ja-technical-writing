@@ -396,10 +396,10 @@
   dependencies:
     "@textlint/ast-node-types" "^13.3.2"
 
-"@textlint/config-inliner@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@textlint/config-inliner/-/config-inliner-0.13.1.tgz#757f8a90fb6a832dbeec760544b6e2fd8875dd2f"
-  integrity sha512-7B9DEuvDoU86RthxnqYx6f6C+5Qd2LwCgmyg5RoFkM1iBzUIwyjZPpBFmbETHAXcHAQRwunVAHc2nRqBaejExQ==
+"@textlint/config-inliner@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/config-inliner/-/config-inliner-0.14.0.tgz#4eb6e7579528cc1cef507c070c409b4b750f3231"
+  integrity sha512-11Zn7VSoRPmh3y27z+EjsqMqZ+dSvsgDvRvbTifVu9QS72uayXocKLNK9FyLGpzwIaPI/Z2mkgoGIlf2V4RsoQ==
   dependencies:
     "@textlint/config-loader" "^13.3.0"
     untildify "^4.0.0"
@@ -430,10 +430,10 @@
     rc-config-loader "^4.1.2"
     try-resolve "^1.0.1"
 
-"@textlint/config-partial-parser@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@textlint/config-partial-parser/-/config-partial-parser-0.13.0.tgz#1b0b2a161542ed0fad9acb4b017158f48944a4e6"
-  integrity sha512-tSkZYsr9iY/4TF7XzE+8zqWmC4kBAIShjRbvhHEqKh/o48e0TkZJG9qwkuR60CVjiYJRwj5gdvgQe/npV7o1mA==
+"@textlint/config-partial-parser@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/config-partial-parser/-/config-partial-parser-0.14.0.tgz#e954a4d5b6e5a031de35a25718e144295d357ac5"
+  integrity sha512-igrKNfWdWzoZ02yDXc5mNUAZ2DAP+oelsNvr1ndOY2KXKqpyeMx4fym6xq+w06NrtDvCe0948W0dFMrY85mbdg==
   dependencies:
     "@textlint/config-loader" "^13.3.0"
     "@textlint/kernel" "^13.3.0"
@@ -618,10 +618,10 @@
     lodash.uniq "^4.5.0"
     lodash.uniqwith "^4.5.0"
 
-"@textlint/runtime-helper@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@textlint/runtime-helper/-/runtime-helper-0.13.1.tgz#cc634b79314445189aadb51161941ea17f0282d0"
-  integrity sha512-C7r5hnV9MzEjrmKAnT1kSKLOaSe0Udx37WLIK7eNqiJ/OwbGIFroMOFVO9NQCMDNKr9bcXk1TDyJPAV70CMsyA==
+"@textlint/runtime-helper@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/runtime-helper/-/runtime-helper-0.14.0.tgz#f6e8fbfe4191eb2025e5ca3a80ae0a1980f56dda"
+  integrity sha512-uNxbg2AXpT9ncpG430w3sWlbWvy4DpSlMsCh+9UJ8M90unH9q/qv0/GkkPYDGlBdhD6ribmsT3idFbpZhNiLfQ==
   dependencies:
     "@kvs/env" "^1.1.0"
     "@textlint/config-loader" "^13.3.0"
@@ -630,18 +630,18 @@
     "@textlint/types" "^13.3.0"
     "@textlint/utils" "^13.3.0"
 
-"@textlint/script-compiler@^0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.13.2.tgz#fb848c642f3e1609f2efea55541ee50fcc92a7c7"
-  integrity sha512-FuxKDmT4Eeacs9Lj6ubZt36qKYKHTyZ6ZvG8Oq/84n8pKapq2HIOLGLfZT6m/ELzbRLOtmhXAciqKeFCZ7ttYw==
+"@textlint/script-compiler@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/script-compiler/-/script-compiler-0.14.0.tgz#13eb95064290673aec912b9d420724d8d331b47b"
+  integrity sha512-RfSm1ZZNjmluOz+ie6Sr23oGZFp4bL6a01q1FBVoZ14bk+JYVsSzXbHJxH9r8sl/MAG7RxnBTPcsbyEHufQCIw==
   dependencies:
     "@babel/core" "^7.12.10"
-    "@textlint/config-inliner" "^0.13.1"
+    "@textlint/config-inliner" "^0.14.0"
     "@textlint/config-loader" "^13.3.0"
-    "@textlint/config-partial-parser" "^0.13.0"
+    "@textlint/config-partial-parser" "^0.14.0"
     "@textlint/kernel" "^13.3.0"
-    "@textlint/runtime-helper" "^0.13.1"
-    "@textlint/script-parser" "^0.13.1"
+    "@textlint/runtime-helper" "^0.14.0"
+    "@textlint/script-parser" "^0.14.0"
     "@textlint/textlint-plugin-markdown" "^13.3.0"
     "@textlint/textlint-plugin-text" "^13.3.0"
     "@textlint/types" "^13.3.0"
@@ -654,10 +654,10 @@
     terser-webpack-plugin "^5.3.6"
     webpack "^5.75.0"
 
-"@textlint/script-parser@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@textlint/script-parser/-/script-parser-0.13.1.tgz#393f2fe5bbf6296ffb3d0c2553331a4fbd73c5d6"
-  integrity sha512-7+4qbvlEhWao9t6egA4hW4puhX+AwuXuvVnY2yZO/MxSP7ay9xkPVwtPp5KnwNanD7jC3hw5ErGbxyCbCXoF8A==
+"@textlint/script-parser@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/script-parser/-/script-parser-0.14.0.tgz#45b0e7aa24395d141236afa8b3ad51e84cbc51cf"
+  integrity sha512-bXC9RBrLpFqCsv3Qsaq5roLN2QUHUVy1gi/8WZLuV9wBmkwQyi0nnZnX89Zo/AjSbbsEf1OCgll4Pfnf5bvx4w==
 
 "@textlint/source-code-fixer@^13.3.0":
   version "13.3.0"
@@ -796,15 +796,15 @@
   resolved "https://registry.yarnpkg.com/@textlint/utils/-/utils-13.3.2.tgz#4854e22c9434bd5d69d8151c2aacf88ddc09cff5"
   integrity sha512-eEi4j5vyQ0WRkfkBS+Sa2q1YQVo0B6cFXde2+TVpoDp7f8yPAb4wMv9jgQ23N+DpiafJVOhRQLyJdrITFwnmFw==
 
-"@textlint/website-generator@^0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.13.2.tgz#71620c48e45196b6b720b21d6a23e111815570f3"
-  integrity sha512-CFi2WagvhBXgCs7oPhAqvWI2Vinutmbbwnxg/Ibra3SvkW8AcZdvtpVogCNlTovZcvbMl5vobgOZUGgKsO1RaA==
+"@textlint/website-generator@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@textlint/website-generator/-/website-generator-0.14.0.tgz#7a6e665e5335388dac1cc2b41d0eefbf5d4c7d72"
+  integrity sha512-9rq2Wi/6ZlHsNWN90S2RPbzPemADjMNr3SPfQmYTRlJSoqnhlYuWr7jsrhKgDaBZtk77n4jnCB94hT5fGUKXuw==
   dependencies:
-    "@textlint/script-compiler" "^0.13.2"
+    "@textlint/script-compiler" "^0.14.0"
     meow "^9.0.0"
     read-pkg "^5.2.0"
-    textchecker-element "^0.13.2"
+    textchecker-element "^0.14.0"
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
@@ -3884,10 +3884,10 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-textchecker-element@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.13.2.tgz#1ac2b0997a2b1c491b04df6b6e59fa2ada686fac"
-  integrity sha512-G1N306x3KHcImzHxO1X9BAtr/IgAV3S1k/xRmNCZxlQe53+KkDn6Q6rFr6+Bf7q3Xv6f4YrRFL1gTQ+oJ5WmjA==
+textchecker-element@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/textchecker-element/-/textchecker-element-0.14.0.tgz#db6478a892296c840de54e8061d612f0cc67d47b"
+  integrity sha512-8bH3gzWrVd4my3MPIpiRurLTjObnFvCu2RF7Z36kRXUYsLJbwDAKsj5ZbPCpfF3txXADMYYglCYV3cm4aqnjGg==
   dependencies:
     "@textlint/source-code-fixer" "^13.3.0"
     delay "^4.4.0"
