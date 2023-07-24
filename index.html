@@ -225,7 +225,8 @@
         }
 
         .status {
-            color: var(--c3);
+            font-size: 0.8em;
+            color: var(--c5);
             background: var(--c1);
             padding: 0.5em 1em;
         }
@@ -246,7 +247,7 @@
     <div id="js-status" class="status">Loading...</div>
 </aside>
 <script type="module">
-    import { run } from "https://cdn.skypack.dev/textchecker-element/public-dist/textchecker-element.es.js";
+    import { run } from "./textchecker-element.esm.js";
 
     run("./textlint-worker.js");
 </script>
