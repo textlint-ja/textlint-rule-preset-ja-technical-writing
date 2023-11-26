@@ -320,6 +320,11 @@
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-13.3.1.tgz#469cab986e43f4ffb39aa5c31d148888a36d2286"
   integrity sha512-/qeEjW3hIFpGwESsCkJRroja7mBOlo9wqyx8G4fwayq4FZRvJMm/9DhIo77jd/4wm/VSJcVVr+fs+rVa4jrY5A==
 
+"@textlint/ast-node-types@^13.4.1":
+  version "13.4.1"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-13.4.1.tgz#00424f7b9bc6fe15cf6a78468ffe1e5d1adce5b2"
+  integrity sha512-qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==
+
 "@textlint/ast-node-types@^4.2.4", "@textlint/ast-node-types@^4.4.2", "@textlint/ast-node-types@^4.4.3":
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.4.3.tgz#fdba16e8126cddc50f45433ce7f6c55e7829566c"
@@ -2879,7 +2884,7 @@ semver@^7.5.4:
   dependencies:
     lru-cache "^6.0.0"
 
-sentence-splitter@^3.0.11, sentence-splitter@^3.2.0, sentence-splitter@^3.2.1, sentence-splitter@^3.2.2:
+sentence-splitter@^3.0.11, sentence-splitter@^3.2.1, sentence-splitter@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.2.2.tgz#b02a28c08bbad4bd3b6ec6f619d50e3fd3596d07"
   integrity sha512-hMvaodgK9Fay928uiQoTMEWjXpCERdKD2uKo7BbSyP+uWTo+wHiRjN+ZShyI99rW0VuoV4Cuw8FUmaRcnpN7Ug==
@@ -2903,6 +2908,14 @@ sentence-splitter@^4.2.0:
   integrity sha512-1Ww0iofAbR56tu6lVJ9Yh8Sj5ukeVjikBQ4sR5sNWM0kc+2AJe3p5F2o2qyuf5dJ4KVs1RbJpNkwEiMBCz7pKg==
   dependencies:
     "@textlint/ast-node-types" "^13.2.0"
+    structured-source "^4.0.0"
+
+sentence-splitter@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-5.0.0.tgz#48535c6c5438a57140626c532f0e1b86c5effa30"
+  integrity sha512-9Mvf7L8vwpPzkH0/HtXzCbmVkyj4aQXdeG7h8ighRvO0hvcZEy2OUEjeIlnM/z4EX4vBacEfpESC65Oa2rWOig==
+  dependencies:
+    "@textlint/ast-node-types" "^13.4.1"
     structured-source "^4.0.0"
 
 serialize-javascript@6.0.0:
@@ -3207,6 +3220,15 @@ textlint-rule-helper@^2.3.0:
     structured-source "^4.0.0"
     unist-util-visit "^2.0.3"
 
+textlint-rule-helper@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-helper/-/textlint-rule-helper-2.3.1.tgz#d2b82dbd46f25694fd315cbee46479bb545af87f"
+  integrity sha512-b1bijvyiUmKinfFE5hkQMSXs3Ky8jyZ3Y6SOoTRJKV9HLL2LWUVFAUezO7z4FpAkVvYruDYWCwA5qWV8GmvyUw==
+  dependencies:
+    "@textlint/ast-node-types" "^13.4.1"
+    structured-source "^4.0.0"
+    unist-util-visit "^2.0.3"
+
 textlint-rule-ja-no-abusage@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-3.0.0.tgz#b43f3f66b7d0aa9a37877ea1c125e3da3bafcc0a"
@@ -3278,15 +3300,15 @@ textlint-rule-max-kanji-continuous-len@^1.1.1:
     match-index "^1.0.1"
     textlint-rule-helper "^2.0.0"
 
-textlint-rule-max-ten@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/textlint-rule-max-ten/-/textlint-rule-max-ten-4.0.4.tgz#f71b06418e9e25817d40a05f6795eec446d3338b"
-  integrity sha512-7jH04Ey2HrjVWrjPB4Epk+X8ngeWcWDbvxhRji6sVu2mKuy8O/rjl4oMKFfHeOJuvnKjP+sfg9/o2nO6Jp0ggw==
+textlint-rule-max-ten@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-max-ten/-/textlint-rule-max-ten-5.0.0.tgz#37fdb94ee1e0ded1daf509c3b7bbc48983160843"
+  integrity sha512-EWOvbEa3Ukxz0+GAUEJ91DYFSC3IkyJ10dBcsU6VlL33k1BvTRoFr3m26w6upnXJffXQUI70Etn39I++2duyhA==
   dependencies:
     kuromojin "^3.0.0"
-    sentence-splitter "^3.2.0"
-    textlint-rule-helper "^2.3.0"
-    textlint-util-to-string "^3.3.0"
+    sentence-splitter "^5.0.0"
+    textlint-rule-helper "^2.3.1"
+    textlint-util-to-string "^3.3.4"
 
 textlint-rule-no-double-negative-ja@^2.0.1:
   version "2.0.1"
@@ -3444,6 +3466,16 @@ textlint-util-to-string@^3.3.2:
   integrity sha512-TCnHX5xGDWIGQpcusLrctodid+n5t5G6ft9+KAVad+GmrOOkk9IiPej8FwH9Vq/uk1j44yTB20YYja0YnQ+z/w==
   dependencies:
     "@textlint/ast-node-types" "^13.0.5"
+    rehype-parse "^6.0.1"
+    structured-source "^4.0.0"
+    unified "^8.4.0"
+
+textlint-util-to-string@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/textlint-util-to-string/-/textlint-util-to-string-3.3.4.tgz#be889e195bcff8c34eec8ce23cde73e2b87cff54"
+  integrity sha512-XF4Qfw0ES+czKy03BwuvBUoXC8NAg920VuRxW0pd72fW76zMeMbPI/bRN5PHq3SbCdOm7U69/Pk+DX34xqIYqA==
+  dependencies:
+    "@textlint/ast-node-types" "^13.4.1"
     rehype-parse "^6.0.1"
     structured-source "^4.0.0"
     unified "^8.4.0"
