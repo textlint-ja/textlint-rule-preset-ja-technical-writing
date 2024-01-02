@@ -1,5 +1,15 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 10.0.0
+
+### Major Changes
+
+- 3e3b2d5: fix(deps): update dependency textlint-rule-no-mix-dearu-desumasu to v6
+
+  文体が統一されていても preferIn 設定に違反する場合は、エラーとなるように変更
+  以前は、prefer とは異なる文体に統一されていた時にエラーになっていませんでした。
+  https://github.com/textlint-ja/textlint-rule-no-mix-dearu-desumasu/releases/tag/v6.0.0
+
 ## 9.0.0
 
 ### Major Changes
