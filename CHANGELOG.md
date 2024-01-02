@@ -1,5 +1,11 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 10.0.1
+
+### Patch Changes
+
+- ac442b6: CI: merge snapshot release
+
 ## 10.0.0
 
 ### Major Changes
