@@ -49,7 +49,7 @@
     "textlint-rule-no-dropping-the-ra": "^3.0.0",
     "textlint-rule-no-exclamation-question-mark": "^1.1.0",
     "textlint-rule-no-hankaku-kana": "^2.0.1",
-    "textlint-rule-no-mix-dearu-desumasu": "^6.0.0",
+    "textlint-rule-no-mix-dearu-desumasu": "^6.0.1",
     "textlint-rule-no-nfd": "^2.0.2",
     "textlint-rule-no-zero-width-spaces": "^1.0.1",
     "textlint-rule-preset-jtf-style": "^2.3.13",
