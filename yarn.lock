@@ -375,10 +375,10 @@
     traverse "^0.6.7"
     unified "^9.2.2"
 
-"@textlint/module-interop@^14.0.3":
-  version "14.0.3"
-  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-14.0.3.tgz#43195d27780220e487a4eb49b7f46e64dc3fba32"
-  integrity sha512-76K6y4wNCZH3+BGziJm6iGPbKsBtb214332EgdXDMNsYah51LPT9YrXuOI1ROyxvfVoztJMH0MDZdtdY/t7cig==
+"@textlint/module-interop@^14.0.4":
+  version "14.0.4"
+  resolved "https://registry.yarnpkg.com/@textlint/module-interop/-/module-interop-14.0.4.tgz#3dafee16c4117b184050b3ac5e02674ee26bd708"
+  integrity sha512-okv52pRSQ1aeC8rim8qp2D2Fmj/oKDYGY2itdeZhj9E/vdkU9/r7OpdcxyuNiuqLEd/sWw03EAwt3S6mlfNIOw==
 
 "@textlint/regexp-string-matcher@^1.0.2", "@textlint/regexp-string-matcher@^1.1.0":
   version "1.1.0"
