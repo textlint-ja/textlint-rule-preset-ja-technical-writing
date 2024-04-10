@@ -1775,8 +1775,11 @@ function wt(n, e) {
     }), {
       fixed: !0,
       messages: l,
+      // have order
       applyingMessages: o.reverse(),
+      // have order
       remainingMessages: i.sort(Ct),
+      // have not order
       output: a + h.join("")
     };
   } else
