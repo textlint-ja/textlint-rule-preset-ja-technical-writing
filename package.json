@@ -59,7 +59,7 @@
     "@changesets/cli": "^2.27.7",
     "markdown-toc": "^1.2.0",
     "mocha": "^10.6.0",
-    "semver": "^7.6.2"
+    "semver": "^7.6.3"
   },
   "email": "azuciao@gmail.com"
 }
