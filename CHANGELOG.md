@@ -1,5 +1,14 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 10.0.2
+
+### Patch Changes
+
+- 1e7958b: Node.js 16 のサポートを終了しました
+- a00b809: ⬆️ @textlint-rule/textlint-rule-no-invalid-control-character@v3
+
+  - Node.js 18+が必要になります。
+
 ## 10.0.1
 
 ### Patch Changes
