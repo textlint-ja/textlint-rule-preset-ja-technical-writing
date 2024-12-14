@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [ 16, 18, 20 ]
+        node_version: [ 18, 20, 22 ]
     steps:
       - name: checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - name: setup Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v4
         with:
-          node_version: ${{ matrix.node_version }}
+          node-version: ${{ matrix.node_version }}
       - name: Install
         run: yarn install
       - name: Test
