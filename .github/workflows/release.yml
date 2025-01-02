@@ -25,12 +25,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org' # to create .npmrc file with NODE_AUTH_TOKEN
           node-version: 22
       - name: Install Dependencies
-        run: yarn install
+        run: npm ci
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: yarn run release
+          publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
@@ -38,8 +38,8 @@ jobs:
       - name: Publish next snapshot
         if: steps.changesets.outputs.published != 'true'
         run: |
-          yarn changeset version --snapshot next
-          yarn changeset publish --no-git-tag --snapshot --tag next
+          npm exec -- changeset version --snapshot next
+          npm exec -- changeset publish --no-git-tag --snapshot --tag next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
