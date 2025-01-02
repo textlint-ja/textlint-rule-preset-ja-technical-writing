@@ -1,5 +1,21 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 11.0.0
+
+### Major Changes
+
+- e9893b5: fix(deps): update dependency textlint-rule-preset-jtf-style to v3
+
+  Node.js 18+が必要になります。peerDependencies の記述の改善など
+  https://github.com/textlint-ja/textlint-rule-preset-JTF-style/releases/tag/v3.0.0
+
+### Patch Changes
+
+- 1e7958b: Node.js 16 のサポートを終了しました
+- a00b809: ⬆️ @textlint-rule/textlint-rule-no-invalid-control-character@v3
+
+  - Node.js 18+が必要になります。
+
 ## 10.0.1
 
 ### Patch Changes
