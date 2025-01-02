@@ -27,7 +27,8 @@
   "scripts": {
     "docs:toc": "markdown-toc -i README.md",
     "release": "changeset publish",
-    "test": "mocha test/ && (cd example && npm ci && npm test)"
+    "test": "mocha test/ && npm run test:example",
+    "test:example": "cd example && npm ci && npm test"
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^3.0.0",
