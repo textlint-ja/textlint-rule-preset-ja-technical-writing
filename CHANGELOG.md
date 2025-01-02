@@ -1,5 +1,11 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 12.0.1
+
+### Patch Changes
+
+- c1881a7: ReRelease
+
 ## 12.0.0
 
 ### Major Changes
