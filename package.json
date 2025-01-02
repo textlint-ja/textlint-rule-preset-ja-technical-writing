@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing.git"
+    "url": "git+https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing.git"
   },
   "license": "MIT",
   "author": "azu",
@@ -61,5 +61,6 @@
     "mocha": "^11.0.1",
     "semver": "^7.6.3"
   },
-  "email": "azuciao@gmail.com"
+  "email": "azuciao@gmail.com",
+  "packageManager": "npm@10.9.2+sha512.8ab88f10f224a0c614cb717a7f7c30499014f77134120e9c1f0211ea3cf3397592cbe483feb38e0c4b3be1c54e347292c76a1b5edb94a3289d5448484ab8ac81"
 }

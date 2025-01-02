@@ -38,9 +38,9 @@ jobs:
       - name: Publish next snapshot
         if: steps.changesets.outputs.published != 'true'
         run: |
-          git checkout master
           yarn changeset version --snapshot next
           yarn changeset publish --no-git-tag --snapshot --tag next
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.SHARED_BOT_NPM_TOKEN }}
