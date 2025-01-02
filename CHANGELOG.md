@@ -1,5 +1,11 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 12.0.2
+
+### Patch Changes
+
+- dba9f59: CI: prevent snapshot release from branch
+
 ## 12.0.1
 
 ### Patch Changes
