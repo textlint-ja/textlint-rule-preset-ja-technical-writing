@@ -1,5 +1,11 @@
 # textlint-rule-preset-ja-technical-writing
 
+## 12.0.0
+
+### Major Changes
+
+- a2089cb: Re Relase
+
 ## 11.0.0
 
 ### Major Changes
