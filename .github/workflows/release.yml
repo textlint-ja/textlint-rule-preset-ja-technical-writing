@@ -38,6 +38,7 @@ jobs:
       - name: Publish next snapshot
         if: steps.changesets.outputs.published != 'true'
         run: |
+          git checkout master # reset current branch to master
           npm exec -- changeset version --snapshot next
           npm exec -- changeset publish --no-git-tag --snapshot --tag next
         env:
