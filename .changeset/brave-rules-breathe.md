@@ -1,5 +1,5 @@
 ---
-"textlint-rule-preset-ja-technical-writing": patch
+"textlint-rule-preset-ja-technical-writing": major
 ---
 
 fix(deps): update dependency textlint-rule-preset-jtf-style to v3
