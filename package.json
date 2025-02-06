@@ -60,8 +60,8 @@
     "@changesets/cli": "^2.27.12",
     "markdown-toc": "^1.2.0",
     "mocha": "^11.1.0",
-    "semver": "^7.6.3"
+    "semver": "^7.7.0"
   },
   "email": "azuciao@gmail.com",
-  "packageManager": "npm@11.0.0+sha512.11dff29565d2297c74e7c594a9762581bde969f0aa5cbe6f5b3644bf008a16c065ece61094d9ffbb81125be38df8e1ba43eb8244b3d30c61eb797e9a2440e3ec"
+  "packageManager": "npm@11.1.0+sha512.acf301ad9b9ddba948fcb72341e2f0fcae477f56a95cc2a092934d133a7461062633cefbf93d5934a3dc0768674e2edee9f04dcfcc4bb4c327ff0e3a7d552a1b"
 }
