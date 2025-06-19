@@ -63,5 +63,5 @@
     "semver": "^7.7.2"
   },
   "email": "azuciao@gmail.com",
-  "packageManager": "npm@11.4.1+sha512.fcee43884166b6f9c5d04535fb95650e9708b6948a1f797eddf40e9778646778a518dfa32651b1c62ff36f4ac42becf177ca46ca27d53f24b539190c8d91802b"
+  "packageManager": "npm@11.4.2+sha512.f90c1ec8b207b625d6edb6693aef23dacb39c38e4217fe8c46a973f119cab392ac0de23fe3f07e583188dae9fd9108b3845ad6f525b598742bd060ebad60bff3"
 }
