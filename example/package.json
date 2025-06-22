@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@textlint/website-generator": "^0.17.0",
-    "textlint": "^14.8.4",
+    "textlint": "^15.0.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "install-local": "^3.0.1"
   }
