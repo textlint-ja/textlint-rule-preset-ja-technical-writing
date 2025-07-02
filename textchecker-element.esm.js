@@ -1,4 +1,4 @@
-var se = [
+var re = [
   "direction",
   // RTL support
   "boxSizing",
@@ -38,7 +38,7 @@ var se = [
   "wordSpacing",
   "tabSize",
   "MozTabSize"
-], Ve = [
+], Re = [
   { n: "direction", v: "inherit" },
   // RTL support
   { n: "boxSizing", v: "inherit" },
@@ -74,97 +74,97 @@ var se = [
   { n: "letterSpacing", v: "inherit" },
   { n: "wordSpacing", v: "inherit" },
   { n: "tabSize", v: "inherit" }
-], Ce = typeof window < "u", Pe = Ce && globalThis.mozInnerScreenX != null, z = globalThis.getComputedStyle ? globalThis.getComputedStyle : function(n) {
-  return n.currentStyle;
-}, B;
-function $e(n) {
-  var e = n && n.id || "input-textarea-caret-position-mirror-div", t = n && n.debug || !1, i = t || n && n.reuse || !1, o;
-  return i && (o = document.getElementById(e)), o || (o = document.createElement("div"), o.id = e, document.body.appendChild(o), B = void 0), o;
+], Te = typeof window < "u", We = Te && globalThis.mozInnerScreenX != null, D = globalThis.getComputedStyle ? globalThis.getComputedStyle : function(i) {
+  return i.currentStyle;
+}, $;
+function Oe(i) {
+  var e = i && i.id || "input-textarea-caret-position-mirror-div", n = i && i.debug || !1, t = n || i && i.reuse || !1, o;
+  return t && (o = document.getElementById(e)), o || (o = document.createElement("div"), o.id = e, document.body.appendChild(o), $ = void 0), o;
 }
-function Ae() {
-  var n = document.createElement("span"), e = n.style;
-  e.position = "absolute", e.visibility = "hidden", e.fontSize = "100px", document.body.appendChild(n);
-  var t = parseFloat(z(n).getPropertyValue("font-size"));
-  return n.parentNode !== null && n.parentNode.removeChild(n), isFinite(t) ? t / 100 : 1;
+function ze() {
+  var i = document.createElement("span"), e = i.style;
+  e.position = "absolute", e.visibility = "hidden", e.fontSize = "100px", document.body.appendChild(i);
+  var n = parseFloat(D(i).getPropertyValue("font-size"));
+  return i.parentNode !== null && i.parentNode.removeChild(i), isFinite(n) ? n / 100 : 1;
 }
-function Be(n, e, t, i) {
-  var o = i && i.debug || !1, l = o || i && i.reuse || !1;
-  if (l) {
-    var c = i && i.forceUpdateStyle || !1;
-    !c && i && !i.reuse && (c = !0);
-    var u;
-    if (c ? u = !1 : u = i && i.guessIfUpdateStyle || !1, u && (typeof u == "function" && !u(t) || B === n.tagName))
+function De(i, e, n, t) {
+  var o = t && t.debug || !1, s = o || t && t.reuse || !1;
+  if (s) {
+    var d = t && t.forceUpdateStyle || !1;
+    !d && t && !t.reuse && (d = !0);
+    var c;
+    if (d ? c = !1 : c = t && t.guessIfUpdateStyle || !1, c && (typeof c == "function" && !c(n) || $ === i.tagName))
       return;
-    B = n.tagName;
+    $ = i.tagName;
   } else
-    B = void 0;
-  var a = t.style, h = z(n), r = n.nodeName === "INPUT";
-  a.whiteSpace = "pre-wrap", r ? (!i || !i.allowInputWrap) && (a.wordWrap = "normal") : a.wordWrap = "break-word", a.position = "absolute", o || (a.visibility = "hidden"), i && i.fontZoom === !0 && (i.fontZoom = 1 / Ae());
-  var s = i && i.additionalStyles ? se.concat(i.additionalStyles) : se;
-  s.forEach(function(d) {
-    if (r && d === "lineHeight") {
-      var v = h;
-      if (h.lineHeight === "normal" && (a.lineHeight = "1em", a.height = h.height, v = z(t)), h.boxSizing === "border-box") {
-        var p = parseInt(h.height), f = parseInt(h.paddingTop) + parseInt(h.paddingBottom) + parseInt(h.borderTopWidth) + parseInt(h.borderBottomWidth), g = f + parseInt(v.lineHeight);
-        p > g ? a.lineHeight = p - f + "px" : p === g ? a.lineHeight = v.lineHeight : a.lineHeight = 0;
+    $ = void 0;
+  var a = n.style, u = D(i), p = i.nodeName === "INPUT";
+  a.whiteSpace = "pre-wrap", p ? (!t || !t.allowInputWrap) && (a.wordWrap = "normal") : a.wordWrap = "break-word", a.position = "absolute", o || (a.visibility = "hidden"), t && t.fontZoom === !0 && (t.fontZoom = 1 / ze());
+  var r = t && t.additionalStyles ? re.concat(t.additionalStyles) : re;
+  r.forEach(function(l) {
+    if (p && l === "lineHeight") {
+      var f = u;
+      if (u.lineHeight === "normal" && (a.lineHeight = "1em", a.height = u.height, f = D(n)), u.boxSizing === "border-box") {
+        var h = parseInt(u.height), g = parseInt(u.paddingTop) + parseInt(u.paddingBottom) + parseInt(u.borderTopWidth) + parseInt(u.borderBottomWidth), v = g + parseInt(f.lineHeight);
+        h > v ? a.lineHeight = h - g + "px" : h === v ? a.lineHeight = f.lineHeight : a.lineHeight = 0;
       } else {
         var x, m, C = 0;
-        isFinite(parseFloat(v.lineHeight)) && isFinite(x = parseFloat(h.height)) ? (["borderTop", "borderBottom", "paddingTop", "paddingBottom", "marginTop", "marginBottom"].forEach(
-          function(_) {
-            m = parseFloat(h[_]), isFinite(m) && (C += m);
+        isFinite(parseFloat(f.lineHeight)) && isFinite(x = parseFloat(u.height)) ? (["borderTop", "borderBottom", "paddingTop", "paddingBottom", "marginTop", "marginBottom"].forEach(
+          function(b) {
+            m = parseFloat(u[b]), isFinite(m) && (C += m);
           }
-        ), C === 0 ? a.lineHeight = h.height : (m = Math.max(x - C, 0), a.lineHeight = (m > 0 ? m : x) + "px")) : a[d] = v[d];
+        ), C === 0 ? a.lineHeight = u.height : (m = Math.max(x - C, 0), a.lineHeight = (m > 0 ? m : x) + "px")) : a[l] = f[l];
       }
-    } else if (i && typeof i.fontZoom == "number" && (d === "fontSize" || d === "lineHeight")) {
-      var b;
-      isFinite(b = parseFloat(h[d])) ? a[d] = b * i.fontZoom + "px" : a[d] = h[d];
+    } else if (t && typeof t.fontZoom == "number" && (l === "fontSize" || l === "lineHeight")) {
+      var w;
+      isFinite(w = parseFloat(u[l])) ? a[l] = w * t.fontZoom + "px" : a[l] = u[l];
     } else
-      a[d] = h[d];
-  }), Pe && n.scrollHeight > parseInt(h.height) && (a.overflowY = "scroll");
+      a[l] = u[l];
+  }), We && i.scrollHeight > parseInt(u.height) && (a.overflowY = "scroll");
 }
-function Re() {
-  B = void 0;
+function je() {
+  $ = void 0;
 }
-function re(n, e) {
-  return e && e.text ? typeof e.text == "function" ? e.text(n, e) : e.text : n.value;
+function oe(i, e) {
+  return e && e.text ? typeof e.text == "function" ? e.text(i, e) : e.text : i.value;
 }
-const We = () => {
-  let n = "", e = null;
-  return (t) => {
-    const i = t.value;
-    return n === i || (n = i, e = z(t)), e;
+const qe = () => {
+  let i = "", e = null;
+  return (n) => {
+    const t = n.value;
+    return i === t || (i = t, e = D(n)), e;
   };
-}, ze = We();
-function Oe(n, e, t, i) {
-  n.scrollLeft && (t.scrollLeft = n.scrollLeft), n.scrollTop && (t.scrollTop = n.scrollTop), n.dir && (t.dir = n.dir), i && i.additionalAttributes && i.additionalAttributes.forEach(function(h) {
-    t[h] = n[h];
+}, Ze = qe();
+function Ue(i, e, n, t) {
+  i.scrollLeft && (n.scrollLeft = i.scrollLeft), i.scrollTop && (n.scrollTop = i.scrollTop), i.dir && (n.dir = i.dir), t && t.additionalAttributes && t.additionalAttributes.forEach(function(u) {
+    n[u] = i[u];
   });
-  var o = ze(n), l = n.nodeName === "INPUT";
-  t.textContent = re(n, i).substring(0, e), l && (!i || !i.allowInputWrap) && (t.textContent = t.textContent.replace(/\s/g, " "));
-  var c = document.createElement("span");
-  if (c.textContent = re(n, i).substring(e) || ".", i.fauxId && (c.id = i.fauxId), i.forceClearFauxStyle) {
-    var u = c.style;
-    Ve.forEach(function(h) {
-      u[h.n] = h.v;
+  var o = Ze(i), s = i.nodeName === "INPUT";
+  n.textContent = oe(i, t).substring(0, e), s && (!t || !t.allowInputWrap) && (n.textContent = n.textContent.replace(/\s/g, " "));
+  var d = document.createElement("span");
+  if (d.textContent = oe(i, t).substring(e) || ".", t.fauxId && (d.id = t.fauxId), t.forceClearFauxStyle) {
+    var c = d.style;
+    Re.forEach(function(u) {
+      c[u.n] = u.v;
     });
   }
-  t.appendChild(c);
+  n.appendChild(d);
   var a = {
-    top: c.offsetTop + parseInt(o.borderTopWidth),
-    left: c.offsetLeft + parseInt(o.borderLeftWidth),
+    top: d.offsetTop + parseInt(o.borderTopWidth),
+    left: d.offsetLeft + parseInt(o.borderLeftWidth),
     height: parseInt(o.lineHeight)
   };
-  return i && i.returnHeight && (a.height = c.offsetHeight), a;
+  return t && t.returnHeight && (a.height = d.offsetHeight), a;
 }
-function ae(n, e, t) {
-  if (!Ce)
+function se(i, e, n) {
+  if (!Te)
     throw new Error("textarea-caret-position#getCaretCoordinates should only be called in a browser");
-  var i = t && t.debug || !1, o = i || t && t.reuse || !1, l = $e(t);
-  Be(n, e, l, t);
-  var c = Oe(n, e, l, t);
-  i && (l.style.backgroundColor = "#aaa", c._div = l);
-  var u = t && t.returnDiv;
-  return !o && !u ? (Re(), document.body.removeChild(l)) : u && (c._div = l), c;
+  var t = n && n.debug || !1, o = t || n && n.reuse || !1, s = Oe(n);
+  De(i, e, s, n);
+  var d = Ue(i, e, s, n);
+  t && (s.style.backgroundColor = "#aaa", d._div = s);
+  var c = n && n.returnDiv;
+  return !o && !c ? (je(), document.body.removeChild(s)) : c && (d._div = s), d;
 }
 /**
  * @license
@@ -179,7 +179,7 @@ function ae(n, e, t) {
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const De = /* @__PURE__ */ new WeakMap(), R = (n) => typeof n == "function" && De.has(n);
+const Xe = /* @__PURE__ */ new WeakMap(), R = (i) => typeof i == "function" && Xe.has(i);
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -193,10 +193,10 @@ const De = /* @__PURE__ */ new WeakMap(), R = (n) => typeof n == "function" && D
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const le = typeof window < "u" && window.customElements != null && window.customElements.polyfillWrapFlushCallback !== void 0, be = (n, e, t = null) => {
-  for (; e !== t; ) {
-    const i = e.nextSibling;
-    n.removeChild(e), e = i;
+const ae = typeof window < "u" && window.customElements != null && window.customElements.polyfillWrapFlushCallback !== void 0, Ie = (i, e, n = null) => {
+  for (; e !== n; ) {
+    const t = e.nextSibling;
+    i.removeChild(e), e = t;
   }
 };
 /**
@@ -212,7 +212,7 @@ const le = typeof window < "u" && window.customElements != null && window.custom
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const T = {}, de = {};
+const S = {}, le = {};
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -226,67 +226,67 @@ const T = {}, de = {};
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const H = `{{lit-${String(Math.random()).slice(2)}}}`, ye = `<!--${H}-->`, ce = new RegExp(`${H}|${ye}`), A = "$lit$";
-class je {
-  constructor(e, t) {
-    this.parts = [], this.element = t;
-    const i = [], o = [], l = document.createTreeWalker(t.content, 133, null, !1);
-    let c = 0, u = -1, a = 0;
-    const { strings: h, values: { length: r } } = e;
-    for (; a < r; ) {
-      const s = l.nextNode();
-      if (s === null) {
-        l.currentNode = o.pop();
+const k = `{{lit-${String(Math.random()).slice(2)}}}`, Ee = `<!--${k}-->`, de = new RegExp(`${k}|${Ee}`), B = "$lit$";
+class Je {
+  constructor(e, n) {
+    this.parts = [], this.element = n;
+    const t = [], o = [], s = document.createTreeWalker(n.content, 133, null, !1);
+    let d = 0, c = -1, a = 0;
+    const { strings: u, values: { length: p } } = e;
+    for (; a < p; ) {
+      const r = s.nextNode();
+      if (r === null) {
+        s.currentNode = o.pop();
         continue;
       }
-      if (u++, s.nodeType === 1) {
-        if (s.hasAttributes()) {
-          const d = s.attributes, { length: v } = d;
-          let p = 0;
-          for (let f = 0; f < v; f++)
-            ue(d[f].name, A) && p++;
-          for (; p-- > 0; ) {
-            const f = h[a], g = U.exec(f)[2], x = g.toLowerCase() + A, m = s.getAttribute(x);
-            s.removeAttribute(x);
-            const C = m.split(ce);
-            this.parts.push({ type: "attribute", index: u, name: g, strings: C }), a += C.length - 1;
+      if (c++, r.nodeType === 1) {
+        if (r.hasAttributes()) {
+          const l = r.attributes, { length: f } = l;
+          let h = 0;
+          for (let g = 0; g < f; g++)
+            ce(l[g].name, B) && h++;
+          for (; h-- > 0; ) {
+            const g = u[a], v = Y.exec(g)[2], x = v.toLowerCase() + B, m = r.getAttribute(x);
+            r.removeAttribute(x);
+            const C = m.split(de);
+            this.parts.push({ type: "attribute", index: c, name: v, strings: C }), a += C.length - 1;
           }
         }
-        s.tagName === "TEMPLATE" && (o.push(s), l.currentNode = s.content);
-      } else if (s.nodeType === 3) {
-        const d = s.data;
-        if (d.indexOf(H) >= 0) {
-          const v = s.parentNode, p = d.split(ce), f = p.length - 1;
-          for (let g = 0; g < f; g++) {
-            let x, m = p[g];
+        r.tagName === "TEMPLATE" && (o.push(r), s.currentNode = r.content);
+      } else if (r.nodeType === 3) {
+        const l = r.data;
+        if (l.indexOf(k) >= 0) {
+          const f = r.parentNode, h = l.split(de), g = h.length - 1;
+          for (let v = 0; v < g; v++) {
+            let x, m = h[v];
             if (m === "")
-              x = M();
+              x = P();
             else {
-              const C = U.exec(m);
-              C !== null && ue(C[2], A) && (m = m.slice(0, C.index) + C[1] + C[2].slice(0, -A.length) + C[3]), x = document.createTextNode(m);
+              const C = Y.exec(m);
+              C !== null && ce(C[2], B) && (m = m.slice(0, C.index) + C[1] + C[2].slice(0, -B.length) + C[3]), x = document.createTextNode(m);
             }
-            v.insertBefore(x, s), this.parts.push({ type: "node", index: ++u });
+            f.insertBefore(x, r), this.parts.push({ type: "node", index: ++c });
           }
-          p[f] === "" ? (v.insertBefore(M(), s), i.push(s)) : s.data = p[f], a += f;
+          h[g] === "" ? (f.insertBefore(P(), r), t.push(r)) : r.data = h[g], a += g;
         }
-      } else if (s.nodeType === 8)
-        if (s.data === H) {
-          const d = s.parentNode;
-          (s.previousSibling === null || u === c) && (u++, d.insertBefore(M(), s)), c = u, this.parts.push({ type: "node", index: u }), s.nextSibling === null ? s.data = "" : (i.push(s), u--), a++;
+      } else if (r.nodeType === 8)
+        if (r.data === k) {
+          const l = r.parentNode;
+          (r.previousSibling === null || c === d) && (c++, l.insertBefore(P(), r)), d = c, this.parts.push({ type: "node", index: c }), r.nextSibling === null ? r.data = "" : (t.push(r), c--), a++;
         } else {
-          let d = -1;
-          for (; (d = s.data.indexOf(H, d + 1)) !== -1; )
+          let l = -1;
+          for (; (l = r.data.indexOf(k, l + 1)) !== -1; )
             this.parts.push({ type: "node", index: -1 }), a++;
         }
     }
-    for (const s of i)
-      s.parentNode.removeChild(s);
+    for (const r of t)
+      r.parentNode.removeChild(r);
   }
 }
-const ue = (n, e) => {
-  const t = n.length - e.length;
-  return t >= 0 && n.slice(t) === e;
-}, Ze = (n) => n.index !== -1, M = () => document.createComment(""), U = (
+const ce = (i, e) => {
+  const n = i.length - e.length;
+  return n >= 0 && i.slice(n) === e;
+}, Ye = (i) => i.index !== -1, P = () => document.createComment(""), Y = (
   // eslint-disable-next-line no-control-regex
   /([ \x09\x0a\x0c\x0d])([^\0-\x1F\x7F-\x9F "'>=/]+)([ \x09\x0a\x0c\x0d]*=[ \x09\x0a\x0c\x0d]*(?:[^ \x09\x0a\x0c\x0d"'`<>=]*|"[^"]*|'[^']*))$/
 );
@@ -303,35 +303,35 @@ const ue = (n, e) => {
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-class he {
-  constructor(e, t, i) {
-    this.__parts = [], this.template = e, this.processor = t, this.options = i;
+class ue {
+  constructor(e, n, t) {
+    this.__parts = [], this.template = e, this.processor = n, this.options = t;
   }
   update(e) {
-    let t = 0;
-    for (const i of this.__parts)
-      i !== void 0 && i.setValue(e[t]), t++;
-    for (const i of this.__parts)
-      i !== void 0 && i.commit();
+    let n = 0;
+    for (const t of this.__parts)
+      t !== void 0 && t.setValue(e[n]), n++;
+    for (const t of this.__parts)
+      t !== void 0 && t.commit();
   }
   _clone() {
-    const e = le ? this.template.element.content.cloneNode(!0) : document.importNode(this.template.element.content, !0), t = [], i = this.template.parts, o = document.createTreeWalker(e, 133, null, !1);
-    let l = 0, c = 0, u, a = o.nextNode();
-    for (; l < i.length; ) {
-      if (u = i[l], !Ze(u)) {
-        this.__parts.push(void 0), l++;
+    const e = ae ? this.template.element.content.cloneNode(!0) : document.importNode(this.template.element.content, !0), n = [], t = this.template.parts, o = document.createTreeWalker(e, 133, null, !1);
+    let s = 0, d = 0, c, a = o.nextNode();
+    for (; s < t.length; ) {
+      if (c = t[s], !Ye(c)) {
+        this.__parts.push(void 0), s++;
         continue;
       }
-      for (; c < u.index; )
-        c++, a.nodeName === "TEMPLATE" && (t.push(a), o.currentNode = a.content), (a = o.nextNode()) === null && (o.currentNode = t.pop(), a = o.nextNode());
-      if (u.type === "node") {
-        const h = this.processor.handleTextExpression(this.options);
-        h.insertAfterNode(a.previousSibling), this.__parts.push(h);
+      for (; d < c.index; )
+        d++, a.nodeName === "TEMPLATE" && (n.push(a), o.currentNode = a.content), (a = o.nextNode()) === null && (o.currentNode = n.pop(), a = o.nextNode());
+      if (c.type === "node") {
+        const u = this.processor.handleTextExpression(this.options);
+        u.insertAfterNode(a.previousSibling), this.__parts.push(u);
       } else
-        this.__parts.push(...this.processor.handleAttributeExpressions(a, u.name, u.strings, this.options));
-      l++;
+        this.__parts.push(...this.processor.handleAttributeExpressions(a, c.name, c.strings, this.options));
+      s++;
     }
-    return le && (document.adoptNode(e), customElements.upgrade(e)), e;
+    return ae && (document.adoptNode(e), customElements.upgrade(e)), e;
   }
 }
 /**
@@ -347,29 +347,29 @@ class he {
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const pe = window.trustedTypes && trustedTypes.createPolicy("lit-html", { createHTML: (n) => n }), Ue = ` ${H} `;
-class we {
-  constructor(e, t, i, o) {
-    this.strings = e, this.values = t, this.type = i, this.processor = o;
+const he = window.trustedTypes && trustedTypes.createPolicy("lit-html", { createHTML: (i) => i }), Ge = ` ${k} `;
+class Se {
+  constructor(e, n, t, o) {
+    this.strings = e, this.values = n, this.type = t, this.processor = o;
   }
   /**
    * Returns a string of HTML used to create a `<template>` element.
    */
   getHTML() {
     const e = this.strings.length - 1;
-    let t = "", i = !1;
+    let n = "", t = !1;
     for (let o = 0; o < e; o++) {
-      const l = this.strings[o], c = l.lastIndexOf("<!--");
-      i = (c > -1 || i) && l.indexOf("-->", c + 1) === -1;
-      const u = U.exec(l);
-      u === null ? t += l + (i ? Ue : ye) : t += l.substr(0, u.index) + u[1] + u[2] + A + u[3] + H;
+      const s = this.strings[o], d = s.lastIndexOf("<!--");
+      t = (d > -1 || t) && s.indexOf("-->", d + 1) === -1;
+      const c = Y.exec(s);
+      c === null ? n += s + (t ? Ge : Ee) : n += s.substr(0, c.index) + c[1] + c[2] + B + c[3] + k;
     }
-    return t += this.strings[e], t;
+    return n += this.strings[e], n;
   }
   getTemplateElement() {
     const e = document.createElement("template");
-    let t = this.getHTML();
-    return pe !== void 0 && (t = pe.createHTML(t)), e.innerHTML = t, e;
+    let n = this.getHTML();
+    return he !== void 0 && (n = he.createHTML(n)), e.innerHTML = n, e;
   }
 }
 /**
@@ -385,64 +385,64 @@ class we {
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const G = (n) => n === null || !(typeof n == "object" || typeof n == "function"), X = (n) => Array.isArray(n) || // eslint-disable-next-line @typescript-eslint/no-explicit-any
-!!(n && n[Symbol.iterator]);
-class Le {
-  constructor(e, t, i) {
-    this.dirty = !0, this.element = e, this.name = t, this.strings = i, this.parts = [];
-    for (let o = 0; o < i.length - 1; o++)
+const Q = (i) => i === null || !(typeof i == "object" || typeof i == "function"), G = (i) => Array.isArray(i) || // eslint-disable-next-line @typescript-eslint/no-explicit-any
+!!(i && i[Symbol.iterator]);
+class Me {
+  constructor(e, n, t) {
+    this.dirty = !0, this.element = e, this.name = n, this.strings = t, this.parts = [];
+    for (let o = 0; o < t.length - 1; o++)
       this.parts[o] = this._createPart();
   }
   /**
    * Creates a single part. Override this to create a differnt type of part.
    */
   _createPart() {
-    return new Fe(this);
+    return new He(this);
   }
   _getValue() {
-    const e = this.strings, t = e.length - 1, i = this.parts;
-    if (t === 1 && e[0] === "" && e[1] === "") {
-      const l = i[0].value;
-      if (typeof l == "symbol")
-        return String(l);
-      if (typeof l == "string" || !X(l))
-        return l;
+    const e = this.strings, n = e.length - 1, t = this.parts;
+    if (n === 1 && e[0] === "" && e[1] === "") {
+      const s = t[0].value;
+      if (typeof s == "symbol")
+        return String(s);
+      if (typeof s == "string" || !G(s))
+        return s;
     }
     let o = "";
-    for (let l = 0; l < t; l++) {
-      o += e[l];
-      const c = i[l];
-      if (c !== void 0) {
-        const u = c.value;
-        if (G(u) || !X(u))
-          o += typeof u == "string" ? u : String(u);
+    for (let s = 0; s < n; s++) {
+      o += e[s];
+      const d = t[s];
+      if (d !== void 0) {
+        const c = d.value;
+        if (Q(c) || !G(c))
+          o += typeof c == "string" ? c : String(c);
         else
-          for (const a of u)
+          for (const a of c)
             o += typeof a == "string" ? a : String(a);
       }
     }
-    return o += e[t], o;
+    return o += e[n], o;
   }
   commit() {
     this.dirty && (this.dirty = !1, this.element.setAttribute(this.name, this._getValue()));
   }
 }
-class Fe {
+class He {
   constructor(e) {
     this.value = void 0, this.committer = e;
   }
   setValue(e) {
-    e !== T && (!G(e) || e !== this.value) && (this.value = e, R(e) || (this.committer.dirty = !0));
+    e !== S && (!Q(e) || e !== this.value) && (this.value = e, R(e) || (this.committer.dirty = !0));
   }
   commit() {
     for (; R(this.value); ) {
       const e = this.value;
-      this.value = T, e(this);
+      this.value = S, e(this);
     }
-    this.value !== T && this.committer.commit();
+    this.value !== S && this.committer.commit();
   }
 }
-class O {
+class j {
   constructor(e) {
     this.value = void 0, this.__pendingValue = void 0, this.options = e;
   }
@@ -452,7 +452,7 @@ class O {
    * This part must be empty, as its contents are not automatically moved.
    */
   appendInto(e) {
-    this.startNode = e.appendChild(M()), this.endNode = e.appendChild(M());
+    this.startNode = e.appendChild(P()), this.endNode = e.appendChild(P());
   }
   /**
    * Inserts this part after the `ref` node (between `ref` and `ref`'s next
@@ -470,7 +470,7 @@ class O {
    * This part must be empty, as its contents are not automatically moved.
    */
   appendIntoPart(e) {
-    e.__insert(this.startNode = M()), e.__insert(this.endNode = M());
+    e.__insert(this.startNode = P()), e.__insert(this.endNode = P());
   }
   /**
    * Inserts this part after the `ref` part.
@@ -478,7 +478,7 @@ class O {
    * This part must be empty, as its contents are not automatically moved.
    */
   insertAfterPart(e) {
-    e.__insert(this.startNode = M()), this.endNode = e.endNode, e.endNode = this.startNode;
+    e.__insert(this.startNode = P()), this.endNode = e.endNode, e.endNode = this.startNode;
   }
   setValue(e) {
     this.__pendingValue = e;
@@ -487,11 +487,11 @@ class O {
     if (this.startNode.parentNode === null)
       return;
     for (; R(this.__pendingValue); ) {
-      const t = this.__pendingValue;
-      this.__pendingValue = T, t(this);
+      const n = this.__pendingValue;
+      this.__pendingValue = S, n(this);
     }
     const e = this.__pendingValue;
-    e !== T && (G(e) ? e !== this.value && this.__commitText(e) : e instanceof we ? this.__commitTemplateResult(e) : e instanceof Node ? this.__commitNode(e) : X(e) ? this.__commitIterable(e) : e === de ? (this.value = de, this.clear()) : this.__commitText(e));
+    e !== S && (Q(e) ? e !== this.value && this.__commitText(e) : e instanceof Se ? this.__commitTemplateResult(e) : e instanceof Node ? this.__commitNode(e) : G(e) ? this.__commitIterable(e) : e === le ? (this.value = le, this.clear()) : this.__commitText(e));
   }
   __insert(e) {
     this.endNode.parentNode.insertBefore(e, this.endNode);
@@ -500,58 +500,58 @@ class O {
     this.value !== e && (this.clear(), this.__insert(e), this.value = e);
   }
   __commitText(e) {
-    const t = this.startNode.nextSibling;
+    const n = this.startNode.nextSibling;
     e = e ?? "";
-    const i = typeof e == "string" ? e : String(e);
-    t === this.endNode.previousSibling && t.nodeType === 3 ? t.data = i : this.__commitNode(document.createTextNode(i)), this.value = e;
+    const t = typeof e == "string" ? e : String(e);
+    n === this.endNode.previousSibling && n.nodeType === 3 ? n.data = t : this.__commitNode(document.createTextNode(t)), this.value = e;
   }
   __commitTemplateResult(e) {
-    const t = this.options.templateFactory(e);
-    if (this.value instanceof he && this.value.template === t)
+    const n = this.options.templateFactory(e);
+    if (this.value instanceof ue && this.value.template === n)
       this.value.update(e.values);
     else {
-      const i = new he(t, e.processor, this.options), o = i._clone();
-      i.update(e.values), this.__commitNode(o), this.value = i;
+      const t = new ue(n, e.processor, this.options), o = t._clone();
+      t.update(e.values), this.__commitNode(o), this.value = t;
     }
   }
   __commitIterable(e) {
     Array.isArray(this.value) || (this.value = [], this.clear());
-    const t = this.value;
-    let i = 0, o;
-    for (const l of e)
-      o = t[i], o === void 0 && (o = new O(this.options), t.push(o), i === 0 ? o.appendIntoPart(this) : o.insertAfterPart(t[i - 1])), o.setValue(l), o.commit(), i++;
-    i < t.length && (t.length = i, this.clear(o && o.endNode));
+    const n = this.value;
+    let t = 0, o;
+    for (const s of e)
+      o = n[t], o === void 0 && (o = new j(this.options), n.push(o), t === 0 ? o.appendIntoPart(this) : o.insertAfterPart(n[t - 1])), o.setValue(s), o.commit(), t++;
+    t < n.length && (n.length = t, this.clear(o && o.endNode));
   }
   clear(e = this.startNode) {
-    be(this.startNode.parentNode, e.nextSibling, this.endNode);
+    Ie(this.startNode.parentNode, e.nextSibling, this.endNode);
   }
 }
-class Xe {
-  constructor(e, t, i) {
-    if (this.value = void 0, this.__pendingValue = void 0, i.length !== 2 || i[0] !== "" || i[1] !== "")
+class Ke {
+  constructor(e, n, t) {
+    if (this.value = void 0, this.__pendingValue = void 0, t.length !== 2 || t[0] !== "" || t[1] !== "")
       throw new Error("Boolean attributes can only contain a single expression");
-    this.element = e, this.name = t, this.strings = i;
+    this.element = e, this.name = n, this.strings = t;
   }
   setValue(e) {
     this.__pendingValue = e;
   }
   commit() {
     for (; R(this.__pendingValue); ) {
-      const t = this.__pendingValue;
-      this.__pendingValue = T, t(this);
+      const n = this.__pendingValue;
+      this.__pendingValue = S, n(this);
     }
-    if (this.__pendingValue === T)
+    if (this.__pendingValue === S)
       return;
     const e = !!this.__pendingValue;
-    this.value !== e && (e ? this.element.setAttribute(this.name, "") : this.element.removeAttribute(this.name), this.value = e), this.__pendingValue = T;
+    this.value !== e && (e ? this.element.setAttribute(this.name, "") : this.element.removeAttribute(this.name), this.value = e), this.__pendingValue = S;
   }
 }
-class qe extends Le {
-  constructor(e, t, i) {
-    super(e, t, i), this.single = i.length === 2 && i[0] === "" && i[1] === "";
+class Qe extends Me {
+  constructor(e, n, t) {
+    super(e, n, t), this.single = t.length === 2 && t[0] === "" && t[1] === "";
   }
   _createPart() {
-    return new Je(this);
+    return new et(this);
   }
   _getValue() {
     return this.single ? this.parts[0].value : super._getValue();
@@ -560,42 +560,42 @@ class qe extends Le {
     this.dirty && (this.dirty = !1, this.element[this.name] = this._getValue());
   }
 }
-class Je extends Fe {
+class et extends He {
 }
-let Ee = !1;
+let Pe = !1;
 (() => {
   try {
-    const n = {
+    const i = {
       get capture() {
-        return Ee = !0, !1;
+        return Pe = !0, !1;
       }
     };
-    window.addEventListener("test", n, n), window.removeEventListener("test", n, n);
+    window.addEventListener("test", i, i), window.removeEventListener("test", i, i);
   } catch {
   }
 })();
-class Ye {
-  constructor(e, t, i) {
-    this.value = void 0, this.__pendingValue = void 0, this.element = e, this.eventName = t, this.eventContext = i, this.__boundHandleEvent = (o) => this.handleEvent(o);
+class tt {
+  constructor(e, n, t) {
+    this.value = void 0, this.__pendingValue = void 0, this.element = e, this.eventName = n, this.eventContext = t, this.__boundHandleEvent = (o) => this.handleEvent(o);
   }
   setValue(e) {
     this.__pendingValue = e;
   }
   commit() {
     for (; R(this.__pendingValue); ) {
-      const l = this.__pendingValue;
-      this.__pendingValue = T, l(this);
+      const s = this.__pendingValue;
+      this.__pendingValue = S, s(this);
     }
-    if (this.__pendingValue === T)
+    if (this.__pendingValue === S)
       return;
-    const e = this.__pendingValue, t = this.value, i = e == null || t != null && (e.capture !== t.capture || e.once !== t.once || e.passive !== t.passive), o = e != null && (t == null || i);
-    i && this.element.removeEventListener(this.eventName, this.__boundHandleEvent, this.__options), o && (this.__options = Ge(e), this.element.addEventListener(this.eventName, this.__boundHandleEvent, this.__options)), this.value = e, this.__pendingValue = T;
+    const e = this.__pendingValue, n = this.value, t = e == null || n != null && (e.capture !== n.capture || e.once !== n.once || e.passive !== n.passive), o = e != null && (n == null || t);
+    t && this.element.removeEventListener(this.eventName, this.__boundHandleEvent, this.__options), o && (this.__options = nt(e), this.element.addEventListener(this.eventName, this.__boundHandleEvent, this.__options)), this.value = e, this.__pendingValue = S;
   }
   handleEvent(e) {
     typeof this.value == "function" ? this.value.call(this.eventContext || this.element, e) : this.value.handleEvent(e);
   }
 }
-const Ge = (n) => n && (Ee ? { capture: n.capture, passive: n.passive, once: n.once } : n.capture);
+const nt = (i) => i && (Pe ? { capture: i.capture, passive: i.passive, once: i.once } : i.capture);
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -609,7 +609,7 @@ const Ge = (n) => n && (Ee ? { capture: n.capture, passive: n.passive, once: n.o
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-class Ke {
+class it {
   /**
    * Create parts for an attribute-position binding, given the event, attribute
    * name, and string literals.
@@ -619,19 +619,19 @@ class Ke {
    * @param strings The string literals. There are always at least two strings,
    *   event for fully-controlled bindings with a single expression.
    */
-  handleAttributeExpressions(e, t, i, o) {
-    const l = t[0];
-    return l === "." ? new qe(e, t.slice(1), i).parts : l === "@" ? [new Ye(e, t.slice(1), o.eventContext)] : l === "?" ? [new Xe(e, t.slice(1), i)] : new Le(e, t, i).parts;
+  handleAttributeExpressions(e, n, t, o) {
+    const s = n[0];
+    return s === "." ? new Qe(e, n.slice(1), t).parts : s === "@" ? [new tt(e, n.slice(1), o.eventContext)] : s === "?" ? [new Ke(e, n.slice(1), t)] : new Me(e, n, t).parts;
   }
   /**
    * Create parts for a text-position binding.
    * @param templateFactory
    */
   handleTextExpression(e) {
-    return new O(e);
+    return new j(e);
   }
 }
-const Qe = new Ke();
+const rt = new it();
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -645,19 +645,19 @@ const Qe = new Ke();
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-function et(n) {
-  let e = fe.get(n.type);
+function ot(i) {
+  let e = pe.get(i.type);
   e === void 0 && (e = {
     stringsArray: /* @__PURE__ */ new WeakMap(),
     keyString: /* @__PURE__ */ new Map()
-  }, fe.set(n.type, e));
-  let t = e.stringsArray.get(n.strings);
-  if (t !== void 0)
-    return t;
-  const i = n.strings.join(H);
-  return t = e.keyString.get(i), t === void 0 && (t = new je(n, n.getTemplateElement()), e.keyString.set(i, t)), e.stringsArray.set(n.strings, t), t;
+  }, pe.set(i.type, e));
+  let n = e.stringsArray.get(i.strings);
+  if (n !== void 0)
+    return n;
+  const t = i.strings.join(k);
+  return n = e.keyString.get(t), n === void 0 && (n = new Je(i, i.getTemplateElement()), e.keyString.set(t, n)), e.stringsArray.set(i.strings, n), n;
 }
-const fe = /* @__PURE__ */ new Map();
+const pe = /* @__PURE__ */ new Map();
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -671,9 +671,9 @@ const fe = /* @__PURE__ */ new Map();
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-const ge = /* @__PURE__ */ new WeakMap(), q = (n, e, t) => {
-  let i = ge.get(e);
-  i === void 0 && (be(e, e.firstChild), ge.set(e, i = new O(Object.assign({ templateFactory: et }, t))), i.appendInto(e)), i.setValue(n), i.commit();
+const fe = /* @__PURE__ */ new WeakMap(), K = (i, e, n) => {
+  let t = fe.get(e);
+  t === void 0 && (Ie(e, e.firstChild), fe.set(e, t = new j(Object.assign({ templateFactory: ot }, n))), t.appendInto(e)), t.setValue(i), t.commit();
 };
 /**
  * @license
@@ -689,22 +689,22 @@ const ge = /* @__PURE__ */ new WeakMap(), q = (n, e, t) => {
  * http://polymer.github.io/PATENTS.txt
  */
 typeof window < "u" && (window.litHtmlVersions || (window.litHtmlVersions = [])).push("1.3.0");
-const E = (n, ...e) => new we(n, e, "html", Qe);
-var Ie = function() {
-  var n = /* @__PURE__ */ new Set();
+const T = (i, ...e) => new Se(i, e, "html", rt);
+var ke = function() {
+  var i = /* @__PURE__ */ new Set();
   return { on: function(e) {
-    n.add(e);
+    i.add(e);
   }, off: function(e) {
-    n.delete(e);
+    i.delete(e);
   }, offAll: function() {
-    n.clear();
+    i.clear();
   }, emit: function(e) {
-    n.forEach(function(t) {
-      return t(e);
+    i.forEach(function(n) {
+      return n(e);
     });
   } };
 };
-const tt = (n) => {
+const st = (i) => {
   let e = {
     visibleTop: 0,
     visibleLeft: 0,
@@ -714,30 +714,30 @@ const tt = (n) => {
     annotationItems: [],
     highlightRectIdSet: /* @__PURE__ */ new Set(),
     mouseHoverRectIdMap: /* @__PURE__ */ new Map(),
-    ...n
+    ...i
   };
-  const t = Ie();
+  const n = ke();
   return {
     get() {
       return e;
     },
-    onChange(i) {
-      t.on(i);
+    onChange(t) {
+      n.on(t);
     },
     dispose() {
-      t.offAll();
+      n.offAll();
     },
-    highlightRectIndexes(i) {
+    highlightRectIndexes(t) {
       e = {
         ...e,
-        highlightRectIdSet: new Set(i)
-      }, t.emit();
+        highlightRectIdSet: new Set(t)
+      }, n.emit();
     },
-    update(i) {
+    update(t) {
       e = {
         ...e,
-        ...i
-      }, t.emit();
+        ...t
+      }, n.emit();
     },
     clear() {
       e = {
@@ -746,116 +746,128 @@ const tt = (n) => {
         annotationItems: [],
         highlightRectIdSet: /* @__PURE__ */ new Set(),
         mouseHoverRectIdMap: /* @__PURE__ */ new Map()
-      }, t.emit();
+      }, n.emit();
     },
     clearHoverState() {
       e = {
         ...e,
         highlightRectIdSet: /* @__PURE__ */ new Set(),
         mouseHoverRectIdMap: /* @__PURE__ */ new Map()
-      }, t.emit();
+      }, n.emit();
     }
   };
 };
-function K(n) {
-  return n && n.__esModule && Object.prototype.hasOwnProperty.call(n, "default") ? n.default : n;
+function Ne(i) {
+  return i && i.__esModule && Object.prototype.hasOwnProperty.call(i, "default") ? i.default : i;
 }
-var nt = function(e, t) {
-  t || (t = [0, ""]), e = String(e);
-  var i = parseFloat(e, 10);
-  return t[0] = i, t[1] = e.match(/[\d.\-\+]*\s*(.*)/)[1] || "", t;
-}, _e = nt, it = Q, P = Te("in", document.body);
-function J(n, e) {
-  var t = _e(getComputedStyle(n).getPropertyValue(e));
-  return t[0] * Q(t[1], n);
+var q, ge;
+function at() {
+  return ge || (ge = 1, q = function(e, n) {
+    n || (n = [0, ""]), e = String(e);
+    var t = parseFloat(e, 10);
+    return n[0] = t, n[1] = e.match(/[\d.\-\+]*\s*(.*)/)[1] || "", n;
+  }), q;
 }
-function Te(n, e) {
-  var t = document.createElement("div");
-  t.style.height = "128" + n, e.appendChild(t);
-  var i = J(t, "height") / 128;
-  return e.removeChild(t), i;
-}
-function Q(n, e) {
-  if (!n)
+var Z, me;
+function lt() {
+  if (me) return Z;
+  me = 1;
+  var i = at();
+  Z = o;
+  var e = t("in", document.body);
+  function n(s, d) {
+    var c = i(getComputedStyle(s).getPropertyValue(d));
+    return c[0] * o(c[1], s);
+  }
+  function t(s, d) {
+    var c = document.createElement("div");
+    c.style.height = "128" + s, d.appendChild(c);
+    var a = n(c, "height") / 128;
+    return d.removeChild(c), a;
+  }
+  function o(s, d) {
+    if (!s) return null;
+    switch (d = d || document.body, s = (s + "" || "px").trim().toLowerCase(), (d === window || d === document) && (d = document.body), s) {
+      case "%":
+        return d.clientHeight / 100;
+      case "ch":
+      case "ex":
+        return t(s, d);
+      case "em":
+        return n(d, "font-size");
+      case "rem":
+        return n(document.body, "font-size");
+      case "vw":
+        return window.innerWidth / 100;
+      case "vh":
+        return window.innerHeight / 100;
+      case "vmin":
+        return Math.min(window.innerWidth, window.innerHeight) / 100;
+      case "vmax":
+        return Math.max(window.innerWidth, window.innerHeight) / 100;
+      case "in":
+        return e;
+      case "cm":
+        return e / 2.54;
+      case "mm":
+        return e / 25.4;
+      case "pt":
+        return e / 72;
+      case "pc":
+        return e / 6;
+      case "px":
+        return 1;
+    }
+    var c = i(s);
+    if (!isNaN(c[0]) && c[1]) {
+      var a = o(c[1], d);
+      return typeof a == "number" ? c[0] * a : null;
+    }
     return null;
-  switch (e = e || document.body, n = (n + "" || "px").trim().toLowerCase(), (e === window || e === document) && (e = document.body), n) {
-    case "%":
-      return e.clientHeight / 100;
-    case "ch":
-    case "ex":
-      return Te(n, e);
-    case "em":
-      return J(e, "font-size");
-    case "rem":
-      return J(document.body, "font-size");
-    case "vw":
-      return window.innerWidth / 100;
-    case "vh":
-      return window.innerHeight / 100;
-    case "vmin":
-      return Math.min(window.innerWidth, window.innerHeight) / 100;
-    case "vmax":
-      return Math.max(window.innerWidth, window.innerHeight) / 100;
-    case "in":
-      return P;
-    case "cm":
-      return P / 2.54;
-    case "mm":
-      return P / 25.4;
-    case "pt":
-      return P / 72;
-    case "pc":
-      return P / 6;
-    case "px":
-      return 1;
   }
-  var t = _e(n);
-  if (!isNaN(t[0]) && t[1]) {
-    var i = Q(t[1], e);
-    return typeof i == "number" ? t[0] * i : null;
-  }
-  return null;
+  return Z;
 }
-const N = /* @__PURE__ */ K(it), ot = (n, e = !1) => e ? E`<span
-            style="pointer-events: none; border: 2px dotted red; position: absolute; left: ${n.left}px; top: ${n.top}px; width: ${n.width}px; height: ${n.height}px;"
-        ></span>` : E`<span
-            style="pointer-events: none; border-bottom: 2px dotted red; position: absolute; left: ${n.left}px; top: ${n.top}px; width: ${n.width}px; height: ${n.height}px;"
+var dt = lt();
+const N = /* @__PURE__ */ Ne(dt), ct = (i, e = !1) => e ? T`<span
+            style="pointer-events: none; border: 2px dotted red; position: absolute; left: ${i.left}px; top: ${i.top}px; width: ${i.width}px; height: ${i.height}px;"
+        ></span>` : T`<span
+            style="pointer-events: none; border-bottom: 2px dotted red; position: absolute; left: ${i.left}px; top: ${i.top}px; width: ${i.width}px; height: ${i.height}px;"
         ></span>`;
-class Se extends HTMLElement {
+class Ve extends HTMLElement {
   constructor(e) {
-    super(), this.hoverPadding = 8, this.isFocus = !1, this.isHovering = !1, this.attributeChangedCallback = (t, i, o) => {
-      this[t] && (this[t] = o, t === "target" && (this.targetElement = document.querySelector(o)));
+    super(), this.hoverPadding = 8, this.isFocus = !1, this.isHovering = !1, this.attributeChangedCallback = (n, t, o) => {
+      this[n] && (this[n] = o, n === "target" && (this.targetElement = document.querySelector(o)));
     }, this.onMouseEnter = () => {
-      var t;
-      this.isHovering = !0, (t = this.onEnter) == null || t.call(this);
+      var n;
+      this.isHovering = !0, (n = this.onEnter) == null || n.call(this);
     }, this.onMouseLeave = () => {
-      var t;
-      this.isHovering = !1, (t = this.onLeave) == null || t.call(this), this.resetHoverState();
-    }, this.renderAnnotationMarkers = (t) => {
-      const i = t.rectItems.map((o) => ot(o, t.highlightRectIdSet.has(o.id)));
-      q(i, this.annotationBox);
+      var n;
+      this.isHovering = !1, (n = this.onLeave) == null || n.call(this), this.resetHoverState();
+    }, this.renderAnnotationMarkers = (n) => {
+      const t = n.rectItems.map((o) => ct(o, n.highlightRectIdSet.has(o.id)));
+      K(t, this.annotationBox);
     }, this.onFocus = () => {
       this.isFocus = !0;
     }, this.onBlur = () => {
       this.isFocus = !1;
-    }, this.isHoverRectItem = (t) => !!this.store.get().mouseHoverRectIdMap.get(t.id), this.onMouseUpdate = (t) => {
-      const i = this.store.get(), o = this.hoverPadding, l = i.rectItems.filter((c) => {
-        const u = {
-          x: t.clientX - c.boxAbsoluteX,
-          y: t.clientY - c.boxAbsoluteY
+    }, this.isHoverRectItem = (n) => !!this.store.get().mouseHoverRectIdMap.get(n.id), this.onMouseUpdate = (n) => {
+      const t = this.store.get(), o = this.hoverPadding, s = t.rectItems.filter((d) => {
+        const c = {
+          x: n.clientX - d.boxAbsoluteX,
+          y: n.clientY - d.boxAbsoluteY
         };
-        return c.left - o <= u.x && c.left + c.width + o >= u.x && c.top - o <= u.y && c.top + c.height + o >= u.y;
-      }).map((c) => c.id);
-      i.rectItems.forEach((c) => {
-        var h, r;
-        const u = i.mouseHoverRectIdMap.get(c.id), a = l.includes(c.id);
-        !u && a ? (h = i.annotationItems.find((s) => s.id === c.id)) == null || h.onMouseEnter({
-          rectItem: c
-        }) : u && !a && ((r = i.annotationItems.find((s) => s.id === c.id)) == null || r.onMouseLeave({
-          rectItem: c
-        })), i.mouseHoverRectIdMap.set(c.id, a);
-      }), this.store.highlightRectIndexes(l);
-    }, this.store = tt(), this.targetElement = e == null ? void 0 : e.targetElement, this.onEnter = e == null ? void 0 : e.onEnter, this.onLeave = e == null ? void 0 : e.onLeave, this.hoverPadding = (e == null ? void 0 : e.hoverPadding) ?? 8;
+        return d.left - o <= c.x && d.left + d.width + o >= c.x && d.top - o <= c.y && d.top + d.height + o >= c.y;
+      }).map((d) => d.id);
+      t.rectItems.forEach((d) => {
+        var u, p;
+        const c = t.mouseHoverRectIdMap.get(d.id), a = s.includes(d.id);
+        !c && a ? (u = t.annotationItems.find((r) => r.id === d.id)) == null || u.onMouseEnter({
+          rectItem: d
+        }) : c && !a && ((p = t.annotationItems.find((r) => r.id === d.id)) == null || p.onMouseLeave({
+          rectItem: d
+        })), t.mouseHoverRectIdMap.set(d.id, a);
+      }), this.store.highlightRectIndexes(s);
+    }, this.store = st(), this.targetElement = e == null ? void 0 : e.targetElement, this.onEnter = e == null ? void 0 : e.onEnter, this.onLeave = e == null ? void 0 : e.onLeave, this.hoverPadding = (e == null ? void 0 : e.hoverPadding) ?? 8;
   }
   static get observedAttributes() {
     return ["target", "hoverPadding"];
@@ -863,13 +875,13 @@ class Se extends HTMLElement {
   connectedCallback() {
     if (!this.targetElement)
       throw new Error("target element is not found");
-    const t = this.attachShadow({ mode: "closed" }), i = document.createElement("div");
-    i.className = "overlay", i.setAttribute(
+    const n = this.attachShadow({ mode: "closed" }), t = document.createElement("div");
+    t.className = "overlay", t.setAttribute(
       "style",
       "color: transparent; border: position: absolute; top: 0px; left: 0px; pointer-events: none;"
     );
     const o = document.createElement("div");
-    o.className = "annotationBox", i.append(o), t.append(i), this.annotationBox = o, this.targetElement.dataset.attachedTextCheckerElement = "true", this.targetElement.addEventListener("mousemove", this.onMouseUpdate), this.targetElement.addEventListener("focus", this.onFocus), this.targetElement.addEventListener("blur", this.onBlur), this.targetElement.addEventListener("mouseenter", this.onMouseEnter), this.targetElement.addEventListener("mouseleave", this.onMouseLeave), this.store.onChange(() => {
+    o.className = "annotationBox", t.append(o), n.append(t), this.annotationBox = o, this.targetElement.dataset.attachedTextCheckerElement = "true", this.targetElement.addEventListener("mousemove", this.onMouseUpdate), this.targetElement.addEventListener("focus", this.onFocus), this.targetElement.addEventListener("blur", this.onBlur), this.targetElement.addEventListener("mouseenter", this.onMouseEnter), this.targetElement.addEventListener("mouseleave", this.onMouseLeave), this.store.onChange(() => {
       this.renderAnnotationMarkers(this.store.get());
     });
   }
@@ -883,160 +895,158 @@ class Se extends HTMLElement {
     this.store.clearHoverState();
   }
   updateAnnotations(e) {
-    const t = this.targetElement, i = window.getComputedStyle(t), l = ["box-sizing"].map((S) => `${S}: ${i.getPropertyValue(S)};`).join("");
+    const n = this.targetElement, t = window.getComputedStyle(n), s = ["box-sizing"].map((I) => `${I}: ${t.getPropertyValue(I)};`).join("");
     this.annotationBox.setAttribute(
       "style",
-      `color: transparent; overflow:hidden; position: absolute; pointer-events: none; ${l}`
+      `color: transparent; overflow:hidden; position: absolute; pointer-events: none; ${s}`
     );
-    const c = t.offsetTop, u = t.offsetLeft, a = t.offsetHeight, h = t.clientWidth + parseInt(i.borderLeftWidth || "0", 10) + parseInt(i.borderRightWidth || "0", 10), r = i.zIndex !== null && i.zIndex !== "auto" ? +i.zIndex : 0;
-    this.annotationBox.style.zIndex = `${r + 1}`, this.annotationBox.style.left = `${u}px`, this.annotationBox.style.top = `${c}px`, this.annotationBox.style.height = `${a}px`, this.annotationBox.style.width = `${h}px`;
-    const s = N(i.getPropertyValue("font-size")) ?? 16.123, d = N(i.getPropertyValue("margin-top")) ?? 0, v = N(i.getPropertyValue("margin-bottom")) ?? 0, p = N(i.getPropertyValue("border-width")) ?? 0, f = N(i.getPropertyValue("padding-top")) ?? 0, g = N(i.getPropertyValue("padding-bottom")) ?? 0, x = t.getBoundingClientRect(), m = x.x, C = x.y, b = x.width, _ = x.height, L = {
-      top: t.scrollTop,
-      left: t.scrollLeft,
-      width: b,
-      height: _
+    const d = n.offsetTop, c = n.offsetLeft, a = n.offsetHeight, u = n.clientWidth + parseInt(t.borderLeftWidth || "0", 10) + parseInt(t.borderRightWidth || "0", 10), p = t.zIndex !== null && t.zIndex !== "auto" ? +t.zIndex : 0;
+    this.annotationBox.style.zIndex = `${p + 1}`, this.annotationBox.style.left = `${c}px`, this.annotationBox.style.top = `${d}px`, this.annotationBox.style.height = `${a}px`, this.annotationBox.style.width = `${u}px`;
+    const r = N(t.getPropertyValue("font-size")) ?? 16.123, l = N(t.getPropertyValue("margin-top")) ?? 0, f = N(t.getPropertyValue("margin-bottom")) ?? 0, h = N(t.getPropertyValue("border-width")) ?? 0, g = N(t.getPropertyValue("padding-top")) ?? 0, v = N(t.getPropertyValue("padding-bottom")) ?? 0, x = n.getBoundingClientRect(), m = x.x, C = x.y, w = x.width, b = x.height, _ = {
+      top: n.scrollTop,
+      left: n.scrollLeft
     };
-    this.annotationBox.scrollTop = t.scrollTop, this.annotationBox.scrollLeft = t.scrollLeft;
-    const w = e.slice().reverse();
-    let y = !1;
-    const V = w.flatMap((S) => {
-      var te, ne, ie, oe;
-      if (y)
+    this.annotationBox.scrollTop = n.scrollTop, this.annotationBox.scrollLeft = n.scrollLeft;
+    const y = e.slice().reverse();
+    let F = !1;
+    const M = y.flatMap((I) => {
+      var ee, te, ne, ie;
+      if (F)
         return [];
-      const Ne = S.start, ke = S.end, F = ae(this.targetElement, Ne, {
+      const Be = I.start, $e = I.end, L = se(this.targetElement, Be, {
         reuse: !0,
         returnHeight: !0,
         returnDiv: !1,
         debug: !1
       });
-      if (F.top + s < L.top)
-        return y = !0, [];
-      const W = ae(this.targetElement, ke, {
+      if (L.top + r < _.top)
+        return F = !0, [];
+      const W = se(this.targetElement, $e, {
         reuse: !0,
         returnHeight: !0,
         returnDiv: !0,
         debug: !1
       });
-      return F.top === W.top ? [
+      return L.top === W.top ? [
         {
-          id: S.id,
+          id: I.id,
           // left and top is visible position
           // annotationBox(textarea) also scroll with same position of actual textarea
-          left: F.left - L.left,
-          top: F.top - L.top,
-          height: s,
+          left: L.left - _.left,
+          top: L.top - _.top,
+          height: r,
           //startCoordinate.height,
-          width: W.left - F.left,
-          boxMarginTop: d,
-          boxMarginBottom: v,
-          boxBorderWidth: p,
+          width: W.left - L.left,
+          boxMarginTop: l,
+          boxMarginBottom: f,
+          boxBorderWidth: h,
           boxAbsoluteX: m,
           boxAbsoluteY: C,
-          boxWidth: b,
-          boxHeight: _,
-          boxPaddingTop: f,
-          boxPaddingBottom: g
+          boxWidth: w,
+          boxHeight: b,
+          boxPaddingTop: g,
+          boxPaddingBottom: v
         }
       ] : (
         // two line
         [
           {
-            id: S.id,
-            left: F.left - L.left,
-            top: F.top - L.top,
-            height: s,
+            id: I.id,
+            left: L.left - _.left,
+            top: L.top - _.top,
+            height: r,
             //startCoordinate.height,
-            width: (((ne = (te = F == null ? void 0 : F._div) == null ? void 0 : te.getBoundingClientRect()) == null ? void 0 : ne.width) ?? 0) - F.left,
-            boxMarginTop: d,
-            boxMarginBottom: v,
-            boxBorderWidth: p,
+            width: (((te = (ee = L == null ? void 0 : L._div) == null ? void 0 : ee.getBoundingClientRect()) == null ? void 0 : te.width) ?? 0) - L.left,
+            boxMarginTop: l,
+            boxMarginBottom: f,
+            boxBorderWidth: h,
             boxAbsoluteX: m,
             boxAbsoluteY: C,
-            boxWidth: b,
-            boxHeight: _,
-            boxPaddingTop: f,
-            boxPaddingBottom: g
+            boxWidth: w,
+            boxHeight: b,
+            boxPaddingTop: g,
+            boxPaddingBottom: v
           },
           {
-            id: S.id,
-            left: -L.left,
-            top: W.top - L.top,
-            height: s,
-            width: (((oe = (ie = F == null ? void 0 : F._div) == null ? void 0 : ie.getBoundingClientRect()) == null ? void 0 : oe.left) ?? 0) + W.left,
-            boxMarginTop: d,
-            boxMarginBottom: v,
-            boxBorderWidth: p,
+            id: I.id,
+            left: -_.left,
+            top: W.top - _.top,
+            height: r,
+            width: (((ie = (ne = L == null ? void 0 : L._div) == null ? void 0 : ne.getBoundingClientRect()) == null ? void 0 : ie.left) ?? 0) + W.left,
+            boxMarginTop: l,
+            boxMarginBottom: f,
+            boxBorderWidth: h,
             boxAbsoluteX: m,
             boxAbsoluteY: C,
-            boxWidth: b,
-            boxHeight: _,
-            boxPaddingTop: f,
-            boxPaddingBottom: g
+            boxWidth: w,
+            boxHeight: b,
+            boxPaddingTop: g,
+            boxPaddingBottom: v
           }
         ]
       );
     });
     this.store.update({
       annotationItems: e,
-      rectItems: V
+      rectItems: M
     });
   }
 }
-window.customElements.get("text-checker-element") || window.customElements.define("text-checker-element", Se);
-const st = (n) => {
+window.customElements.get("text-checker-element") || window.customElements.define("text-checker-element", Ve);
+const ut = (i) => {
   let e = {
-    ...n
+    ...i
   };
-  const t = Ie();
+  const n = ke();
   return {
     get() {
       return e;
     },
-    onChange(i) {
-      t.on(i);
+    onChange(t) {
+      n.on(t);
     },
     dispose() {
-      t.offAll();
+      n.offAll();
     },
-    update(i) {
+    update(t) {
       e = {
         ...e,
-        ...i
-      }, t.emit();
+        ...t
+      }, n.emit();
     },
-    removeCardById(i) {
+    removeCardById(t) {
       var o;
-      ((o = e == null ? void 0 : e.card) == null ? void 0 : o.id) === i && (e = {
+      ((o = e == null ? void 0 : e.card) == null ? void 0 : o.id) === t && (e = {
         ...e,
         card: void 0
-      }, t.emit());
+      }, n.emit());
     },
     removeAllCard() {
       e = {
         ...e,
         card: void 0
-      }, t.emit();
+      }, n.emit();
     }
   };
 };
-class Me extends HTMLElement {
+class Ae extends HTMLElement {
   constructor(e) {
     super(), this.isHovering = !1, this.onMouseEnter = () => {
-      var t;
-      this.isHovering = !0, (t = this.onEnter) == null || t.call(this);
+      var n;
+      this.isHovering = !0, (n = this.onEnter) == null || n.call(this);
     }, this.onMouseLeave = () => {
-      var t;
-      this.isHovering = !1, (t = this.onLeave) == null || t.call(this);
-    }, this.renderAnnotationMarkers = (t) => {
-      var r, s, d, v;
-      const i = t.targetRect;
-      if (!i)
+      var n;
+      this.isHovering = !1, (n = this.onLeave) == null || n.call(this);
+    }, this.renderAnnotationMarkers = (n) => {
+      var p, r, l, f;
+      const t = n.targetRect;
+      if (!t)
         return;
-      if (!t.card) {
-        q("", this.overlay);
+      if (!n.card) {
+        K("", this.overlay);
         return;
       }
-      const o = 16, l = t.card.message.split(/\n/)[0], c = E` <svg
+      const o = 16, s = n.card.message.split(/\n/)[0], d = T` <svg
             class="popup-listItem--icon"
             width="24"
             height="24"
@@ -1047,37 +1057,37 @@ class Me extends HTMLElement {
             <path
                 d="M7.5 5.6L5 7L6.4 4.5L5 2L7.5 3.4L10 2L8.6 4.5L10 7L7.5 5.6ZM19.5 15.4L22 14L20.6 16.5L22 19L19.5 17.6L17 19L18.4 16.5L17 14L19.5 15.4ZM22 2L20.6 4.5L22 7L19.5 5.6L17 7L18.4 4.5L17 2L19.5 3.4L22 2ZM13.34 12.78L15.78 10.34L13.66 8.22L11.22 10.66L13.34 12.78ZM14.37 7.29L16.71 9.63C17.1 10 17.1 10.65 16.71 11.04L5.04 22.71C4.65 23.1 4 23.1 3.63 22.71L1.29 20.37C0.899998 20 0.899998 19.35 1.29 18.96L12.96 7.29C13.35 6.9 14 6.9 14.37 7.29Z"
             />
-        </svg>`, u = [
-        t.card.fixable ? {
-          message: l,
-          label: E`Fix it!`,
-          onClick: (r = t.handlers) == null ? void 0 : r.onFixText,
-          icon: c
+        </svg>`, c = [
+        n.card.fixable ? {
+          message: s,
+          label: T`Fix it!`,
+          onClick: (p = n.handlers) == null ? void 0 : p.onFixText,
+          icon: d
         } : {
-          message: t.card.message
+          message: n.card.message
         },
-        ...t.card.fixable ? [
+        ...n.card.fixable ? [
           {
-            label: E`Fix
-                              <span class="popup-listItem--ruleName">${t.card.messageRuleId}</span> problems`,
-            onClick: (s = t.handlers) == null ? void 0 : s.onFixRule,
-            icon: c
+            label: T`Fix
+                              <span class="popup-listItem--ruleName">${n.card.messageRuleId}</span> problems`,
+            onClick: (r = n.handlers) == null ? void 0 : r.onFixRule,
+            icon: d
           }
         ] : [],
-        ...t.card.fixable ? [
+        ...n.card.fixable ? [
           {
-            label: E`Fix all problems`,
-            onClick: (d = t.handlers) == null ? void 0 : d.onFixAll,
-            icon: c
+            label: T`Fix all problems`,
+            onClick: (l = n.handlers) == null ? void 0 : l.onFixAll,
+            icon: d
           }
         ] : [],
         {
-          label: E`Ignore`,
+          label: T`Ignore`,
           onClick: () => {
-            var p, f;
-            (f = (p = t.handlers) == null ? void 0 : p.onIgnore) == null || f.call(p);
+            var h, g;
+            (g = (h = n.handlers) == null ? void 0 : h.onIgnore) == null || g.call(h);
           },
-          icon: E`
+          icon: T`
                     <svg
                         class="popup-listItem--icon"
                         width="24"
@@ -1095,9 +1105,9 @@ class Me extends HTMLElement {
                 `
         },
         {
-          label: E`Rule <span class="popup-listItem--ruleName">${t.card.messageRuleId}</span>`,
-          onClick: (v = t.handlers) == null ? void 0 : v.onSeeDocument,
-          icon: E` <svg
+          label: T`Rule <span class="popup-listItem--ruleName">${n.card.messageRuleId}</span>`,
+          onClick: (f = n.handlers) == null ? void 0 : f.onSeeDocument,
+          icon: T` <svg
                     class="popup-listItem--iconImage"
                     width="24"
                     height="24"
@@ -1125,47 +1135,47 @@ class Me extends HTMLElement {
                     />
                 </svg>`
         }
-      ], a = E` <ul class="popoup-list" style="--padding: ${o}px">
-            ${u.map((p) => {
-        const f = {
-          handleEvent: p.onClick
+      ], a = T` <ul class="popoup-list" style="--padding: ${o}px">
+            ${c.map((h) => {
+        const g = {
+          handleEvent: h.onClick
         };
-        return p.message ? p.onClick ? E` <li
-                            @click=${f}
+        return h.message ? h.onClick ? T` <li
+                            @click=${g}
                             class="popup-listItem"
                             style="--padding: ${o}px;"
                             tabindex="0"
                         >
-                            <p class="popup-listItem-message">${p.message}</p>
-                            <p class="popup-listItem-content">${p.icon}${p.label}</p>
-                        </li>` : E` <li
+                            <p class="popup-listItem-message">${h.message}</p>
+                            <p class="popup-listItem-content">${h.icon}${h.label}</p>
+                        </li>` : T` <li
                             class="popup-listItem"
                             style="--padding: ${o}px; padding-bottom: 0;"
                             tabindex="0"
                         >
-                            <p class="popup-listItem-message">${p.message}</p>
-                            <p class="popup-listItem-content">${p.icon}${p.label}</p>
-                        </li>` : E` <li
-                    @click=${f}
+                            <p class="popup-listItem-message">${h.message}</p>
+                            <p class="popup-listItem-content">${h.icon}${h.label}</p>
+                        </li>` : T` <li
+                    @click=${g}
                     class="popup-listItem"
                     style="--padding: ${o}px;"
                     tabindex="0"
                 >
-                    <p class="popup-listItem-content">${p.icon}${p.label}</p>
+                    <p class="popup-listItem-content">${h.icon}${h.label}</p>
                 </li>`;
       })}
-        </ul>`, h = `position: fixed; z-index: 2147483644; min-width: 300px; max-width: 800px; top: ${i.top}px; left: ${i.left - o}px;`;
-      this.overlay.setAttribute("style", h), q(a, this.overlay);
-    }, this.onEnter = e.onEnter, this.onLeave = e.onLeave, this.store = st();
+        </ul>`, u = `position: fixed; z-index: 2147483644; min-width: 300px; max-width: 800px; top: ${t.top}px; left: ${t.left - o}px;`;
+      this.overlay.setAttribute("style", u), K(a, this.overlay);
+    }, this.onEnter = e.onEnter, this.onLeave = e.onLeave, this.store = ut();
   }
   connectedCallback() {
-    const e = this.attachShadow({ mode: "closed" }), t = document.createElement("div");
-    t.className = "popup";
-    const i = document.createElement("style"), o = "#F35373", l = "#9095AA";
-    i.textContent = `
+    const e = this.attachShadow({ mode: "closed" }), n = document.createElement("div");
+    n.className = "popup";
+    const t = document.createElement("style"), o = "#F35373", s = "#9095AA";
+    t.textContent = `
 :root {
     --highlight-color: ${o};
-    --highlight-textColor: ${l};
+    --highlight-textColor: ${s};
 }
 .popup {
   color: #000;
@@ -1185,7 +1195,7 @@ class Me extends HTMLElement {
 
 .popup-listItem--icon, .popup-listItem--iconImage {
     padding-right: 12px; 
-    fill: ${l};
+    fill: ${s};
     width: 24px;
     height: 24px;
     min-height: 24px;
@@ -1224,7 +1234,7 @@ class Me extends HTMLElement {
     fill: #ffffff !important;
     stroke: #ffffff !important;
 }
-`, this.overlay = t, this.overlay.addEventListener("mouseenter", this.onMouseEnter), this.overlay.addEventListener("mouseleave", this.onMouseLeave), e.append(i), e.append(t), this.store.onChange(() => {
+`, this.overlay = n, this.overlay.addEventListener("mouseenter", this.onMouseEnter), this.overlay.addEventListener("mouseleave", this.onMouseLeave), e.append(t), e.append(n), this.store.onChange(() => {
       this.renderAnnotationMarkers(this.store.get());
     });
   }
@@ -1233,13 +1243,13 @@ class Me extends HTMLElement {
   }
   updateCard({
     card: e,
-    rect: t,
-    handlers: i
+    rect: n,
+    handlers: t
   }) {
     this.store.update({
       card: e,
-      targetRect: t,
-      handlers: i
+      targetRect: n,
+      handlers: t
     });
   }
   dismissCard(e) {
@@ -1249,146 +1259,149 @@ class Me extends HTMLElement {
     this.store.removeAllCard();
   }
 }
-window.customElements.get("textchecker-popoup-element") || window.customElements.define("textchecker-popoup-element", Me);
-var ee = { exports: {} };
-const He = (n, e, t = {}) => {
-  if (!Number.isFinite(e))
-    throw new TypeError("Expected `wait` to be a finite number");
-  let i, o, l = [];
-  return function(...c) {
-    return new Promise((u) => {
-      const a = t.leading && !o;
-      clearTimeout(o), o = setTimeout(() => {
-        o = null;
-        const h = t.leading ? i : n.apply(this, c);
-        for (u of l)
-          u(h);
-        l = [];
-      }, e), a ? (i = n.apply(this, c), u(i)) : l.push(u);
-    });
+window.customElements.get("textchecker-popoup-element") || window.customElements.define("textchecker-popoup-element", Ae);
+var O = { exports: {} }, ve;
+function ht() {
+  if (ve) return O.exports;
+  ve = 1;
+  const i = (e, n, t = {}) => {
+    if (!Number.isFinite(n))
+      throw new TypeError("Expected `wait` to be a finite number");
+    let o, s, d = [];
+    return function(...c) {
+      return new Promise((a) => {
+        const u = t.leading && !s;
+        clearTimeout(s), s = setTimeout(() => {
+          s = null;
+          const p = t.leading ? o : e.apply(this, c);
+          for (a of d)
+            a(p);
+          d = [];
+        }, n), u ? (o = e.apply(this, c), a(o)) : d.push(a);
+      });
+    };
   };
-};
-ee.exports = He;
-ee.exports.default = He;
-var rt = ee.exports;
-const at = /* @__PURE__ */ K(rt), lt = localStorage.DEBUG ?? "", dt = lt === "*", I = (...n) => {
-  dt && console.log("[textchecker-element]", ...n);
-}, ct = () => {
-  let n = !1;
+  return O.exports = i, O.exports.default = i, O.exports;
+}
+var pt = ht();
+const ft = /* @__PURE__ */ Ne(pt), xe = localStorage.DEBUG ?? "", gt = xe === "*" ? xe.startsWith("@textlint") : !1, E = (...i) => {
+  gt && console.log("[textchecker-element]", ...i);
+}, mt = () => {
+  let i = !1;
   return {
-    onComposition: n,
+    onComposition: i,
     handleEvent: (e) => {
-      e.type === "compositionend" ? n = !1 : e.type === "compositionstart" && (n = !0);
+      e.type === "compositionend" ? i = !1 : e.type === "compositionstart" && (i = !0);
     }
   };
-}, ut = (n) => {
-  const e = new Me(n);
+}, vt = (i) => {
+  const e = new Ae(i);
   return document.body.append(e), e;
 };
-function ht(n) {
-  const e = window.getComputedStyle(n);
+function xt(i) {
+  const e = window.getComputedStyle(i);
   if (e.display === "none" || e.visibility === "hidden")
     return !1;
-  const t = n.getBoundingClientRect();
-  return t.height === 0 || t.width === 0 ? !1 : t.top >= 0 && t.left >= 0 && t.bottom <= (window.innerHeight || document.documentElement.clientHeight) && t.right <= (window.innerWidth || document.documentElement.clientWidth);
+  const n = i.getBoundingClientRect();
+  return n.height === 0 || n.width === 0 ? !1 : n.top >= 0 && n.left >= 0 && n.bottom <= (window.innerHeight || document.documentElement.clientHeight) && n.right <= (window.innerWidth || document.documentElement.clientWidth);
 }
-const pt = ({
-  textAreaElement: n,
+const Ct = ({
+  textAreaElement: i,
   lintingDebounceMs: e,
-  lintEngine: t
+  lintEngine: n
 }) => {
-  if (!n)
-    return I("Can not attach. No textarea", n), () => {
+  if (!i)
+    return E("Can not attach. No textarea", i), () => {
     };
-  if (n.readOnly)
-    return I("Can not attach textarea that is readonly", n), () => {
+  if (i.readOnly)
+    return E("Can not attach textarea that is readonly", i), () => {
     };
-  if (n.dataset.attachedTextCheckerElement === "true")
-    return I("Can not attach textarea that is already attached", n), () => {
+  if (i.dataset.attachedTextCheckerElement === "true")
+    return E("Can not attach textarea that is already attached", i), () => {
     };
-  const i = () => {
-    I("dismissCards", {
+  const t = () => {
+    E("dismissCards", {
       textCheckerPopup: o.isHovering,
-      textChecker: l.isHovering,
-      textCheckerF: l.isFocus
-    }), !o.isHovering && !l.isHovering && !l.isFocus && (o.dismissCards(), l.resetHoverState());
-  }, o = ut({
+      textChecker: s.isHovering,
+      textCheckerF: s.isFocus
+    }), !o.isHovering && !s.isHovering && !s.isFocus && (o.dismissCards(), s.resetHoverState());
+  }, o = vt({
     onLeave() {
-      i();
+      t();
     }
-  }), l = new Se({
-    targetElement: n,
+  }), s = new Ve({
+    targetElement: i,
     hoverPadding: 20,
     onLeave() {
-      i();
+      t();
     }
   });
-  n.before(l);
-  const c = ct(), u = at(async () => {
-    if (!ht(n) || c.onComposition)
+  i.before(s);
+  const d = mt(), c = ft(async () => {
+    if (!xt(i) || d.onComposition)
       return;
-    const v = n.value, p = await t.lintText({
-      text: v
+    const f = i.value, h = await n.lintText({
+      text: f
     });
-    I("lint results", p);
-    const f = async (x, m) => {
-      const C = n.value;
-      C === v && C !== x && (n.value = x, await a(), o.dismissCard(m));
-    }, g = p.flatMap((x) => x.messages.map((m) => {
-      var L;
-      const C = m.range ?? ((L = m.fix) == null ? void 0 : L.range) ?? [m.index, m.index + 1], b = {
+    E("lint results", h);
+    const g = async (x, m) => {
+      const C = i.value;
+      C === f && C !== x && (i.value = x, await a(), o.dismissCard(m));
+    }, v = h.flatMap((x) => x.messages.map((m) => {
+      var _;
+      const C = m.range ?? ((_ = m.fix) == null ? void 0 : _.range) ?? [m.index, m.index + 1], w = {
         id: `${m.ruleId}::${C[0]}-${C[1]}`,
         message: m.message,
         messageRuleId: m.ruleId,
         fixable: !!m.fix
       };
-      let _ = null;
+      let b = null;
       return {
         id: `${m.ruleId}::${C[0]}-${C[1]}`,
         start: C[0],
         end: C[1],
-        onMouseEnter: ({ rectItem: w }) => {
-          I("annotation - onMouseEnter"), _ && clearTimeout(_), o.updateCard({
-            card: b,
+        onMouseEnter: ({ rectItem: y }) => {
+          E("annotation - onMouseEnter"), b && clearTimeout(b), o.updateCard({
+            card: w,
             rect: {
-              top: w.boxBorderWidth + w.boxMarginTop + w.boxPaddingTop + w.boxAbsoluteY + w.top + w.height,
-              left: w.boxAbsoluteX + w.left,
-              width: w.width
+              top: y.boxBorderWidth + y.boxMarginTop + y.boxPaddingTop + y.boxAbsoluteY + y.top + y.height,
+              left: y.boxAbsoluteX + y.left,
+              width: y.width
             },
             handlers: {
               async onFixText() {
-                const y = await t.fixText({
-                  text: v,
+                const F = await n.fixText({
+                  text: f,
                   messages: [m]
                 });
-                await f(y.output, b);
+                await g(F.output, w);
               },
               async onFixAll() {
-                const y = await t.fixText({
-                  text: v,
+                const F = await n.fixText({
+                  text: f,
                   messages: x.messages
                 });
-                await f(y.output, b);
+                await g(F.output, w);
               },
               async onFixRule() {
-                const y = x.messages.filter(
-                  (S) => S.ruleId === m.ruleId
-                ), V = await t.fixText({
-                  text: v,
-                  messages: y
+                const F = x.messages.filter(
+                  (I) => I.ruleId === m.ruleId
+                ), M = await n.fixText({
+                  text: f,
+                  messages: F
                 });
-                await f(V.output, b);
+                await g(M.output, w);
               },
               async onIgnore() {
-                await t.ignoreText({
-                  text: v,
+                await n.ignoreText({
+                  text: f,
                   message: m
                 }), await a();
               },
               onSeeDocument() {
-                const y = m.ruleId.includes("/") ? m.ruleId.split("/")[1] : m.ruleId;
+                const F = m.ruleId.includes("/") ? m.ruleId.split("/")[1] : m.ruleId;
                 window.open(
-                  `https://github.com/search?q=textlint ${encodeURIComponent(y)}`,
+                  `https://github.com/search?q=textlint ${encodeURIComponent(F)}`,
                   "_blank",
                   "noopener"
                 );
@@ -1396,412 +1409,465 @@ const pt = ({
             }
           });
         },
-        async onMouseLeave({ rectItem: w }) {
+        async onMouseLeave({ rectItem: y }) {
           try {
-            I("annotation - onMouseLeave"), _ = setTimeout(() => {
-              const y = l.isHoverRectItem(w);
-              I("dismiss", {
+            E("annotation - onMouseLeave"), b = setTimeout(() => {
+              const F = s.isHoverRectItem(y);
+              E("dismiss", {
                 textCheckerPopup: o.isHovering,
-                isRectElementHover: y
-              }), !(o.isHovering || y) && o.dismissCard(b);
+                isRectElementHover: F
+              }), !(o.isHovering || F) && o.dismissCard(w);
             }, 500);
-          } catch (y) {
-            I("Abort dismiss popup", y);
+          } catch (F) {
+            E("Abort dismiss popup", F);
           }
         }
       };
     }));
-    I("annotations", g), l.updateAnnotations(g);
+    E("annotations", v), s.updateAnnotations(v);
   }, e), a = async () => {
     try {
-      await u();
-    } catch (v) {
-      I("update error", v), l.updateAnnotations([]);
+      await c();
+    } catch (f) {
+      E("update error", f), s.updateAnnotations([]);
     }
-  }, h = new ResizeObserver(() => {
-    I("ResizeObserver do update"), o.dismissCards(), l.resetAnnotations(), a();
+  }, u = new ResizeObserver(() => {
+    E("ResizeObserver do update"), o.dismissCards(), s.resetAnnotations(), a();
   });
-  h.observe(n);
-  const r = () => {
-    o.dismissCards(), l.resetAnnotations(), a();
-  }, s = () => {
+  u.observe(i);
+  const p = () => {
+    o.dismissCards(), s.resetAnnotations(), a();
+  }, r = () => {
     o.dismissCards(), a();
-  }, d = (v) => {
-    v.relatedTarget === l || v.relatedTarget === o || o.dismissCards();
+  }, l = (f) => {
+    f.relatedTarget === s || f.relatedTarget === o || o.dismissCards();
   };
-  return n.addEventListener("compositionstart", c), n.addEventListener("compositionend", c), n.addEventListener("input", u), n.addEventListener("focus", s), n.addEventListener("blur", d), n.addEventListener("focusout", i), window.addEventListener("scroll", r), n.addEventListener("scroll", r), a(), () => {
-    window.removeEventListener("scroll", r), n.removeEventListener("scroll", r), n.removeEventListener("compositionstart", c), n.removeEventListener("compositionend", c), n.removeEventListener("input", u), n.removeEventListener("focus", s), n.removeEventListener("blur", d), h.disconnect();
+  return i.addEventListener("compositionstart", d), i.addEventListener("compositionend", d), i.addEventListener("input", c), i.addEventListener("focus", r), i.addEventListener("blur", l), i.addEventListener("focusout", t), window.addEventListener("scroll", p), i.addEventListener("scroll", p), a(), () => {
+    window.removeEventListener("scroll", p), i.removeEventListener("scroll", p), i.removeEventListener("compositionstart", d), i.removeEventListener("compositionend", d), i.removeEventListener("input", c), i.removeEventListener("focus", r), i.removeEventListener("blur", l), u.disconnect();
   };
 };
-var Y = { exports: {} }, D, me;
-function ft() {
-  if (me)
-    return D;
-  me = 1;
-  var n = 1e3, e = n * 60, t = e * 60, i = t * 24, o = i * 7, l = i * 365.25;
-  D = function(r, s) {
-    s = s || {};
-    var d = typeof r;
-    if (d === "string" && r.length > 0)
-      return c(r);
-    if (d === "number" && isFinite(r))
-      return s.long ? a(r) : u(r);
+var U = {}, H = {}, z = { exports: {} }, X, Ce;
+function bt() {
+  if (Ce) return X;
+  Ce = 1;
+  var i = 1e3, e = i * 60, n = e * 60, t = n * 24, o = t * 7, s = t * 365.25;
+  X = function(p, r) {
+    r = r || {};
+    var l = typeof p;
+    if (l === "string" && p.length > 0)
+      return d(p);
+    if (l === "number" && isFinite(p))
+      return r.long ? a(p) : c(p);
     throw new Error(
-      "val is not a non-empty string or a valid number. val=" + JSON.stringify(r)
+      "val is not a non-empty string or a valid number. val=" + JSON.stringify(p)
     );
   };
-  function c(r) {
-    if (r = String(r), !(r.length > 100)) {
-      var s = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
-        r
+  function d(p) {
+    if (p = String(p), !(p.length > 100)) {
+      var r = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
+        p
       );
-      if (s) {
-        var d = parseFloat(s[1]), v = (s[2] || "ms").toLowerCase();
-        switch (v) {
+      if (r) {
+        var l = parseFloat(r[1]), f = (r[2] || "ms").toLowerCase();
+        switch (f) {
           case "years":
           case "year":
           case "yrs":
           case "yr":
           case "y":
-            return d * l;
+            return l * s;
           case "weeks":
           case "week":
           case "w":
-            return d * o;
+            return l * o;
           case "days":
           case "day":
           case "d":
-            return d * i;
+            return l * t;
           case "hours":
           case "hour":
           case "hrs":
           case "hr":
           case "h":
-            return d * t;
+            return l * n;
           case "minutes":
           case "minute":
           case "mins":
           case "min":
           case "m":
-            return d * e;
+            return l * e;
           case "seconds":
           case "second":
           case "secs":
           case "sec":
           case "s":
-            return d * n;
+            return l * i;
           case "milliseconds":
           case "millisecond":
           case "msecs":
           case "msec":
           case "ms":
-            return d;
+            return l;
           default:
             return;
         }
       }
     }
   }
-  function u(r) {
-    var s = Math.abs(r);
-    return s >= i ? Math.round(r / i) + "d" : s >= t ? Math.round(r / t) + "h" : s >= e ? Math.round(r / e) + "m" : s >= n ? Math.round(r / n) + "s" : r + "ms";
+  function c(p) {
+    var r = Math.abs(p);
+    return r >= t ? Math.round(p / t) + "d" : r >= n ? Math.round(p / n) + "h" : r >= e ? Math.round(p / e) + "m" : r >= i ? Math.round(p / i) + "s" : p + "ms";
   }
-  function a(r) {
-    var s = Math.abs(r);
-    return s >= i ? h(r, s, i, "day") : s >= t ? h(r, s, t, "hour") : s >= e ? h(r, s, e, "minute") : s >= n ? h(r, s, n, "second") : r + " ms";
+  function a(p) {
+    var r = Math.abs(p);
+    return r >= t ? u(p, r, t, "day") : r >= n ? u(p, r, n, "hour") : r >= e ? u(p, r, e, "minute") : r >= i ? u(p, r, i, "second") : p + " ms";
   }
-  function h(r, s, d, v) {
-    var p = s >= d * 1.5;
-    return Math.round(r / d) + " " + v + (p ? "s" : "");
+  function u(p, r, l, f) {
+    var h = r >= l * 1.5;
+    return Math.round(p / l) + " " + f + (h ? "s" : "");
   }
-  return D;
+  return X;
 }
-function gt(n) {
-  t.debug = t, t.default = t, t.coerce = a, t.disable = l, t.enable = o, t.enabled = c, t.humanize = ft(), t.destroy = h, Object.keys(n).forEach((r) => {
-    t[r] = n[r];
-  }), t.names = [], t.skips = [], t.formatters = {};
-  function e(r) {
-    let s = 0;
-    for (let d = 0; d < r.length; d++)
-      s = (s << 5) - s + r.charCodeAt(d), s |= 0;
-    return t.colors[Math.abs(s) % t.colors.length];
-  }
-  t.selectColor = e;
-  function t(r) {
-    let s, d = null, v, p;
-    function f(...g) {
-      if (!f.enabled)
-        return;
-      const x = f, m = Number(/* @__PURE__ */ new Date()), C = m - (s || m);
-      x.diff = C, x.prev = s, x.curr = m, s = m, g[0] = t.coerce(g[0]), typeof g[0] != "string" && g.unshift("%O");
-      let b = 0;
-      g[0] = g[0].replace(/%([a-zA-Z%])/g, (L, w) => {
-        if (L === "%%")
-          return "%";
-        b++;
-        const y = t.formatters[w];
-        if (typeof y == "function") {
-          const V = g[b];
-          L = y.call(x, V), g.splice(b, 1), b--;
-        }
-        return L;
-      }), t.formatArgs.call(x, g), (x.log || t.log).apply(x, g);
+var J, be;
+function yt() {
+  if (be) return J;
+  be = 1;
+  function i(e) {
+    t.debug = t, t.default = t, t.coerce = u, t.disable = c, t.enable = s, t.enabled = a, t.humanize = bt(), t.destroy = p, Object.keys(e).forEach((r) => {
+      t[r] = e[r];
+    }), t.names = [], t.skips = [], t.formatters = {};
+    function n(r) {
+      let l = 0;
+      for (let f = 0; f < r.length; f++)
+        l = (l << 5) - l + r.charCodeAt(f), l |= 0;
+      return t.colors[Math.abs(l) % t.colors.length];
     }
-    return f.namespace = r, f.useColors = t.useColors(), f.color = t.selectColor(r), f.extend = i, f.destroy = t.destroy, Object.defineProperty(f, "enabled", {
-      enumerable: !0,
-      configurable: !1,
-      get: () => d !== null ? d : (v !== t.namespaces && (v = t.namespaces, p = t.enabled(r)), p),
-      set: (g) => {
-        d = g;
+    t.selectColor = n;
+    function t(r) {
+      let l, f = null, h, g;
+      function v(...x) {
+        if (!v.enabled)
+          return;
+        const m = v, C = Number(/* @__PURE__ */ new Date()), w = C - (l || C);
+        m.diff = w, m.prev = l, m.curr = C, l = C, x[0] = t.coerce(x[0]), typeof x[0] != "string" && x.unshift("%O");
+        let b = 0;
+        x[0] = x[0].replace(/%([a-zA-Z%])/g, (y, F) => {
+          if (y === "%%")
+            return "%";
+          b++;
+          const M = t.formatters[F];
+          if (typeof M == "function") {
+            const I = x[b];
+            y = M.call(m, I), x.splice(b, 1), b--;
+          }
+          return y;
+        }), t.formatArgs.call(m, x), (m.log || t.log).apply(m, x);
       }
-    }), typeof t.init == "function" && t.init(f), f;
+      return v.namespace = r, v.useColors = t.useColors(), v.color = t.selectColor(r), v.extend = o, v.destroy = t.destroy, Object.defineProperty(v, "enabled", {
+        enumerable: !0,
+        configurable: !1,
+        get: () => f !== null ? f : (h !== t.namespaces && (h = t.namespaces, g = t.enabled(r)), g),
+        set: (x) => {
+          f = x;
+        }
+      }), typeof t.init == "function" && t.init(v), v;
+    }
+    function o(r, l) {
+      const f = t(this.namespace + (typeof l > "u" ? ":" : l) + r);
+      return f.log = this.log, f;
+    }
+    function s(r) {
+      t.save(r), t.namespaces = r, t.names = [], t.skips = [];
+      const l = (typeof r == "string" ? r : "").trim().replace(/\s+/g, ",").split(",").filter(Boolean);
+      for (const f of l)
+        f[0] === "-" ? t.skips.push(f.slice(1)) : t.names.push(f);
+    }
+    function d(r, l) {
+      let f = 0, h = 0, g = -1, v = 0;
+      for (; f < r.length; )
+        if (h < l.length && (l[h] === r[f] || l[h] === "*"))
+          l[h] === "*" ? (g = h, v = f, h++) : (f++, h++);
+        else if (g !== -1)
+          h = g + 1, v++, f = v;
+        else
+          return !1;
+      for (; h < l.length && l[h] === "*"; )
+        h++;
+      return h === l.length;
+    }
+    function c() {
+      const r = [
+        ...t.names,
+        ...t.skips.map((l) => "-" + l)
+      ].join(",");
+      return t.enable(""), r;
+    }
+    function a(r) {
+      for (const l of t.skips)
+        if (d(r, l))
+          return !1;
+      for (const l of t.names)
+        if (d(r, l))
+          return !0;
+      return !1;
+    }
+    function u(r) {
+      return r instanceof Error ? r.stack || r.message : r;
+    }
+    function p() {
+      console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
+    }
+    return t.enable(t.load()), t;
   }
-  function i(r, s) {
-    const d = t(this.namespace + (typeof s > "u" ? ":" : s) + r);
-    return d.log = this.log, d;
-  }
-  function o(r) {
-    t.save(r), t.namespaces = r, t.names = [], t.skips = [];
-    let s;
-    const d = (typeof r == "string" ? r : "").split(/[\s,]+/), v = d.length;
-    for (s = 0; s < v; s++)
-      d[s] && (r = d[s].replace(/\*/g, ".*?"), r[0] === "-" ? t.skips.push(new RegExp("^" + r.slice(1) + "$")) : t.names.push(new RegExp("^" + r + "$")));
-  }
-  function l() {
-    const r = [
-      ...t.names.map(u),
-      ...t.skips.map(u).map((s) => "-" + s)
-    ].join(",");
-    return t.enable(""), r;
-  }
-  function c(r) {
-    if (r[r.length - 1] === "*")
-      return !0;
-    let s, d;
-    for (s = 0, d = t.skips.length; s < d; s++)
-      if (t.skips[s].test(r))
-        return !1;
-    for (s = 0, d = t.names.length; s < d; s++)
-      if (t.names[s].test(r))
+  return J = i, J;
+}
+var ye;
+function wt() {
+  return ye || (ye = 1, function(i, e) {
+    e.formatArgs = t, e.save = o, e.load = s, e.useColors = n, e.storage = d(), e.destroy = /* @__PURE__ */ (() => {
+      let a = !1;
+      return () => {
+        a || (a = !0, console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."));
+      };
+    })(), e.colors = [
+      "#0000CC",
+      "#0000FF",
+      "#0033CC",
+      "#0033FF",
+      "#0066CC",
+      "#0066FF",
+      "#0099CC",
+      "#0099FF",
+      "#00CC00",
+      "#00CC33",
+      "#00CC66",
+      "#00CC99",
+      "#00CCCC",
+      "#00CCFF",
+      "#3300CC",
+      "#3300FF",
+      "#3333CC",
+      "#3333FF",
+      "#3366CC",
+      "#3366FF",
+      "#3399CC",
+      "#3399FF",
+      "#33CC00",
+      "#33CC33",
+      "#33CC66",
+      "#33CC99",
+      "#33CCCC",
+      "#33CCFF",
+      "#6600CC",
+      "#6600FF",
+      "#6633CC",
+      "#6633FF",
+      "#66CC00",
+      "#66CC33",
+      "#9900CC",
+      "#9900FF",
+      "#9933CC",
+      "#9933FF",
+      "#99CC00",
+      "#99CC33",
+      "#CC0000",
+      "#CC0033",
+      "#CC0066",
+      "#CC0099",
+      "#CC00CC",
+      "#CC00FF",
+      "#CC3300",
+      "#CC3333",
+      "#CC3366",
+      "#CC3399",
+      "#CC33CC",
+      "#CC33FF",
+      "#CC6600",
+      "#CC6633",
+      "#CC9900",
+      "#CC9933",
+      "#CCCC00",
+      "#CCCC33",
+      "#FF0000",
+      "#FF0033",
+      "#FF0066",
+      "#FF0099",
+      "#FF00CC",
+      "#FF00FF",
+      "#FF3300",
+      "#FF3333",
+      "#FF3366",
+      "#FF3399",
+      "#FF33CC",
+      "#FF33FF",
+      "#FF6600",
+      "#FF6633",
+      "#FF9900",
+      "#FF9933",
+      "#FFCC00",
+      "#FFCC33"
+    ];
+    function n() {
+      if (typeof window < "u" && window.process && (window.process.type === "renderer" || window.process.__nwjs))
         return !0;
-    return !1;
-  }
-  function u(r) {
-    return r.toString().substring(2, r.toString().length - 2).replace(/\.\*\?$/, "*");
-  }
-  function a(r) {
-    return r instanceof Error ? r.stack || r.message : r;
-  }
-  function h() {
-    console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`.");
-  }
-  return t.enable(t.load()), t;
-}
-var mt = gt;
-(function(n, e) {
-  e.formatArgs = i, e.save = o, e.load = l, e.useColors = t, e.storage = c(), e.destroy = (() => {
-    let a = !1;
-    return () => {
-      a || (a = !0, console.warn("Instance method `debug.destroy()` is deprecated and no longer does anything. It will be removed in the next major version of `debug`."));
+      if (typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/))
+        return !1;
+      let a;
+      return typeof document < "u" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
+      typeof window < "u" && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
+      // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+      typeof navigator < "u" && navigator.userAgent && (a = navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/)) && parseInt(a[1], 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
+      typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+    }
+    function t(a) {
+      if (a[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + a[0] + (this.useColors ? "%c " : " ") + "+" + i.exports.humanize(this.diff), !this.useColors)
+        return;
+      const u = "color: " + this.color;
+      a.splice(1, 0, u, "color: inherit");
+      let p = 0, r = 0;
+      a[0].replace(/%[a-zA-Z%]/g, (l) => {
+        l !== "%%" && (p++, l === "%c" && (r = p));
+      }), a.splice(r, 0, u);
+    }
+    e.log = console.debug || console.log || (() => {
+    });
+    function o(a) {
+      try {
+        a ? e.storage.setItem("debug", a) : e.storage.removeItem("debug");
+      } catch {
+      }
+    }
+    function s() {
+      let a;
+      try {
+        a = e.storage.getItem("debug") || e.storage.getItem("DEBUG");
+      } catch {
+      }
+      return !a && typeof process < "u" && "env" in process && (a = process.env.DEBUG), a;
+    }
+    function d() {
+      try {
+        return localStorage;
+      } catch {
+      }
+    }
+    i.exports = yt()(e);
+    const { formatters: c } = i.exports;
+    c.j = function(a) {
+      try {
+        return JSON.stringify(a);
+      } catch (u) {
+        return "[UnexpectedJSONParseError]: " + u.message;
+      }
     };
-  })(), e.colors = [
-    "#0000CC",
-    "#0000FF",
-    "#0033CC",
-    "#0033FF",
-    "#0066CC",
-    "#0066FF",
-    "#0099CC",
-    "#0099FF",
-    "#00CC00",
-    "#00CC33",
-    "#00CC66",
-    "#00CC99",
-    "#00CCCC",
-    "#00CCFF",
-    "#3300CC",
-    "#3300FF",
-    "#3333CC",
-    "#3333FF",
-    "#3366CC",
-    "#3366FF",
-    "#3399CC",
-    "#3399FF",
-    "#33CC00",
-    "#33CC33",
-    "#33CC66",
-    "#33CC99",
-    "#33CCCC",
-    "#33CCFF",
-    "#6600CC",
-    "#6600FF",
-    "#6633CC",
-    "#6633FF",
-    "#66CC00",
-    "#66CC33",
-    "#9900CC",
-    "#9900FF",
-    "#9933CC",
-    "#9933FF",
-    "#99CC00",
-    "#99CC33",
-    "#CC0000",
-    "#CC0033",
-    "#CC0066",
-    "#CC0099",
-    "#CC00CC",
-    "#CC00FF",
-    "#CC3300",
-    "#CC3333",
-    "#CC3366",
-    "#CC3399",
-    "#CC33CC",
-    "#CC33FF",
-    "#CC6600",
-    "#CC6633",
-    "#CC9900",
-    "#CC9933",
-    "#CCCC00",
-    "#CCCC33",
-    "#FF0000",
-    "#FF0033",
-    "#FF0066",
-    "#FF0099",
-    "#FF00CC",
-    "#FF00FF",
-    "#FF3300",
-    "#FF3333",
-    "#FF3366",
-    "#FF3399",
-    "#FF33CC",
-    "#FF33FF",
-    "#FF6600",
-    "#FF6633",
-    "#FF9900",
-    "#FF9933",
-    "#FFCC00",
-    "#FFCC33"
-  ];
-  function t() {
-    return typeof window < "u" && window.process && (window.process.type === "renderer" || window.process.__nwjs) ? !0 : typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/) ? !1 : typeof document < "u" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || // Is firebug? http://stackoverflow.com/a/398120/376773
-    typeof window < "u" && window.console && (window.console.firebug || window.console.exception && window.console.table) || // Is firefox >= v31?
-    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-    typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || // Double check webkit in userAgent just in case we are in a worker
-    typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
-  }
-  function i(a) {
-    if (a[0] = (this.useColors ? "%c" : "") + this.namespace + (this.useColors ? " %c" : " ") + a[0] + (this.useColors ? "%c " : " ") + "+" + n.exports.humanize(this.diff), !this.useColors)
-      return;
-    const h = "color: " + this.color;
-    a.splice(1, 0, h, "color: inherit");
-    let r = 0, s = 0;
-    a[0].replace(/%[a-zA-Z%]/g, (d) => {
-      d !== "%%" && (r++, d === "%c" && (s = r));
-    }), a.splice(s, 0, h);
-  }
-  e.log = console.debug || console.log || (() => {
-  });
-  function o(a) {
-    try {
-      a ? e.storage.setItem("debug", a) : e.storage.removeItem("debug");
-    } catch {
-    }
-  }
-  function l() {
-    let a;
-    try {
-      a = e.storage.getItem("debug");
-    } catch {
-    }
-    return !a && typeof process < "u" && "env" in process && (a = process.env.DEBUG), a;
-  }
-  function c() {
-    try {
-      return localStorage;
-    } catch {
-    }
-  }
-  n.exports = mt(e);
-  const { formatters: u } = n.exports;
-  u.j = function(a) {
-    try {
-      return JSON.stringify(a);
-    } catch (h) {
-      return "[UnexpectedJSONParseError]: " + h.message;
-    }
+  }(z, z.exports)), z.exports;
+}
+var we;
+function Ft() {
+  if (we) return H;
+  we = 1;
+  var i = H && H.__importDefault || function(u) {
+    return u && u.__esModule ? u : { default: u };
   };
-})(Y, Y.exports);
-var vt = Y.exports;
-const xt = /* @__PURE__ */ K(vt), j = xt("textlint:source-code-fixer"), Z = "\uFEFF";
-function Ct(n, e) {
-  const t = n.line - e.line;
-  return t === 0 ? n.column - e.column : t;
+  Object.defineProperty(H, "__esModule", { value: !0 }), H.applyFixesToText = d, H.applyFixesToSourceCode = c, H.revertSourceCode = a;
+  const n = (0, i(wt()).default)("textlint:source-code-fixer"), t = "\uFEFF";
+  function o(u, p) {
+    const r = u.line - p.line;
+    return r === 0 ? u.column - p.column : r;
+  }
+  function s(u) {
+    return JSON.parse(JSON.stringify(u));
+  }
+  function d(u, p) {
+    const r = u.charCodeAt(0) === 65279;
+    return c({
+      text: u,
+      hasBOM: r
+    }, p).output;
+  }
+  function c(u, p) {
+    n("Applying fixes");
+    const r = u.text, l = [], f = [], h = p.slice(), g = [];
+    let v = r.length, x = u.hasBOM ? t : "";
+    if (h.forEach((m) => {
+      m && m.fix !== void 0 ? g.push(m) : l.push(m);
+    }), g.length) {
+      n("Found fixes to apply"), g.sort((C, w) => w.fix.range[1] - C.fix.range[1] || w.fix.range[0] - C.fix.range[0]);
+      const m = r.split("");
+      return g.forEach((C) => {
+        const w = C.fix;
+        let b = w.range[0];
+        const _ = w.range[1];
+        let y = w.text;
+        if (_ <= v) {
+          b < 0 && (x = "", b = 0), b === 0 && y[0] === t && (x = t, y = y.slice(1));
+          const F = m.splice(b, _ - b, y);
+          v = b;
+          const M = s(C);
+          M.fix = {
+            range: [b, b + y.length],
+            text: F.join("")
+          }, f.push(M);
+        } else
+          l.push(C);
+      }), {
+        fixed: !0,
+        messages: h,
+        // have order
+        applyingMessages: f.reverse(),
+        // have order
+        remainingMessages: l.sort(o),
+        // have not order
+        output: x + m.join("")
+      };
+    } else
+      return n("No fixes to apply"), {
+        fixed: !1,
+        messages: h,
+        applyingMessages: f,
+        remainingMessages: l,
+        output: x + r
+      };
+  }
+  function a(u, p) {
+    n("Restore applied fixes");
+    let r = u.text;
+    return p.forEach((l) => {
+      const f = {
+        text: r,
+        hasBOM: u.hasBOM
+      };
+      r = c(f, [l]).output;
+    }), r;
+  }
+  return H;
 }
-function bt(n) {
-  return JSON.parse(JSON.stringify(n));
+var Fe;
+function _t() {
+  return Fe || (Fe = 1, function(i) {
+    Object.defineProperty(i, "__esModule", { value: !0 }), i.revertSourceCode = i.applyFixesToSourceCode = i.applyFixesToText = void 0;
+    var e = /* @__PURE__ */ Ft();
+    Object.defineProperty(i, "applyFixesToText", { enumerable: !0, get: function() {
+      return e.applyFixesToText;
+    } }), Object.defineProperty(i, "applyFixesToSourceCode", { enumerable: !0, get: function() {
+      return e.applyFixesToSourceCode;
+    } }), Object.defineProperty(i, "revertSourceCode", { enumerable: !0, get: function() {
+      return e.revertSourceCode;
+    } });
+  }(U)), U;
 }
-function yt(n, e) {
-  const t = n.charCodeAt(0) === 65279;
-  return wt({
-    text: n,
-    hasBOM: t
-  }, e).output;
-}
-function wt(n, e) {
-  j("Applying fixes");
-  const t = n.text, i = [], o = [], l = e.slice(), c = [];
-  let u = t.length, a = n.hasBOM ? Z : "";
-  if (l.forEach((h) => {
-    h && h.fix !== void 0 ? c.push(h) : i.push(h);
-  }), c.length) {
-    j("Found fixes to apply"), c.sort((r, s) => s.fix.range[1] - r.fix.range[1] || s.fix.range[0] - r.fix.range[0]);
-    const h = t.split("");
-    return c.forEach((r) => {
-      const s = r.fix;
-      let d = s.range[0];
-      const v = s.range[1];
-      let p = s.text;
-      if (v <= u) {
-        d < 0 && (a = "", d = 0), d === 0 && p[0] === Z && (a = Z, p = p.slice(1));
-        const f = h.splice(d, v - d, p);
-        u = d;
-        const g = bt(r);
-        g.fix = {
-          range: [d, d + p.length],
-          text: f.join("")
-        }, o.push(g);
-      } else
-        i.push(r);
-    }), {
-      fixed: !0,
-      messages: l,
-      // have order
-      applyingMessages: o.reverse(),
-      // have order
-      remainingMessages: i.sort(Ct),
-      // have not order
-      output: a + h.join("")
-    };
-  } else
-    return j("No fixes to apply"), {
-      fixed: !1,
-      messages: l,
-      applyingMessages: o,
-      remainingMessages: i,
-      output: a + t
-    };
-}
-const ve = document.querySelector("#js-status"), k = (n) => {
-  ve && (ve.textContent = n);
-}, Lt = (n) => {
+var Lt = /* @__PURE__ */ _t();
+const _e = document.querySelector("#js-status"), V = (i) => {
+  _e && (_e.textContent = i);
+}, Tt = (i) => {
   let e = null;
-  const t = new Promise((i) => {
-    e = i;
+  const n = new Promise((t) => {
+    e = t;
   });
-  return n.addEventListener(
+  return i.addEventListener(
     "message",
-    function(i) {
-      const o = i.data;
+    function(t) {
+      const o = t.data;
       o.command === "init" && e && e(o.metadata);
     },
     {
@@ -1809,117 +1875,117 @@ const ve = document.querySelector("#js-status"), k = (n) => {
     }
   ), {
     ready() {
-      return t;
+      return n;
     }
   };
-}, xe = () => crypto.randomUUID(), Ft = ({ worker: n, ext: e }) => ({
+}, Le = () => crypto.randomUUID(), It = ({ worker: i, ext: e }) => ({
   lintText: async ({ text: o }) => {
-    k("linting...");
-    const l = new AbortController(), c = new Promise((u, a) => {
-      const h = xe();
-      return n.addEventListener(
+    V("linting...");
+    const s = new AbortController(), d = new Promise((c, a) => {
+      const u = Le();
+      return i.addEventListener(
         "message",
-        (r) => {
-          const s = r.data;
-          s.command === "error" && (!("id" in s) || s.id === h) ? a(s.error) : s.command === "lint:result" && s.id === h && u([s.result]);
+        (p) => {
+          const r = p.data;
+          r.command === "error" && (!("id" in r) || r.id === u) ? a(r.error) : r.command === "lint:result" && r.id === u && c([r.result]);
         },
-        { signal: l.signal }
-      ), n.postMessage({
-        id: h,
+        { signal: s.signal }
+      ), i.postMessage({
+        id: u,
         command: "lint",
         text: o,
         ext: e
       });
     });
-    return c.then(() => {
-      k("linted");
+    return d.then(() => {
+      V("linted");
     }).catch(() => {
-      k("failed to lint");
+      V("failed to lint");
     }).finally(() => {
-      l.abort();
-    }), c;
+      s.abort();
+    }), d;
   },
   fixText: async ({
     text: o,
-    message: l
+    message: s
   }) => {
-    k("fixing...");
-    const c = new AbortController(), u = new Promise((a, h) => {
-      const r = xe();
-      return n.addEventListener(
+    V("fixing...");
+    const d = new AbortController(), c = new Promise((a, u) => {
+      const p = Le();
+      return i.addEventListener(
         "message",
-        (s) => {
-          const d = s.data;
-          d.command === "error" && (!("id" in d) || d.id === r) ? h(d.error) : d.command === "fix:result" && d.id === r && a(d.result);
+        (r) => {
+          const l = r.data;
+          l.command === "error" && (!("id" in l) || l.id === p) ? u(l.error) : l.command === "fix:result" && l.id === p && a(l.result);
         },
-        { signal: c.signal }
-      ), n.postMessage({
-        id: r,
+        { signal: d.signal }
+      ), i.postMessage({
+        id: p,
         command: "fix",
         text: o,
-        ruleId: l == null ? void 0 : l.ruleId,
+        ruleId: s == null ? void 0 : s.ruleId,
         ext: e
       });
     });
-    return u.then(() => {
-      k("fixed");
+    return c.then(() => {
+      V("fixed");
     }).catch(() => {
-      k("failed to fix");
+      V("failed to fix");
     }).finally(() => {
-      c.abort();
-    }), u;
+      d.abort();
+    }), c;
   }
 });
-function $(n) {
-  return n.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+function A(i) {
+  return i.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
-async function It(n) {
-  var d, v;
-  const e = new Worker(n), t = Lt(e), i = new URL(location.href).searchParams.get("text"), o = document.querySelectorAll("textarea"), l = Ft({ worker: e, ext: ".md" }), c = await t.ready(), u = /* @__PURE__ */ new Map(), a = (p, f) => {
+async function St(i) {
+  var l, f;
+  const e = new Worker(i), n = Tt(e), t = new URL(location.href).searchParams.get("text"), o = document.querySelectorAll("textarea"), s = It({ worker: e, ext: ".md" }), d = await n.ready(), c = /* @__PURE__ */ new Map(), a = (h, g) => {
     var x;
-    const g = f.range ?? ((x = f == null ? void 0 : f.fix) == null ? void 0 : x.range) ?? [f.index, f.index + 1];
-    return p.slice(g[0], g[1]);
-  }, h = ({ text: p, message: f }) => {
-    const g = u.get(f.ruleId);
-    return g ? g.has(a(p, f)) : !1;
-  }, r = {
-    async lintText({ text: p }) {
-      return (await l.lintText({ text: p })).map((g) => ({
-        filePath: g.filePath,
-        messages: g.messages.filter((x) => !h({ text: p, message: x }))
+    const v = g.range ?? ((x = g == null ? void 0 : g.fix) == null ? void 0 : x.range) ?? [g.index, g.index + 1];
+    return h.slice(v[0], v[1]);
+  }, u = ({ text: h, message: g }) => {
+    const v = c.get(g.ruleId);
+    return v ? v.has(a(h, g)) : !1;
+  }, p = {
+    async lintText({ text: h }) {
+      return (await s.lintText({ text: h })).map((v) => ({
+        filePath: v.filePath,
+        messages: v.messages.filter((x) => !u({ text: h, message: x }))
       }));
     },
-    async fixText({ text: p, messages: f }) {
-      const g = f.filter((x) => !h({ text: p, message: x }));
+    async fixText({ text: h, messages: g }) {
+      const v = g.filter((x) => !u({ text: h, message: x }));
       return {
-        output: yt(p, g)
+        output: Lt.applyFixesToText(h, v)
       };
     },
-    async ignoreText({ text: p, message: f }) {
-      const g = u.get(f.ruleId) ?? /* @__PURE__ */ new Set();
-      return g.add(a(p, f)), u.set(f.ruleId, g), !0;
+    async ignoreText({ text: h, message: g }) {
+      const v = c.get(g.ruleId) ?? /* @__PURE__ */ new Set();
+      return v.add(a(h, g)), c.set(g.ruleId, v), !0;
     }
   };
-  o.forEach((p) => {
-    i && (p.value = i), pt({
-      textAreaElement: p,
+  o.forEach((h) => {
+    t && (h.value = t), Ct({
+      textAreaElement: h,
       lintingDebounceMs: 200,
-      lintEngine: r
+      lintEngine: p
     });
   });
-  const s = document.createElement("div");
-  s.innerHTML = `
+  const r = document.createElement("div");
+  r.innerHTML = `
 <h3>Script metadata</h3>
 <ul>
-    ${Object.entries(c).map(([p, f]) => {
-    const g = (x, m) => x === "homepage" ? `<a href="${$(m)}">${$(m)}</a>` : typeof m == "object" ? `<pre>${$(JSON.stringify(m, null, 4))}</pre>` : $(m);
-    return `<dt>${$(p)}</dt><dd>${g(p, f)}</dd>`;
+    ${Object.entries(d).map(([h, g]) => {
+    const v = (x, m) => x === "homepage" ? `<a href="${A(m)}">${A(m)}</a>` : typeof m == "object" ? `<pre>${A(JSON.stringify(m, null, 4))}</pre>` : A(m);
+    return `<dt>${A(h)}</dt><dd>${v(h, g)}</dd>`;
   }).join(`
 `)}
-</ul>`, (d = document.querySelector("#metadata")) == null || d.append(s), (v = document.querySelector("#install")) == null || v.addEventListener("click", () => {
+</ul>`, (l = document.querySelector("#metadata")) == null || l.append(r), (f = document.querySelector("#install")) == null || f.addEventListener("click", () => {
     window.open("textlint-worker.js", "_blank");
   });
 }
 export {
-  It as run
+  St as run
 };
