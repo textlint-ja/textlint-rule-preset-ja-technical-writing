@@ -14,6 +14,12 @@
 <!-- textlint-disable preset-ja-technical-writing/no-mix-dearu-desumasu,
 preset-ja-technical-writing/no-exclamation-question-mark -->
 
+## Online Demo
+
+次のURLからブラウザでルールの動作を試せます。
+
+- <https://textlint-ja.github.io/textlint-rule-preset-ja-technical-writing/>
+
 ## Install
 
 [npm](https://www.npmjs.com/)コマンドを使ってインストールできます。
