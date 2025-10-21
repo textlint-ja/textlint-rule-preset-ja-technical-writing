@@ -14,6 +14,6 @@
     "@textlint/website-generator": "^0.18.0",
     "textlint": "^15.2.1",
     "textlint-filter-rule-comments": "^1.2.2",
-    "install-local": "^3.0.1"
+    "install-local": "^4.1.0"
   }
 }
