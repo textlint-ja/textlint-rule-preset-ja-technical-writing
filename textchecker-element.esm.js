@@ -688,7 +688,7 @@ const fe = /* @__PURE__ */ new WeakMap(), K = (i, e, n) => {
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-typeof window < "u" && (window.litHtmlVersions || (window.litHtmlVersions = [])).push("1.3.0");
+typeof window < "u" && (window.litHtmlVersions || (window.litHtmlVersions = [])).push("1.4.1");
 const T = (i, ...e) => new Se(i, e, "html", rt);
 var ke = function() {
   var i = /* @__PURE__ */ new Set();
@@ -1623,7 +1623,7 @@ function yt() {
 }
 var ye;
 function wt() {
-  return ye || (ye = 1, function(i, e) {
+  return ye || (ye = 1, (function(i, e) {
     e.formatArgs = t, e.save = o, e.load = s, e.useColors = n, e.storage = d(), e.destroy = /* @__PURE__ */ (() => {
       let a = !1;
       return () => {
@@ -1760,7 +1760,7 @@ function wt() {
         return "[UnexpectedJSONParseError]: " + u.message;
       }
     };
-  }(z, z.exports)), z.exports;
+  })(z, z.exports)), z.exports;
 }
 var we;
 function Ft() {
@@ -1844,7 +1844,7 @@ function Ft() {
 }
 var Fe;
 function _t() {
-  return Fe || (Fe = 1, function(i) {
+  return Fe || (Fe = 1, (function(i) {
     Object.defineProperty(i, "__esModule", { value: !0 }), i.revertSourceCode = i.applyFixesToSourceCode = i.applyFixesToText = void 0;
     var e = /* @__PURE__ */ Ft();
     Object.defineProperty(i, "applyFixesToText", { enumerable: !0, get: function() {
@@ -1854,7 +1854,7 @@ function _t() {
     } }), Object.defineProperty(i, "revertSourceCode", { enumerable: !0, get: function() {
       return e.revertSourceCode;
     } });
-  }(U)), U;
+  })(U)), U;
 }
 var Lt = /* @__PURE__ */ _t();
 const _e = document.querySelector("#js-status"), V = (i) => {
