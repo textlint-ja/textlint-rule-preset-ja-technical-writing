@@ -33,9 +33,9 @@
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^3.0.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^2.0.4",
-    "@textlint/module-interop": "^15.2.1",
+    "@textlint/module-interop": "^15.2.3",
     "textlint-rule-ja-no-abusage": "^3.0.0",
-    "textlint-rule-ja-no-mixed-period": "^3.0.1",
+    "textlint-rule-ja-no-mixed-period": "^3.0.2",
     "textlint-rule-ja-no-redundant-expression": "^4.0.1",
     "textlint-rule-ja-no-successive-word": "^2.0.1",
     "textlint-rule-ja-no-weak-phrase": "^2.0.0",
@@ -46,22 +46,22 @@
     "textlint-rule-no-double-negative-ja": "^2.0.1",
     "textlint-rule-no-doubled-conjunction": "^3.0.0",
     "textlint-rule-no-doubled-conjunctive-particle-ga": "^3.0.0",
-    "textlint-rule-no-doubled-joshi": "^5.1.0",
+    "textlint-rule-no-doubled-joshi": "^5.1.1",
     "textlint-rule-no-dropping-the-ra": "^3.0.0",
     "textlint-rule-no-exclamation-question-mark": "^1.1.0",
     "textlint-rule-no-hankaku-kana": "^2.0.1",
     "textlint-rule-no-mix-dearu-desumasu": "^6.0.4",
     "textlint-rule-no-nfd": "^2.0.2",
     "textlint-rule-no-zero-width-spaces": "^1.0.1",
-    "textlint-rule-preset-jtf-style": "^3.0.2",
+    "textlint-rule-preset-jtf-style": "^3.0.3",
     "textlint-rule-sentence-length": "^5.2.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
+    "@changesets/cli": "^2.29.7",
     "markdown-toc": "^1.2.0",
-    "mocha": "^11.7.1",
-    "semver": "^7.7.2"
+    "mocha": "^11.7.5",
+    "semver": "^7.7.3"
   },
   "email": "azuciao@gmail.com",
-  "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
+  "packageManager": "npm@11.6.2+sha512.ee22b335fcbc95662cdf3ab8a053daf045d9cf9c6df6040d28965abb707512b2c16fa6c5eec049d34c74f78f390cebd14f697919eadb97756564d4f9eccc4954"
 }
