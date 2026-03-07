@@ -28,7 +28,11 @@
     "docs:toc": "markdown-toc -i README.md",
     "release": "changeset publish",
     "test": "mocha test/ && npm run test:example",
-    "test:example": "cd example && npm ci && npm test"
+    "test:example": "cd example && npm ci && npm test",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "prepare": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^3.0.0",
@@ -57,10 +61,17 @@
     "textlint-rule-sentence-length": "^5.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.0.6",
     "@changesets/cli": "^2.29.5",
+    "lint-staged": "^16.1.2",
     "markdown-toc": "^1.2.0",
     "mocha": "^11.7.1",
     "semver": "^7.7.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   },
   "email": "azuciao@gmail.com",
   "packageManager": "npm@11.11.0+sha512.f36811c4aae1fde639527368ae44c571d050006a608d67a191f195a801a52637a312d259186254aa3a3799b05335b7390539cf28656d18f0591a1125ba35f973"
