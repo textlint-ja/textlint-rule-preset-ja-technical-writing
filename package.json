@@ -33,7 +33,7 @@
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^3.0.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^2.0.4",
-    "@textlint/module-interop": "^15.5.0",
+    "@textlint/module-interop": "^15.8.0",
     "textlint-rule-ja-no-abusage": "^3.0.0",
     "textlint-rule-ja-no-mixed-period": "^3.0.1",
     "textlint-rule-ja-no-redundant-expression": "^4.0.1",
@@ -57,11 +57,11 @@
     "textlint-rule-sentence-length": "^5.2.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
+    "@changesets/cli": "^2.31.1",
     "markdown-toc": "^1.2.0",
-    "mocha": "^11.7.1",
-    "semver": "^7.7.2"
+    "mocha": "^11.8.0",
+    "semver": "^7.8.5"
   },
   "email": "azuciao@gmail.com",
-  "packageManager": "npm@11.11.0+sha512.f36811c4aae1fde639527368ae44c571d050006a608d67a191f195a801a52637a312d259186254aa3a3799b05335b7390539cf28656d18f0591a1125ba35f973"
+  "packageManager": "npm@11.20.0+sha512.745dc40c5c1b60df8de51522a7e6580ded0d79444ae4182a28e72f4f588db546214cc4e5d05c16841b97ad2ecab57c9dbaac93312e5a6906ab7a09c70c0c4d83"
 }
