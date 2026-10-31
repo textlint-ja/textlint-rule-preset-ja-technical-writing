@@ -33,11 +33,11 @@
   "dependencies": {
     "@textlint-rule/textlint-rule-no-invalid-control-character": "^3.0.0",
     "@textlint-rule/textlint-rule-no-unmatched-pair": "^2.0.4",
-    "@textlint/module-interop": "^15.5.0",
+    "@textlint/module-interop": "^15.8.0",
     "textlint-rule-ja-no-abusage": "^3.0.0",
     "textlint-rule-ja-no-mixed-period": "^3.0.1",
     "textlint-rule-ja-no-redundant-expression": "^4.0.1",
-    "textlint-rule-ja-no-successive-word": "^2.0.1",
+    "textlint-rule-ja-no-successive-word": "^2.1.0",
     "textlint-rule-ja-no-weak-phrase": "^2.0.0",
     "textlint-rule-ja-unnatural-alphabet": "2.0.1",
     "textlint-rule-max-comma": "^4.0.0",
@@ -57,11 +57,11 @@
     "textlint-rule-sentence-length": "^5.2.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
+    "@changesets/cli": "^2.31.1",
     "markdown-toc": "^1.2.0",
-    "mocha": "^11.7.1",
-    "semver": "^7.7.2"
+    "mocha": "^11.8.0",
+    "semver": "^7.8.5"
   },
   "email": "azuciao@gmail.com",
-  "packageManager": "npm@11.11.0+sha512.f36811c4aae1fde639527368ae44c571d050006a608d67a191f195a801a52637a312d259186254aa3a3799b05335b7390539cf28656d18f0591a1125ba35f973"
+  "packageManager": "npm@11.21.1+sha512.613ccbe90044257c87713bb426251ced128ca7e9b3949b65eeb18b98445a5d441e14720c73d6ad76be86f4cf42f2f0d66efe347a9a13400ccd2f6fcfb5954385"
 }
