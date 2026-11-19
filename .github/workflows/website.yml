@@ -5,20 +5,32 @@ on:
       - master
   workflow_dispatch:
 
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # push to gh-pages
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22
+          node-version: 26
+          package-manager-cache: false
       - name: Set Env
         run: |
-          echo "OWNER_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')" >> $GITHUB_ENV
-          echo "REPO_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')" >> $GITHUB_ENV
-          echo "CURRENT_VERSION=$(node -p 'require("./package.json").version')" >> $GITHUB_ENV
+          {
+            echo "OWNER_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')"
+            echo "REPO_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')"
+            echo "CURRENT_VERSION=$(node -p 'require("./package.json").version')"
+          } >> "$GITHUB_ENV"
       - name: Install
         run: npm ci
       - name: Build
@@ -31,7 +43,7 @@ jobs:
           CURRENT_VERSION: ${{ env.CURRENT_VERSION }}
         working-directory: example/
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./example/dist
