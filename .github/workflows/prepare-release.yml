@@ -8,11 +8,12 @@ jobs:
   create_issue:
     name: Create ReleaseIssue
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       issues: write
     steps:
       - name: Create team sync issue
-        uses: imjohnbo/issue-bot@v3.4
+        uses: imjohnbo/issue-bot@572eed14422c4d6ca37e870f97e7da209422f5bd # v3.4.4
         with:
           assignees: "azu"
           labels: "Type: Release"
@@ -21,7 +22,8 @@ jobs:
             ### 次のリリースの準備ができました
 
             - [ ] マージ忘れのPRがないかを確認
-            - [ ] Version PackagesのPRをマージ
+            - [ ] Create Release PR のワークフローを実行して、Release PR をマージ
+            - [ ] npm で staged のバージョンを approve
             - [ ] 新しいバージョンがリリースされたことを確認
 
           pinned: false

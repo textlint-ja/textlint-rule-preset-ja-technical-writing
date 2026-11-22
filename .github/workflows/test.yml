@@ -1,19 +1,29 @@
 name: test
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 env:
   CI: true
 jobs:
   test:
     name: "Test on Node.js ${{ matrix.node_version }}"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
-        node_version: [ 18, 20, 22 ]
+        node_version: [ 22, 24, 26 ]
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: setup Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node_version }}
       - name: Install
