@@ -58,7 +58,7 @@ jobs:
 
       - name: Setup Node.js
         if: steps.tag-check.outputs.exists == 'false'
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           # Release workflow should not use cache for avoiding cache poisoning
           # OIDC trusted publishing requires npm 11.5.1+ (bundled with Node.js 24)
