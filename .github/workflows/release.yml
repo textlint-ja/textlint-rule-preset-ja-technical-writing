@@ -62,7 +62,7 @@ jobs:
         with:
           # Release workflow should not use cache for avoiding cache poisoning
           # OIDC trusted publishing requires npm 11.5.1+ (bundled with Node.js 24)
-          node-version: 24
+          node-version: 26
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
